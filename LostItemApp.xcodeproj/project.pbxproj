@@ -1,0 +1,1020 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		531A8B0C2A77FC1A009ABE30 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531A8B0B2A77FC1A009ABE30 /* OpenGLES.framework */; };
+		53220BBB2ABEF1360011A099 /* free-icon-backward-318339.png in Resources */ = {isa = PBXBuildFile; fileRef = 53220BBA2ABEF1350011A099 /* free-icon-backward-318339.png */; };
+		5324A50C2AA0B8BB008B7A6E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324A50B2AA0B8BB008B7A6E /* PostViewController.swift */; };
+		5340DF852A72887F004E81A6 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF842A72887F004E81A6 /* KakaoSDK */; };
+		5340DF872A72887F004E81A6 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF862A72887F004E81A6 /* KakaoSDKAuth */; };
+		5340DF892A72887F004E81A6 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF882A72887F004E81A6 /* KakaoSDKCommon */; };
+		5340DF8B2A72887F004E81A6 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF8A2A72887F004E81A6 /* KakaoSDKUser */; };
+		5349C7042A7918E300C790CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5349C7032A7918E300C790CE /* GoogleService-Info.plist */; };
+		5349C7242A7A750C00C790CE /* btn_google_signin_dark_focus_web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5349C7232A7A750B00C790CE /* btn_google_signin_dark_focus_web@2x.png */; };
+		5349C72B2A7D209E00C790CE /* free-icon-back-arrow-594830.png in Resources */ = {isa = PBXBuildFile; fileRef = 5349C72A2A7D209E00C790CE /* free-icon-back-arrow-594830.png */; };
+		534C12952A615C930032F957 /* kakao_login_medium_wide.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C12912A615AF80032F957 /* kakao_login_medium_wide.png */; };
+		534C12982A615CBC0032F957 /* lost item.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C128F2A615AF70032F957 /* lost item.png */; };
+		534C12992A615CC00032F957 /* free-icon-lost-items-3372390-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C12922A615AF80032F957 /* free-icon-lost-items-3372390-3.png */; };
+		534C129A2A615CC20032F957 /* free-icon-message-in-a-bottle-7292542.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C12932A615AF80032F957 /* free-icon-message-in-a-bottle-7292542.png */; };
+		534C129B2A615CC50032F957 /* free-icon-document-list-11240429.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C128E2A615AF70032F957 /* free-icon-document-list-11240429.png */; };
+		534C129C2A615CC70032F957 /* free-icon-user-7718888.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C12902A615AF80032F957 /* free-icon-user-7718888.png */; };
+		53605FBA2AC4408B007F09B2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53605FB92AC4408B007F09B2 /* TabBarController.swift */; };
+		53605FBC2AC44219007F09B2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53605FBB2AC44219007F09B2 /* TabBar.storyboard */; };
+		53605FBE2AC44EC7007F09B2 /* free-icon-map-423354.png in Resources */ = {isa = PBXBuildFile; fileRef = 53605FBD2AC44EC7007F09B2 /* free-icon-map-423354.png */; };
+		53605FC02AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png in Resources */ = {isa = PBXBuildFile; fileRef = 53605FBF2AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png */; };
+		53605FC22AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png in Resources */ = {isa = PBXBuildFile; fileRef = 53605FC12AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png */; };
+		537312922A5D8DBB005DF023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312912A5D8DBB005DF023 /* AppDelegate.swift */; };
+		537312942A5D8DBB005DF023 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312932A5D8DBB005DF023 /* SceneDelegate.swift */; };
+		5373129C2A5D8DBB005DF023 /* LostItemApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5373129A2A5D8DBB005DF023 /* LostItemApp.xcdatamodeld */; };
+		5373129E2A5D8DBE005DF023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5373129D2A5D8DBE005DF023 /* Assets.xcassets */; };
+		537312C72A5D8E78005DF023 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312C62A5D8E78005DF023 /* LoginViewController.swift */; };
+		537312D72A5DB1B6005DF023 /* KakaoAuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312D62A5DB1B6005DF023 /* KakaoAuthVM.swift */; };
+		53A1AA6E2A61A00C004A1295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A1AA6D2A61A00C004A1295 /* Main.storyboard */; };
+		53A1AA702A61A021004A1295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A1AA6F2A61A021004A1295 /* LaunchScreen.storyboard */; };
+		53A1AB142A61AB76004A1295 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1AB132A61AB76004A1295 /* SystemConfiguration.framework */; };
+		53A1AB162A61AB7F004A1295 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1AB152A61AB7E004A1295 /* CoreLocation.framework */; };
+		53A1AB182A61AB85004A1295 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1AB172A61AB85004A1295 /* QuartzCore.framework */; };
+		53A1AB1A2A61AB92004A1295 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1AB192A61AB8E004A1295 /* libc++.tbd */; };
+		53A1AB1C2A61AB9E004A1295 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1AB1B2A61AB9A004A1295 /* libxml2.tbd */; };
+		53A1AB1E2A61ABAA004A1295 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1AB1D2A61ABA6004A1295 /* libsqlite3.tbd */; };
+		53A237F22A99DE7B0037AFA1 /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A237F12A99DE7B0037AFA1 /* RegisterTableViewCell.swift */; };
+		53A237F42A99E0640037AFA1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A237F32A99E0640037AFA1 /* RegisterViewController.swift */; };
+		53A237F62A99E8830037AFA1 /* RegisterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A237F52A99E8830037AFA1 /* RegisterInfoViewController.swift */; };
+		53A2F5B62AB9C76D009B97AD /* free-icon-profile-7310896.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5B52AB9C76C009B97AD /* free-icon-profile-7310896.png */; };
+		53A2F5BA2AB9C779009B97AD /* free-icon-message-520648.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5B92AB9C779009B97AD /* free-icon-message-520648.png */; };
+		53A2F5BC2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5BB2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png */; };
+		53A2F5BE2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5BD2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png */; };
+		53A2F5C02ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5BF2ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png */; };
+		53A2F5C22ABC6706009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5C12ABC6705009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png */; };
+		53A2F5C42ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5C32ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png */; };
+		53A2F5C82ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5C72ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png */; };
+		53AB63F92AAD80EC00795B8C /* MapMarkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB63F82AAD80EC00795B8C /* MapMarkerViewController.swift */; };
+		53AB63FB2AAD810A00795B8C /* MapMarkerRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53AB63FA2AAD810A00795B8C /* MapMarkerRegister.storyboard */; };
+		53AC716A2A6AC119005CF4A2 /* MyPagecontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AC71692A6AC119005CF4A2 /* MyPagecontroller.swift */; };
+		53B09FF92A8E030700DEA70E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B09FF82A8E030700DEA70E /* ChatViewController.swift */; };
+		53B09FFB2A8E032300DEA70E /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B09FFA2A8E032300DEA70E /* Chat.storyboard */; };
+		53B09FFD2A8E1F0D00DEA70E /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B09FFC2A8E1F0D00DEA70E /* ChatTableCell.swift */; };
+		53C587652A6AC18A0024E203 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C587642A6AC18A0024E203 /* MyPage.storyboard */; };
+		53CF4ECF2A82366C00BCE475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF4ECE2A82366C00BCE475 /* ViewController.swift */; };
+		53CF4EDC2A8250B800BCE475 /* MyprofileModifycontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF4EDA2A8250B800BCE475 /* MyprofileModifycontroller.swift */; };
+		53CF4EDF2A8253E700BCE475 /* MyprofileModify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CF4EDE2A8253E700BCE475 /* MyprofileModify.storyboard */; };
+		53F415D22A95B2F8005AB96D /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F415D12A95B2F8005AB96D /* ChatRoomViewController.swift */; };
+		53F415D62A95BC22005AB96D /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F415D52A95BC22005AB96D /* ChatRoomTableViewCell.swift */; };
+		53F415DE2A95EB8A005AB96D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F415DD2A95EB8A005AB96D /* Register.storyboard */; };
+		57BD3A31A8840269569F1C6F /* Pods_LostItemAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61125168A952755FE6F65189 /* Pods_LostItemAppTests.framework */; };
+		B69A494813C05861FB5C0000 /* Pods_LostItemApp_LostItemAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309727993C2F454850980CCD /* Pods_LostItemApp_LostItemAppUITests.framework */; };
+		BAA5557144E7CF5F15E59C66 /* Pods_LostItemApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF083D44900B1EE01E3A9997 /* Pods_LostItemApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		537312A82A5D8DBE005DF023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 537312862A5D8DBB005DF023 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5373128D2A5D8DBB005DF023;
+			remoteInfo = LostItemApp;
+		};
+		537312B22A5D8DBE005DF023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 537312862A5D8DBB005DF023 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5373128D2A5D8DBB005DF023;
+			remoteInfo = LostItemApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53F89EAA2A77F31300991512 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2C318E5A7221020B580E8B95 /* Pods-LostItemApp-LostItemAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LostItemApp-LostItemAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-LostItemApp-LostItemAppUITests/Pods-LostItemApp-LostItemAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		309727993C2F454850980CCD /* Pods_LostItemApp_LostItemAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LostItemApp_LostItemAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		531A8B0B2A77FC1A009ABE30 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		53220BBA2ABEF1350011A099 /* free-icon-backward-318339.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-backward-318339.png"; path = "../../../../../../Downloads/free-icon-backward-318339.png"; sourceTree = "<group>"; };
+		5324A50B2AA0B8BB008B7A6E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		5349C7032A7918E300C790CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5349C7232A7A750B00C790CE /* btn_google_signin_dark_focus_web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_google_signin_dark_focus_web@2x.png"; path = "../../../../../../Downloads/google_signin_buttons/web/2x/btn_google_signin_dark_focus_web@2x.png"; sourceTree = "<group>"; };
+		5349C72A2A7D209E00C790CE /* free-icon-back-arrow-594830.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-back-arrow-594830.png"; path = "../../../../../../Downloads/free-icon-back-arrow-594830.png"; sourceTree = "<group>"; };
+		534C128E2A615AF70032F957 /* free-icon-document-list-11240429.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-icon-document-list-11240429.png"; sourceTree = "<group>"; };
+		534C128F2A615AF70032F957 /* lost item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lost item.png"; sourceTree = "<group>"; };
+		534C12902A615AF80032F957 /* free-icon-user-7718888.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-icon-user-7718888.png"; sourceTree = "<group>"; };
+		534C12912A615AF80032F957 /* kakao_login_medium_wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_login_medium_wide.png; sourceTree = "<group>"; };
+		534C12922A615AF80032F957 /* free-icon-lost-items-3372390-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-icon-lost-items-3372390-3.png"; sourceTree = "<group>"; };
+		534C12932A615AF80032F957 /* free-icon-message-in-a-bottle-7292542.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-icon-message-in-a-bottle-7292542.png"; sourceTree = "<group>"; };
+		534C129D2A6168350032F957 /* LostItemApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LostItemApp.entitlements; sourceTree = "<group>"; };
+		53605FB92AC4408B007F09B2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		53605FBB2AC44219007F09B2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		53605FBD2AC44EC7007F09B2 /* free-icon-map-423354.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-map-423354.png"; path = "../../../../../../Downloads/free-icon-map-423354.png"; sourceTree = "<group>"; };
+		53605FBF2AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-chat-bot-9384045.png"; path = "../../../../../../Downloads/free-icon-chat-bot-9384045.png"; sourceTree = "<group>"; };
+		53605FC12AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-27-21-45-31.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-27-21-45-31.png"; sourceTree = "<group>"; };
+		536D903E4D25738494CCFF4E /* Pods-LostItemAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LostItemAppTests.debug.xcconfig"; path = "Target Support Files/Pods-LostItemAppTests/Pods-LostItemAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		537312912A5D8DBB005DF023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		537312932A5D8DBB005DF023 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5373129B2A5D8DBB005DF023 /* LostItemApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LostItemApp.xcdatamodel; sourceTree = "<group>"; };
+		5373129D2A5D8DBE005DF023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		537312A22A5D8DBE005DF023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		537312C62A5D8E78005DF023 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		537312D52A5DAE38005DF023 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		537312D62A5DB1B6005DF023 /* KakaoAuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthVM.swift; sourceTree = "<group>"; };
+		53A1AA6D2A61A00C004A1295 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		53A1AA6F2A61A021004A1295 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53A1AB132A61AB76004A1295 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		53A1AB152A61AB7E004A1295 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		53A1AB172A61AB85004A1295 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		53A1AB192A61AB8E004A1295 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		53A1AB1B2A61AB9A004A1295 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		53A1AB1D2A61ABA6004A1295 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		53A237F12A99DE7B0037AFA1 /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
+		53A237F32A99E0640037AFA1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		53A237F52A99E8830037AFA1 /* RegisterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoViewController.swift; sourceTree = "<group>"; };
+		53A2F5B52AB9C76C009B97AD /* free-icon-profile-7310896.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-profile-7310896.png"; path = "../../../../../../Downloads/free-icon-profile-7310896.png"; sourceTree = "<group>"; };
+		53A2F5B92AB9C779009B97AD /* free-icon-message-520648.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-message-520648.png"; path = "../../../../../../Downloads/free-icon-message-520648.png"; sourceTree = "<group>"; };
+		53A2F5BB2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-lost-and-found-2669415.png"; path = "../../../../../../Downloads/free-icon-lost-and-found-2669415.png"; sourceTree = "<group>"; };
+		53A2F5BD2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-lost-items-1436258.png"; path = "../../../../../../Downloads/free-icon-lost-items-1436258.png"; sourceTree = "<group>"; };
+		53A2F5BF2ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-21-20-46-01.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-21-20-46-01.png"; sourceTree = "<group>"; };
+		53A2F5C12ABC6705009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-21-20-56-36.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-21-20-56-36.png"; sourceTree = "<group>"; };
+		53A2F5C32ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-21-20-56-40.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-21-20-56-40.png"; sourceTree = "<group>"; };
+		53A2F5C72ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-21-23-24-51.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-21-23-24-51.png"; sourceTree = "<group>"; };
+		53A6BA8F2A61AF3500DBC192 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		53AB63F82AAD80EC00795B8C /* MapMarkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerViewController.swift; sourceTree = "<group>"; };
+		53AB63FA2AAD810A00795B8C /* MapMarkerRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapMarkerRegister.storyboard; sourceTree = "<group>"; };
+		53AC71692A6AC119005CF4A2 /* MyPagecontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPagecontroller.swift; sourceTree = "<group>"; };
+		53B09FF12A8A374B00DEA70E /* LostItemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostItemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B09FF22A8A374B00DEA70E /* LostItemAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostItemAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B09FF32A8A374B00DEA70E /* LostItemAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostItemAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B09FF82A8E030700DEA70E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		53B09FFA2A8E032300DEA70E /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		53B09FFC2A8E1F0D00DEA70E /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
+		53C587642A6AC18A0024E203 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		53CF4ECE2A82366C00BCE475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53CF4EDA2A8250B800BCE475 /* MyprofileModifycontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileModifycontroller.swift; sourceTree = "<group>"; };
+		53CF4EDE2A8253E700BCE475 /* MyprofileModify.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyprofileModify.storyboard; sourceTree = "<group>"; };
+		53F415D12A95B2F8005AB96D /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		53F415D52A95BC22005AB96D /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
+		53F415DD2A95EB8A005AB96D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		61125168A952755FE6F65189 /* Pods_LostItemAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LostItemAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B9661D58D2F120930F3308 /* Pods-LostItemApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LostItemApp.release.xcconfig"; path = "Target Support Files/Pods-LostItemApp/Pods-LostItemApp.release.xcconfig"; sourceTree = "<group>"; };
+		7A1266CC75E8CE77D90483B5 /* Pods-LostItemApp-LostItemAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LostItemApp-LostItemAppUITests.release.xcconfig"; path = "Target Support Files/Pods-LostItemApp-LostItemAppUITests/Pods-LostItemApp-LostItemAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8D484AD98E8119C992EDAF45 /* Pods-LostItemAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LostItemAppTests.release.xcconfig"; path = "Target Support Files/Pods-LostItemAppTests/Pods-LostItemAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF083D44900B1EE01E3A9997 /* Pods_LostItemApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LostItemApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC9D3F982EF8CCFDB856FA2E /* Pods-LostItemApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LostItemApp.debug.xcconfig"; path = "Target Support Files/Pods-LostItemApp/Pods-LostItemApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5373128B2A5D8DBB005DF023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5340DF852A72887F004E81A6 /* KakaoSDK in Frameworks */,
+				53A1AB142A61AB76004A1295 /* SystemConfiguration.framework in Frameworks */,
+				53A1AB1E2A61ABAA004A1295 /* libsqlite3.tbd in Frameworks */,
+				5340DF892A72887F004E81A6 /* KakaoSDKCommon in Frameworks */,
+				53A1AB182A61AB85004A1295 /* QuartzCore.framework in Frameworks */,
+				5340DF872A72887F004E81A6 /* KakaoSDKAuth in Frameworks */,
+				5340DF8B2A72887F004E81A6 /* KakaoSDKUser in Frameworks */,
+				53A1AB1A2A61AB92004A1295 /* libc++.tbd in Frameworks */,
+				53A1AB162A61AB7F004A1295 /* CoreLocation.framework in Frameworks */,
+				53A1AB1C2A61AB9E004A1295 /* libxml2.tbd in Frameworks */,
+				531A8B0C2A77FC1A009ABE30 /* OpenGLES.framework in Frameworks */,
+				BAA5557144E7CF5F15E59C66 /* Pods_LostItemApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537312A42A5D8DBE005DF023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57BD3A31A8840269569F1C6F /* Pods_LostItemAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537312AE2A5D8DBE005DF023 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69A494813C05861FB5C0000 /* Pods_LostItemApp_LostItemAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EEBDAB5783DF67DEC553C8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC9D3F982EF8CCFDB856FA2E /* Pods-LostItemApp.debug.xcconfig */,
+				65B9661D58D2F120930F3308 /* Pods-LostItemApp.release.xcconfig */,
+				2C318E5A7221020B580E8B95 /* Pods-LostItemApp-LostItemAppUITests.debug.xcconfig */,
+				7A1266CC75E8CE77D90483B5 /* Pods-LostItemApp-LostItemAppUITests.release.xcconfig */,
+				536D903E4D25738494CCFF4E /* Pods-LostItemAppTests.debug.xcconfig */,
+				8D484AD98E8119C992EDAF45 /* Pods-LostItemAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		534C12972A615CAA0032F957 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				53A2F5B52AB9C76C009B97AD /* free-icon-profile-7310896.png */,
+				53605FC12AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png */,
+				534C12912A615AF80032F957 /* kakao_login_medium_wide.png */,
+				534C128F2A615AF70032F957 /* lost item.png */,
+				534C12922A615AF80032F957 /* free-icon-lost-items-3372390-3.png */,
+				53605FBF2AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png */,
+				53605FBD2AC44EC7007F09B2 /* free-icon-map-423354.png */,
+				5349C7232A7A750B00C790CE /* btn_google_signin_dark_focus_web@2x.png */,
+				53220BBA2ABEF1350011A099 /* free-icon-backward-318339.png */,
+				53A2F5C72ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png */,
+				53A2F5C32ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png */,
+				53A2F5C12ABC6705009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png */,
+				53A2F5BF2ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png */,
+				5349C72A2A7D209E00C790CE /* free-icon-back-arrow-594830.png */,
+				53A2F5B92AB9C779009B97AD /* free-icon-message-520648.png */,
+				53A2F5BD2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png */,
+				53A2F5BB2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png */,
+				534C12932A615AF80032F957 /* free-icon-message-in-a-bottle-7292542.png */,
+				534C128E2A615AF70032F957 /* free-icon-document-list-11240429.png */,
+				534C12902A615AF80032F957 /* free-icon-user-7718888.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		537312852A5D8DBB005DF023 = {
+			isa = PBXGroup;
+			children = (
+				537312902A5D8DBB005DF023 /* LostItemApp */,
+				53A1AB102A61AB6C004A1295 /* Frameworks */,
+				4EEBDAB5783DF67DEC553C8C /* Pods */,
+				53B09FF12A8A374B00DEA70E /* LostItemApp.app */,
+				53B09FF22A8A374B00DEA70E /* LostItemAppTests.xctest */,
+				53B09FF32A8A374B00DEA70E /* LostItemAppUITests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		537312902A5D8DBB005DF023 /* LostItemApp */ = {
+			isa = PBXGroup;
+			children = (
+				534C129D2A6168350032F957 /* LostItemApp.entitlements */,
+				5349C7032A7918E300C790CE /* GoogleService-Info.plist */,
+				537312912A5D8DBB005DF023 /* AppDelegate.swift */,
+				537312932A5D8DBB005DF023 /* SceneDelegate.swift */,
+				53605FB92AC4408B007F09B2 /* TabBarController.swift */,
+				53CF4ECE2A82366C00BCE475 /* ViewController.swift */,
+				537312C62A5D8E78005DF023 /* LoginViewController.swift */,
+				53AC71692A6AC119005CF4A2 /* MyPagecontroller.swift */,
+				53CF4EDA2A8250B800BCE475 /* MyprofileModifycontroller.swift */,
+				53B09FF82A8E030700DEA70E /* ChatViewController.swift */,
+				53B09FFC2A8E1F0D00DEA70E /* ChatTableCell.swift */,
+				53F415D12A95B2F8005AB96D /* ChatRoomViewController.swift */,
+				53F415D52A95BC22005AB96D /* ChatRoomTableViewCell.swift */,
+				53A237F52A99E8830037AFA1 /* RegisterInfoViewController.swift */,
+				53AB63F82AAD80EC00795B8C /* MapMarkerViewController.swift */,
+				53A237F32A99E0640037AFA1 /* RegisterViewController.swift */,
+				53A237F12A99DE7B0037AFA1 /* RegisterTableViewCell.swift */,
+				5324A50B2AA0B8BB008B7A6E /* PostViewController.swift */,
+				537312D62A5DB1B6005DF023 /* KakaoAuthVM.swift */,
+				5373129D2A5D8DBE005DF023 /* Assets.xcassets */,
+				53A1AA6D2A61A00C004A1295 /* Main.storyboard */,
+				53605FBB2AC44219007F09B2 /* TabBar.storyboard */,
+				53C587642A6AC18A0024E203 /* MyPage.storyboard */,
+				53CF4EDE2A8253E700BCE475 /* MyprofileModify.storyboard */,
+				53B09FFA2A8E032300DEA70E /* Chat.storyboard */,
+				53F415DD2A95EB8A005AB96D /* Register.storyboard */,
+				53AB63FA2AAD810A00795B8C /* MapMarkerRegister.storyboard */,
+				53A1AA6F2A61A021004A1295 /* LaunchScreen.storyboard */,
+				537312A22A5D8DBE005DF023 /* Info.plist */,
+				5373129A2A5D8DBB005DF023 /* LostItemApp.xcdatamodeld */,
+				537312D52A5DAE38005DF023 /* Config.xcconfig */,
+				534C12972A615CAA0032F957 /* Images */,
+			);
+			path = LostItemApp;
+			sourceTree = "<group>";
+		};
+		53A1AB102A61AB6C004A1295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				531A8B0B2A77FC1A009ABE30 /* OpenGLES.framework */,
+				53A1AB1D2A61ABA6004A1295 /* libsqlite3.tbd */,
+				53A1AB1B2A61AB9A004A1295 /* libxml2.tbd */,
+				53A1AB192A61AB8E004A1295 /* libc++.tbd */,
+				53A1AB172A61AB85004A1295 /* QuartzCore.framework */,
+				53A1AB152A61AB7E004A1295 /* CoreLocation.framework */,
+				53A6BA8F2A61AF3500DBC192 /* DaumMap.framework */,
+				53A1AB132A61AB76004A1295 /* SystemConfiguration.framework */,
+				DF083D44900B1EE01E3A9997 /* Pods_LostItemApp.framework */,
+				309727993C2F454850980CCD /* Pods_LostItemApp_LostItemAppUITests.framework */,
+				61125168A952755FE6F65189 /* Pods_LostItemAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5373128D2A5D8DBB005DF023 /* LostItemApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 537312BB2A5D8DBE005DF023 /* Build configuration list for PBXNativeTarget "LostItemApp" */;
+			buildPhases = (
+				3BC9F6C789BE165A93E6D342 /* [CP] Check Pods Manifest.lock */,
+				5373128A2A5D8DBB005DF023 /* Sources */,
+				5373128B2A5D8DBB005DF023 /* Frameworks */,
+				5373128C2A5D8DBB005DF023 /* Resources */,
+				53F89EAA2A77F31300991512 /* Embed Frameworks */,
+				55F9168195140662F137DA3D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LostItemApp;
+			packageProductDependencies = (
+				5340DF842A72887F004E81A6 /* KakaoSDK */,
+				5340DF862A72887F004E81A6 /* KakaoSDKAuth */,
+				5340DF882A72887F004E81A6 /* KakaoSDKCommon */,
+				5340DF8A2A72887F004E81A6 /* KakaoSDKUser */,
+			);
+			productName = LostItemApp;
+			productReference = 53B09FF12A8A374B00DEA70E /* LostItemApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		537312A62A5D8DBE005DF023 /* LostItemAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 537312BE2A5D8DBE005DF023 /* Build configuration list for PBXNativeTarget "LostItemAppTests" */;
+			buildPhases = (
+				CA3410B78E494EDB7B78BA88 /* [CP] Check Pods Manifest.lock */,
+				537312A32A5D8DBE005DF023 /* Sources */,
+				537312A42A5D8DBE005DF023 /* Frameworks */,
+				537312A52A5D8DBE005DF023 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				537312A92A5D8DBE005DF023 /* PBXTargetDependency */,
+			);
+			name = LostItemAppTests;
+			productName = LostItemAppTests;
+			productReference = 53B09FF22A8A374B00DEA70E /* LostItemAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		537312B02A5D8DBE005DF023 /* LostItemAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 537312C12A5D8DBE005DF023 /* Build configuration list for PBXNativeTarget "LostItemAppUITests" */;
+			buildPhases = (
+				08B75F6E0CB4697CBE18FD1A /* [CP] Check Pods Manifest.lock */,
+				537312AD2A5D8DBE005DF023 /* Sources */,
+				537312AE2A5D8DBE005DF023 /* Frameworks */,
+				537312AF2A5D8DBE005DF023 /* Resources */,
+				FC7B7F0A42005EC28AD24082 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				537312B32A5D8DBE005DF023 /* PBXTargetDependency */,
+			);
+			name = LostItemAppUITests;
+			productName = LostItemAppUITests;
+			productReference = 53B09FF32A8A374B00DEA70E /* LostItemAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		537312862A5D8DBB005DF023 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					5373128D2A5D8DBB005DF023 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					537312A62A5D8DBE005DF023 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 5373128D2A5D8DBB005DF023;
+					};
+					537312B02A5D8DBE005DF023 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 5373128D2A5D8DBB005DF023;
+					};
+				};
+			};
+			buildConfigurationList = 537312892A5D8DBB005DF023 /* Build configuration list for PBXProject "LostItemApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 537312852A5D8DBB005DF023;
+			packageReferences = (
+				5340DF832A72887F004E81A6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
+			productRefGroup = 537312852A5D8DBB005DF023;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5373128D2A5D8DBB005DF023 /* LostItemApp */,
+				537312A62A5D8DBE005DF023 /* LostItemAppTests */,
+				537312B02A5D8DBE005DF023 /* LostItemAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5373128C2A5D8DBB005DF023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A2F5BA2AB9C779009B97AD /* free-icon-message-520648.png in Resources */,
+				53B09FFB2A8E032300DEA70E /* Chat.storyboard in Resources */,
+				53A2F5BC2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png in Resources */,
+				53A1AA702A61A021004A1295 /* LaunchScreen.storyboard in Resources */,
+				53605FC02AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png in Resources */,
+				53220BBB2ABEF1360011A099 /* free-icon-backward-318339.png in Resources */,
+				534C129C2A615CC70032F957 /* free-icon-user-7718888.png in Resources */,
+				53605FBE2AC44EC7007F09B2 /* free-icon-map-423354.png in Resources */,
+				53A2F5C42ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png in Resources */,
+				53605FC22AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png in Resources */,
+				534C129B2A615CC50032F957 /* free-icon-document-list-11240429.png in Resources */,
+				53F415DE2A95EB8A005AB96D /* Register.storyboard in Resources */,
+				5349C7042A7918E300C790CE /* GoogleService-Info.plist in Resources */,
+				534C12952A615C930032F957 /* kakao_login_medium_wide.png in Resources */,
+				5349C7242A7A750C00C790CE /* btn_google_signin_dark_focus_web@2x.png in Resources */,
+				53605FBC2AC44219007F09B2 /* TabBar.storyboard in Resources */,
+				5373129E2A5D8DBE005DF023 /* Assets.xcassets in Resources */,
+				534C12992A615CC00032F957 /* free-icon-lost-items-3372390-3.png in Resources */,
+				53A2F5B62AB9C76D009B97AD /* free-icon-profile-7310896.png in Resources */,
+				53A2F5C02ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png in Resources */,
+				53CF4EDF2A8253E700BCE475 /* MyprofileModify.storyboard in Resources */,
+				53A2F5C22ABC6706009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png in Resources */,
+				53C587652A6AC18A0024E203 /* MyPage.storyboard in Resources */,
+				53AB63FB2AAD810A00795B8C /* MapMarkerRegister.storyboard in Resources */,
+				5349C72B2A7D209E00C790CE /* free-icon-back-arrow-594830.png in Resources */,
+				53A2F5C82ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png in Resources */,
+				53A1AA6E2A61A00C004A1295 /* Main.storyboard in Resources */,
+				53A2F5BE2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png in Resources */,
+				534C12982A615CBC0032F957 /* lost item.png in Resources */,
+				534C129A2A615CC20032F957 /* free-icon-message-in-a-bottle-7292542.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537312A52A5D8DBE005DF023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537312AF2A5D8DBE005DF023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08B75F6E0CB4697CBE18FD1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LostItemApp-LostItemAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BC9F6C789BE165A93E6D342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LostItemApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55F9168195140662F137DA3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LostItemApp/Pods-LostItemApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LostItemApp/Pods-LostItemApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LostItemApp/Pods-LostItemApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA3410B78E494EDB7B78BA88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LostItemAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7B7F0A42005EC28AD24082 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LostItemApp-LostItemAppUITests/Pods-LostItemApp-LostItemAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LostItemApp-LostItemAppUITests/Pods-LostItemApp-LostItemAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LostItemApp-LostItemAppUITests/Pods-LostItemApp-LostItemAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5373128A2A5D8DBB005DF023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53AB63F92AAD80EC00795B8C /* MapMarkerViewController.swift in Sources */,
+				5324A50C2AA0B8BB008B7A6E /* PostViewController.swift in Sources */,
+				53AC716A2A6AC119005CF4A2 /* MyPagecontroller.swift in Sources */,
+				53605FBA2AC4408B007F09B2 /* TabBarController.swift in Sources */,
+				537312922A5D8DBB005DF023 /* AppDelegate.swift in Sources */,
+				5373129C2A5D8DBB005DF023 /* LostItemApp.xcdatamodeld in Sources */,
+				537312C72A5D8E78005DF023 /* LoginViewController.swift in Sources */,
+				53B09FFD2A8E1F0D00DEA70E /* ChatTableCell.swift in Sources */,
+				537312D72A5DB1B6005DF023 /* KakaoAuthVM.swift in Sources */,
+				53A237F62A99E8830037AFA1 /* RegisterInfoViewController.swift in Sources */,
+				53A237F42A99E0640037AFA1 /* RegisterViewController.swift in Sources */,
+				53CF4EDC2A8250B800BCE475 /* MyprofileModifycontroller.swift in Sources */,
+				537312942A5D8DBB005DF023 /* SceneDelegate.swift in Sources */,
+				53B09FF92A8E030700DEA70E /* ChatViewController.swift in Sources */,
+				53CF4ECF2A82366C00BCE475 /* ViewController.swift in Sources */,
+				53A237F22A99DE7B0037AFA1 /* RegisterTableViewCell.swift in Sources */,
+				53F415D62A95BC22005AB96D /* ChatRoomTableViewCell.swift in Sources */,
+				53F415D22A95B2F8005AB96D /* ChatRoomViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537312A32A5D8DBE005DF023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537312AD2A5D8DBE005DF023 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		537312A92A5D8DBE005DF023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5373128D2A5D8DBB005DF023 /* LostItemApp */;
+			targetProxy = 537312A82A5D8DBE005DF023 /* PBXContainerItemProxy */;
+		};
+		537312B32A5D8DBE005DF023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5373128D2A5D8DBB005DF023 /* LostItemApp */;
+			targetProxy = 537312B22A5D8DBE005DF023 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		537312B92A5D8DBE005DF023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kimjeonghyeon/Documents/GitHub/Programmers/LostItemApp/LostItemApp/Kakao-Map-Bridge-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		537312BA2A5D8DBE005DF023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kimjeonghyeon/Documents/GitHub/Programmers/LostItemApp/LostItemApp/Kakao-Map-Bridge-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		537312BC2A5D8DBE005DF023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC9D3F982EF8CCFDB856FA2E /* Pods-LostItemApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = LostItemApp/LostItemApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CABase.h:16:10",
+					could,
+					not,
+					build,
+					module,
+					"'CoreFoundation'",
+				);
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LostItemApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LostItem.LostItemApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kimjeonghyeon/Documents/GitHub/Programmers/LostItemApp/LostItemApp/Kakao-Map-Bridge-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		537312BD2A5D8DBE005DF023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65B9661D58D2F120930F3308 /* Pods-LostItemApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = LostItemApp/LostItemApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CABase.h:16:10",
+					could,
+					not,
+					build,
+					module,
+					"'CoreFoundation'",
+				);
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LostItemApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LostItem.LostItemApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kimjeonghyeon/Documents/GitHub/Programmers/LostItemApp/LostItemApp/Kakao-Map-Bridge-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		537312BF2A5D8DBE005DF023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 537312D52A5DAE38005DF023 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LostItem.LostItemAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LostItemApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LostItemApp";
+			};
+			name = Debug;
+		};
+		537312C02A5D8DBE005DF023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 537312D52A5DAE38005DF023 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LostItem.LostItemAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LostItemApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LostItemApp";
+			};
+			name = Release;
+		};
+		537312C22A5D8DBE005DF023 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 537312D52A5DAE38005DF023 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LostItem.LostItemAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LostItemApp;
+			};
+			name = Debug;
+		};
+		537312C32A5D8DBE005DF023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 537312D52A5DAE38005DF023 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LostItem.LostItemAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LostItemApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		537312892A5D8DBB005DF023 /* Build configuration list for PBXProject "LostItemApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				537312B92A5D8DBE005DF023 /* Debug */,
+				537312BA2A5D8DBE005DF023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		537312BB2A5D8DBE005DF023 /* Build configuration list for PBXNativeTarget "LostItemApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				537312BC2A5D8DBE005DF023 /* Debug */,
+				537312BD2A5D8DBE005DF023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		537312BE2A5D8DBE005DF023 /* Build configuration list for PBXNativeTarget "LostItemAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				537312BF2A5D8DBE005DF023 /* Debug */,
+				537312C02A5D8DBE005DF023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		537312C12A5D8DBE005DF023 /* Build configuration list for PBXNativeTarget "LostItemAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				537312C22A5D8DBE005DF023 /* Debug */,
+				537312C32A5D8DBE005DF023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5340DF832A72887F004E81A6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5340DF842A72887F004E81A6 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5340DF832A72887F004E81A6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		5340DF862A72887F004E81A6 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5340DF832A72887F004E81A6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		5340DF882A72887F004E81A6 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5340DF832A72887F004E81A6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		5340DF8A2A72887F004E81A6 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5340DF832A72887F004E81A6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5373129A2A5D8DBB005DF023 /* LostItemApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5373129B2A5D8DBB005DF023 /* LostItemApp.xcdatamodel */,
+			);
+			currentVersion = 5373129B2A5D8DBB005DF023 /* LostItemApp.xcdatamodel */;
+			path = LostItemApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 537312862A5D8DBB005DF023 /* Project object */;
+}

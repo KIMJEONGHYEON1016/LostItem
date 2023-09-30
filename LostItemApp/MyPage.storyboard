@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MY-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MyPagecontroller" id="Y6W-OH-hqX" customClass="MyPagecontroller" customModule="LostItemApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="free-icon-user-7718888.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZlR-Jg-0Xx">
+                                <rect key="frame" x="146.66666666666666" y="141" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="E1o-dV-DGG"/>
+                                    <constraint firstAttribute="width" constant="100" id="hxh-ra-b5i"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="마이페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pG7-9M-P1o">
+                                <rect key="frame" x="159.66666666666666" y="69" width="73.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0T-kr-F3A">
+                                <rect key="frame" x="300.66666666666669" y="79" width="87.333333333333314" height="35"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="정보 수정"/>
+                                <connections>
+                                    <action selector="InformationModify:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZLp-T1-pZ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFf-sU-6rf">
+                                <rect key="frame" x="8" y="351" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="내 글 목록"/>
+                                <connections>
+                                    <action selector="MyPostBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oq-Jp-eir"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fe-lL-Acl">
+                                <rect key="frame" x="174" y="249" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7fe-lL-Acl" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3LI-SY-uoF"/>
+                            <constraint firstItem="ZlR-Jg-0Xx" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="80w-pN-lZ4"/>
+                            <constraint firstItem="pG7-9M-P1o" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="S6F-hI-I7g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="J0T-kr-F3A" secondAttribute="trailing" constant="5" id="XTK-Oi-BN1"/>
+                            <constraint firstItem="J0T-kr-F3A" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="a5G-Kp-nyI"/>
+                            <constraint firstItem="ZlR-Jg-0Xx" firstAttribute="top" secondItem="pG7-9M-P1o" secondAttribute="bottom" constant="51" id="c6Z-7u-fnv"/>
+                            <constraint firstItem="7fe-lL-Acl" firstAttribute="top" secondItem="ZlR-Jg-0Xx" secondAttribute="bottom" constant="8" id="daZ-sk-rED"/>
+                            <constraint firstItem="pG7-9M-P1o" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="ynu-Lm-XhH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MY" image="free-icon-profile-7310896.png" id="xts-fN-7kc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="NickName" destination="7fe-lL-Acl" id="yJC-z8-T4N"/>
+                        <outlet property="profileimage" destination="ZlR-Jg-0Xx" id="gKn-RN-xhd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.778625954198468" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="free-icon-profile-7310896.png" width="18.75" height="18.75"/>
+        <image name="free-icon-user-7718888.png" width="384" height="384"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

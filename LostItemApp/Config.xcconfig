@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  LostItemApp
+//
+//  Created by 김정현 on 2023/07/12.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KAKAO_NATIVE_APP_KEY = f93f5fc80bab1f9b13cef7afaaf6f004
