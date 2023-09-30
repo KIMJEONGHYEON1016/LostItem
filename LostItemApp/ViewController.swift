@@ -94,7 +94,7 @@ class ViewController: UIViewController {
                             self?.present(PostViewControllerVC, animated: true)
                             PostViewControllerVC.deleteBtn.isHidden = true
                             PostViewControllerVC.ChatButton.isHidden = false
-                            let db = Firestore.firestore()
+                            let db  =  Firestore.firestore()
                             db.collection("게시글")
                                 .whereField("latitude", isEqualTo: latitude)
                                 .whereField("longitude", isEqualTo: longitude)
