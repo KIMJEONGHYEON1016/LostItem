@@ -192,6 +192,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         ChatRoomViewControllerVC.chatUser = chatUser
         ChatRoomViewControllerVC.nickName = self.nickName
         ChatRoomViewControllerVC.profileImage = self.profileImage
+        ChatRoomViewControllerVC.modalPresentationStyle = .fullScreen
         present(ChatRoomViewControllerVC, animated: true)
     }
 }

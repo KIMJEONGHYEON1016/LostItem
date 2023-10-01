@@ -27,7 +27,6 @@
 		53605FBC2AC44219007F09B2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53605FBB2AC44219007F09B2 /* TabBar.storyboard */; };
 		53605FBE2AC44EC7007F09B2 /* free-icon-map-423354.png in Resources */ = {isa = PBXBuildFile; fileRef = 53605FBD2AC44EC7007F09B2 /* free-icon-map-423354.png */; };
 		53605FC02AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png in Resources */ = {isa = PBXBuildFile; fileRef = 53605FBF2AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png */; };
-		53605FC22AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png in Resources */ = {isa = PBXBuildFile; fileRef = 53605FC12AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png */; };
 		537312922A5D8DBB005DF023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312912A5D8DBB005DF023 /* AppDelegate.swift */; };
 		537312942A5D8DBB005DF023 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312932A5D8DBB005DF023 /* SceneDelegate.swift */; };
 		5373129C2A5D8DBB005DF023 /* LostItemApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5373129A2A5D8DBB005DF023 /* LostItemApp.xcdatamodeld */; };
@@ -56,6 +55,7 @@
 		53AB63F92AAD80EC00795B8C /* MapMarkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB63F82AAD80EC00795B8C /* MapMarkerViewController.swift */; };
 		53AB63FB2AAD810A00795B8C /* MapMarkerRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53AB63FA2AAD810A00795B8C /* MapMarkerRegister.storyboard */; };
 		53AC716A2A6AC119005CF4A2 /* MyPagecontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AC71692A6AC119005CF4A2 /* MyPagecontroller.swift */; };
+		53AE400A2AC8347800DF32DC /* free-icon-lost-and-found-2669415.png in Resources */ = {isa = PBXBuildFile; fileRef = 53AE40092AC8347800DF32DC /* free-icon-lost-and-found-2669415.png */; };
 		53B09FF92A8E030700DEA70E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B09FF82A8E030700DEA70E /* ChatViewController.swift */; };
 		53B09FFB2A8E032300DEA70E /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53B09FFA2A8E032300DEA70E /* Chat.storyboard */; };
 		53B09FFD2A8E1F0D00DEA70E /* ChatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B09FFC2A8E1F0D00DEA70E /* ChatTableCell.swift */; };
@@ -121,7 +121,6 @@
 		53605FBB2AC44219007F09B2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		53605FBD2AC44EC7007F09B2 /* free-icon-map-423354.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-map-423354.png"; path = "../../../../../../Downloads/free-icon-map-423354.png"; sourceTree = "<group>"; };
 		53605FBF2AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-chat-bot-9384045.png"; path = "../../../../../../Downloads/free-icon-chat-bot-9384045.png"; sourceTree = "<group>"; };
-		53605FC12AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-27-21-45-31.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-27-21-45-31.png"; sourceTree = "<group>"; };
 		536D903E4D25738494CCFF4E /* Pods-LostItemAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LostItemAppTests.debug.xcconfig"; path = "Target Support Files/Pods-LostItemAppTests/Pods-LostItemAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		537312912A5D8DBB005DF023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537312932A5D8DBB005DF023 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,9 +153,10 @@
 		53AB63F82AAD80EC00795B8C /* MapMarkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerViewController.swift; sourceTree = "<group>"; };
 		53AB63FA2AAD810A00795B8C /* MapMarkerRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapMarkerRegister.storyboard; sourceTree = "<group>"; };
 		53AC71692A6AC119005CF4A2 /* MyPagecontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPagecontroller.swift; sourceTree = "<group>"; };
-		53B09FF12A8A374B00DEA70E /* LostItemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostItemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		53B09FF22A8A374B00DEA70E /* LostItemAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostItemAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53B09FF32A8A374B00DEA70E /* LostItemAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostItemAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53AE40092AC8347800DF32DC /* free-icon-lost-and-found-2669415.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-lost-and-found-2669415.png"; path = "../../../../../../Downloads/free-icon-lost-and-found-2669415.png"; sourceTree = "<group>"; };
+		53B09FF12A8A374B00DEA70E /* LostItemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = LostItemApp.app; path = "/Users/kimjeonghyeon/Documents/project/01.lostItem/source/build/Debug-iphoneos/LostItemApp.app"; sourceTree = "<absolute>"; };
+		53B09FF22A8A374B00DEA70E /* LostItemAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LostItemAppTests.xctest; path = "/Users/kimjeonghyeon/Documents/project/01.lostItem/source/build/Debug-iphoneos/LostItemAppTests.xctest"; sourceTree = "<absolute>"; };
+		53B09FF32A8A374B00DEA70E /* LostItemAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = LostItemAppUITests.xctest; path = "/Users/kimjeonghyeon/Documents/project/01.lostItem/source/build/Debug-iphoneos/LostItemAppUITests.xctest"; sourceTree = "<absolute>"; };
 		53B09FF82A8E030700DEA70E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		53B09FFA2A8E032300DEA70E /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		53B09FFC2A8E1F0D00DEA70E /* ChatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableCell.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				53A2F5B52AB9C76C009B97AD /* free-icon-profile-7310896.png */,
-				53605FC12AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png */,
+				53AE40092AC8347800DF32DC /* free-icon-lost-and-found-2669415.png */,
 				534C12912A615AF80032F957 /* kakao_login_medium_wide.png */,
 				534C128F2A615AF70032F957 /* lost item.png */,
 				534C12922A615AF80032F957 /* free-icon-lost-items-3372390-3.png */,
@@ -260,9 +260,6 @@
 				537312902A5D8DBB005DF023 /* LostItemApp */,
 				53A1AB102A61AB6C004A1295 /* Frameworks */,
 				4EEBDAB5783DF67DEC553C8C /* Pods */,
-				53B09FF12A8A374B00DEA70E /* LostItemApp.app */,
-				53B09FF22A8A374B00DEA70E /* LostItemAppTests.xctest */,
-				53B09FF32A8A374B00DEA70E /* LostItemAppUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -451,7 +448,7 @@
 				534C129C2A615CC70032F957 /* free-icon-user-7718888.png in Resources */,
 				53605FBE2AC44EC7007F09B2 /* free-icon-map-423354.png in Resources */,
 				53A2F5C42ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png in Resources */,
-				53605FC22AC45B81007F09B2 /* KakaoTalk_Photo_2023-09-27-21-45-31.png in Resources */,
+				53AE400A2AC8347800DF32DC /* free-icon-lost-and-found-2669415.png in Resources */,
 				534C129B2A615CC50032F957 /* free-icon-document-list-11240429.png in Resources */,
 				53F415DE2A95EB8A005AB96D /* Register.storyboard in Resources */,
 				5349C7042A7918E300C790CE /* GoogleService-Info.plist in Resources */,

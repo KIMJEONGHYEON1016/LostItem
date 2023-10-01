@@ -37,9 +37,7 @@
         }
         
         @IBAction func BackBtn(_ sender: Any) {
-            let storyboard = UIStoryboard(name: "MyPage", bundle: nil)
-            guard let MyPageVC = storyboard.instantiateViewController(withIdentifier: "MyPagecontroller") as? MyPagecontroller else { return }
-            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MyPageVC, animated: true)
+            self.dismiss(animated: true)
         }
     }
         

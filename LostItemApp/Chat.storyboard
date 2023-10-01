@@ -16,22 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1K-aE-m2F">
-                                <rect key="frame" x="15" y="62" width="40" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="WhI-cZ-sXo"/>
-                                    <constraint firstAttribute="width" constant="40" id="mBx-h4-Xyc"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="free-icon-backward-318339.png" imageContentMode="scaleToFill"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="BackBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fok-5y-qNE"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Sdr-Cw-af5">
-                                <rect key="frame" x="0.0" y="115" width="393" height="654"/>
+                                <rect key="frame" x="0.0" y="117" width="393" height="652"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableCell" rowHeight="77" id="a8C-Xs-hGc" customClass="ChatTableCell" customModule="LostItemApp" customModuleProvider="target">
@@ -88,9 +74,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="채팅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu0-tO-nOk">
-                                <rect key="frame" x="318" y="74" width="47" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="채팅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu0-tO-nOk">
+                                <rect key="frame" x="173" y="69" width="47" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,20 +84,17 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Sdr-Cw-af5" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="4sx-ax-Ezj"/>
-                            <constraint firstItem="Sdr-Cw-af5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Egd-yF-c7b"/>
+                            <constraint firstItem="Sdr-Cw-af5" firstAttribute="top" secondItem="Tu0-tO-nOk" secondAttribute="bottom" constant="15" id="41S-kc-ZwK"/>
                             <constraint firstItem="Sdr-Cw-af5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HCv-ZZ-Yv4"/>
-                            <constraint firstItem="V1K-aE-m2F" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="QkW-cv-keN"/>
-                            <constraint firstItem="Sdr-Cw-af5" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Yy4-Ud-PuK"/>
                             <constraint firstItem="Sdr-Cw-af5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cWv-66-3D8"/>
-                            <constraint firstItem="Sdr-Cw-af5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="eRl-U1-J63"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Sdr-Cw-af5" secondAttribute="bottom" id="fiy-lp-iW5"/>
-                            <constraint firstItem="Sdr-Cw-af5" firstAttribute="top" secondItem="V1K-aE-m2F" secondAttribute="bottom" constant="29" id="gPA-8g-2Ad"/>
+                            <constraint firstItem="Tu0-tO-nOk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hhd-TI-arH"/>
+                            <constraint firstItem="Tu0-tO-nOk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="tuk-eu-0v5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sdr-Cw-af5" secondAttribute="trailing" id="wFh-PP-7ld"/>
-                            <constraint firstItem="V1K-aE-m2F" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="3" id="xo3-Wv-LgE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="채팅" image="free-icon-chat-bot-9384045.png" id="MBY-1n-dha"/>
+                    <navigationItem key="navigationItem" id="mLq-Fi-xGr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chattingtable" destination="Sdr-Cw-af5" id="t3i-El-FcL"/>
@@ -199,7 +181,7 @@
                                     <backgroundConfiguration key="background" image="free-icon-backward-318339.png" imageContentMode="scaleToFill"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="BackBtn:" destination="Oil-ke-NI0" eventType="touchUpInside" id="nqb-1d-keJ"/>
+                                    <action selector="BackBtn:" destination="Oil-ke-NI0" eventType="touchUpInside" id="f1w-bk-ug2"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UOh-3U-DTc">

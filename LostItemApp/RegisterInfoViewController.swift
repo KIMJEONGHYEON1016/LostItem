@@ -43,7 +43,7 @@ class RegisterInfoViewController: UIViewController {
     }
     
     func TabBarItem() {
-        let yourImage = UIImage(named: "KakaoTalk_Photo_2023-09-27-21-45-31.png")
+        let yourImage = UIImage(named: "free-icon-lost-and-found-2669415.png")
         tabBarItem.image = yourImage?.withRenderingMode(.alwaysOriginal)
         tabBarItem.selectedImage = yourImage
         let appearance = UITabBarAppearance()

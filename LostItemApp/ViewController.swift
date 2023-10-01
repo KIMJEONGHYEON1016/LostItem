@@ -109,7 +109,12 @@ class ViewController: UIViewController {
                                         let documentID = document.documentID
                                         PostViewControllerVC.titleLabel.text = documentID
                                         if let chatuser = document["유저"] as? String {
-                                            PostViewControllerVC.chatUser = chatuser
+                                            if chatuser == UserDefaults.standard.string(forKey: "UserEmailKey")! {
+                                                PostViewControllerVC.deleteBtn.isHidden = false
+                                                PostViewControllerVC.ChatButton.isHidden = true
+                                            } else {
+                                                PostViewControllerVC.chatUser = chatuser
+                                            }
                                         }
                                     }
                                 }
