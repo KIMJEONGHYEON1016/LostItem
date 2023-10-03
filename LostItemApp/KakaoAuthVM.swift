@@ -46,7 +46,33 @@ class KakaoAuthVM: ObservableObject {
                     }
                 }
             }
+        } else {
+            UserApi.shared.loginWithKakaoAccount { [weak self] (oauthToken, error) in
+                if let error = error {
+                    print(error)
+                    completion(false)
+                } else {
+                    print("loginWithKakaoAccount() success.")
+                    
+                    // 요청할 동의 항목 설정
+                    let scopes: [String] = ["account_email"] // 이메일 접근 권한
+                    
+                    // 사용자 동의 창 열기
+                    UserApi.shared.loginWithKakaoAccount(scopes: scopes) { [weak self] (oauthToken, error) in
+                        if let error = error {
+                            print(error)
+                            completion(false)
+                        } else {
+                            print("loginWithKakaoAccount(scopes:) success.")
+                            self?.oauthToken = oauthToken // 토큰 저장
+                            self?.ReadingAccount()
+                            completion(true)
+                        }
+                    }
+                }
+            }
         }
+
     }
     
     
@@ -60,8 +86,6 @@ class KakaoAuthVM: ObservableObject {
             //UserDefaults에 정보추가
 
             UserDefaults.standard.set(self.useremail, forKey: "UserEmailKey")
-            UserDefaults.standard.set(self.oauthToken?.accessToken, forKey: "AccessTokenKey")
-            UserDefaults.standard.set(self.oauthToken?.refreshToken, forKey: "RefreshTokenKey")
             
             _ = user
             self.addUserToFirebase(completion: { success in

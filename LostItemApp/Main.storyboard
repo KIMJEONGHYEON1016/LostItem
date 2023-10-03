@@ -17,42 +17,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6f0-ZM-qIZ">
-                                <rect key="frame" x="44" y="510" width="304" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6f0-ZM-qIZ">
+                                <rect key="frame" x="44.666666666666657" y="511.66666666666674" width="304" height="41"/>
                                 <color key="backgroundColor" red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="0.51466328110000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="Gmt-bO-wel"/>
+                                    <constraint firstAttribute="height" constant="41" id="y33-a8-6Tn"/>
+                                </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="free-icon-lost-items-3372390-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="UCl-Eh-2kc">
-                                <rect key="frame" x="76" y="205" width="240" height="218"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="free-icon-lost-items-3372390-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="UCl-Eh-2kc">
+                                <rect key="frame" x="76.666666666666686" y="188" width="240" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="J8P-zj-DGh"/>
+                                    <constraint firstAttribute="width" constant="240" id="OjH-DE-mk0"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFp-qw-Guc">
-                                <rect key="frame" x="34" y="559" width="324" height="59"/>
+                                <rect key="frame" x="29" y="563" width="334" height="59"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="kakao_login_medium_wide.png"/>
                                 <connections>
                                     <action selector="KakaoLoginBtn:" destination="zEk-1O-vul" eventType="touchUpInside" id="LMV-13-zBm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-HQ-YfZ">
-                                <rect key="frame" x="44" y="626" width="304" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-HQ-YfZ">
+                                <rect key="frame" x="44.666666666666657" y="631.66666666666663" width="304" height="41"/>
+                                <color key="backgroundColor" red="0.32461455459999999" green="0.51292389630000002" blue="0.9255366921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Et5-k2-DO1"/>
+                                    <constraint firstAttribute="width" constant="304" id="TmJ-Hw-fBz"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="btn_google_signin_dark_focus_web.png">
-                                    <backgroundConfiguration key="background"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="스크린샷 2023-10-03 오후 10.04.24.png"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="GoogleBtnAction:" destination="zEk-1O-vul" eventType="touchUpInside" id="JlQ-Ed-RRv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분실물! 주인 찾자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7a-sY-i25">
+                                <rect key="frame" x="78.666666666666686" y="439" width="236" height="38.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UmM-ra-mhA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UmM-ra-mhA" firstAttribute="trailing" secondItem="dFp-qw-Guc" secondAttribute="trailing" constant="35" id="4Vn-iK-eYo"/>
-                            <constraint firstItem="dFp-qw-Guc" firstAttribute="leading" secondItem="UmM-ra-mhA" secondAttribute="leading" constant="34" id="KQV-jU-wRy"/>
-                            <constraint firstItem="dFp-qw-Guc" firstAttribute="top" secondItem="UmM-ra-mhA" secondAttribute="top" constant="500" id="Lbb-Ad-Ecp"/>
-                            <constraint firstItem="UmM-ra-mhA" firstAttribute="bottom" secondItem="dFp-qw-Guc" secondAttribute="bottom" constant="200" id="eaV-tO-lky"/>
+                            <constraint firstItem="UmM-ra-mhA" firstAttribute="trailing" secondItem="dFp-qw-Guc" secondAttribute="trailing" constant="30" id="4Vn-iK-eYo"/>
+                            <constraint firstItem="dFp-qw-Guc" firstAttribute="leading" secondItem="UmM-ra-mhA" secondAttribute="leading" constant="29" id="KQV-jU-wRy"/>
+                            <constraint firstItem="6f0-ZM-qIZ" firstAttribute="centerX" secondItem="UPk-Ga-tIh" secondAttribute="centerX" id="QB0-j6-KPp"/>
+                            <constraint firstItem="UCl-Eh-2kc" firstAttribute="top" secondItem="UmM-ra-mhA" secondAttribute="top" constant="129" id="QKJ-Hq-D9j"/>
+                            <constraint firstItem="6f0-ZM-qIZ" firstAttribute="top" secondItem="R7a-sY-i25" secondAttribute="bottom" constant="34" id="ayT-DD-5Vc"/>
+                            <constraint firstItem="UCl-Eh-2kc" firstAttribute="centerX" secondItem="UPk-Ga-tIh" secondAttribute="centerX" id="fUx-Eb-BEX"/>
+                            <constraint firstItem="0Xh-HQ-YfZ" firstAttribute="top" secondItem="dFp-qw-Guc" secondAttribute="bottom" constant="10" id="ivv-8s-pSx"/>
+                            <constraint firstItem="0Xh-HQ-YfZ" firstAttribute="centerX" secondItem="UPk-Ga-tIh" secondAttribute="centerX" id="pbh-oN-l9u"/>
+                            <constraint firstItem="R7a-sY-i25" firstAttribute="centerX" secondItem="UPk-Ga-tIh" secondAttribute="centerX" id="rwl-rt-hv9"/>
+                            <constraint firstItem="dFp-qw-Guc" firstAttribute="top" secondItem="6f0-ZM-qIZ" secondAttribute="bottom" constant="10" id="vCR-ar-jeS"/>
+                            <constraint firstItem="R7a-sY-i25" firstAttribute="top" secondItem="UCl-Eh-2kc" secondAttribute="bottom" constant="33" id="vpt-T6-1Px"/>
                         </constraints>
                     </view>
                     <connections>
@@ -62,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWd-Pp-5T6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-941.22137404580144" y="-12.67605633802817"/>
+            <point key="canvasLocation" x="-941.22137404580144" y="-7.042253521126761"/>
         </scene>
         <!--지도-->
         <scene sceneID="tne-QT-ifu">
@@ -98,10 +121,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_google_signin_dark_focus_web.png" width="191" height="46"/>
         <image name="free-icon-lost-items-3372390-3.png" width="384" height="384"/>
         <image name="free-icon-map-423354.png" width="20" height="20"/>
         <image name="kakao_login_medium_wide.png" width="300" height="45"/>
+        <image name="스크린샷 2023-10-03 오후 10.04.24.png" width="555" height="73"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

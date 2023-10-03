@@ -19,11 +19,7 @@ class ChatViewController: UIViewController {
     var nickName: String?
     var profileImage: UIImage?
     
-    @IBAction func BackBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let MainVC = storyboard.instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainVC, animated: true)
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +32,6 @@ class ChatViewController: UIViewController {
     
     
     func TabBarItem() {
-        let yourImage = UIImage(named: "free-icon-chat-bot-9384045.png")
-        tabBarItem.image = yourImage
-        tabBarItem.image = yourImage?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = yourImage
         let appearance = UITabBarAppearance()
             
             // 타이틀의 일반 상태 (선택되지 않은 상태) 색상 설정

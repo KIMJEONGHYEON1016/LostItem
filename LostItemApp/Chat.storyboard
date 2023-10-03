@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Sdr-Cw-af5">
-                                <rect key="frame" x="0.0" y="117" width="393" height="652"/>
+                                <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="642.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableCell" rowHeight="77" id="a8C-Xs-hGc" customClass="ChatTableCell" customModule="LostItemApp" customModuleProvider="target">
@@ -74,9 +74,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="채팅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu0-tO-nOk">
-                                <rect key="frame" x="173" y="69" width="47" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="채팅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psI-Ly-rgY">
+                                <rect key="frame" x="175.66666666666666" y="69" width="41.666666666666657" height="27.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -84,12 +84,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Sdr-Cw-af5" firstAttribute="top" secondItem="Tu0-tO-nOk" secondAttribute="bottom" constant="15" id="41S-kc-ZwK"/>
+                            <constraint firstItem="psI-Ly-rgY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Eti-ot-51s"/>
                             <constraint firstItem="Sdr-Cw-af5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HCv-ZZ-Yv4"/>
+                            <constraint firstItem="Sdr-Cw-af5" firstAttribute="top" secondItem="psI-Ly-rgY" secondAttribute="bottom" constant="30" id="MeS-BL-JWB"/>
                             <constraint firstItem="Sdr-Cw-af5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cWv-66-3D8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Sdr-Cw-af5" secondAttribute="bottom" id="fiy-lp-iW5"/>
-                            <constraint firstItem="Tu0-tO-nOk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hhd-TI-arH"/>
-                            <constraint firstItem="Tu0-tO-nOk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="tuk-eu-0v5"/>
+                            <constraint firstItem="psI-Ly-rgY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="g4y-RG-6uc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sdr-Cw-af5" secondAttribute="trailing" id="wFh-PP-7ld"/>
                         </constraints>
                     </view>
@@ -172,13 +172,13 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmx-QR-Qkn">
-                                <rect key="frame" x="13" y="59" width="40" height="24"/>
+                                <rect key="frame" x="13" y="71" width="27" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="RAU-HP-zIG"/>
+                                    <constraint firstAttribute="height" constant="28" id="RAU-HP-zIG"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="free-icon-backward-318339.png" imageContentMode="scaleToFill"/>
+                                    <backgroundConfiguration key="background" image="free-icon-backward-arrow-81037.png" imageContentMode="scaleToFill"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="BackBtn:" destination="Oil-ke-NI0" eventType="touchUpInside" id="f1w-bk-ug2"/>
@@ -201,16 +201,16 @@
                             <constraint firstItem="N78-EH-8Ki" firstAttribute="leading" secondItem="UOh-3U-DTc" secondAttribute="trailing" id="7w7-Jh-jqA"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="centerY" secondItem="N78-EH-8Ki" secondAttribute="centerY" id="8d7-VS-SKl"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="top" secondItem="DNr-LD-zjq" secondAttribute="bottom" id="9Lh-zR-9Db"/>
-                            <constraint firstItem="DNr-LD-zjq" firstAttribute="top" secondItem="qmx-QR-Qkn" secondAttribute="bottom" constant="31" id="Clb-FP-0xn"/>
+                            <constraint firstItem="DNr-LD-zjq" firstAttribute="top" secondItem="qmx-QR-Qkn" secondAttribute="bottom" constant="15" id="Clb-FP-0xn"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="bottom" secondItem="dXI-M5-9Jv" secondAttribute="bottom" id="JOh-mH-W7c"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="N78-EH-8Ki" secondAttribute="trailing" id="Kir-4g-bJJ"/>
                             <constraint firstItem="DNr-LD-zjq" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="NbJ-L8-SlY"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="bottom" secondItem="N78-EH-8Ki" secondAttribute="bottom" id="NxD-rG-gEu"/>
                             <constraint firstItem="qmx-QR-Qkn" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" constant="13" id="Uno-bu-XOM"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="N78-EH-8Ki" secondAttribute="trailing" id="XxR-qq-vp5"/>
-                            <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="qmx-QR-Qkn" secondAttribute="trailing" constant="340" id="iCz-ff-TWg"/>
+                            <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="qmx-QR-Qkn" secondAttribute="trailing" constant="353" id="iCz-ff-TWg"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="kah-vS-Y7V"/>
-                            <constraint firstItem="qmx-QR-Qkn" firstAttribute="top" secondItem="dXI-M5-9Jv" secondAttribute="top" id="tzP-HK-cds"/>
+                            <constraint firstItem="qmx-QR-Qkn" firstAttribute="top" secondItem="dXI-M5-9Jv" secondAttribute="top" constant="12" id="tzP-HK-cds"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="DNr-LD-zjq" secondAttribute="trailing" id="uZn-zf-76w"/>
                             <constraint firstItem="DNr-LD-zjq" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="vfQ-hT-V2z"/>
                         </constraints>
@@ -226,7 +226,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="free-icon-backward-318339.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="free-icon-backward-arrow-81037.png" width="247.40939331054688" height="247.40939331054688"/>
         <image name="free-icon-chat-bot-9384045.png" width="18.75" height="18.75"/>
         <image name="free-icon-user-7718888.png" width="384" height="384"/>
         <systemColor name="labelColor">

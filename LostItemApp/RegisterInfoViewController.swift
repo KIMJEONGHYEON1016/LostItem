@@ -43,9 +43,6 @@ class RegisterInfoViewController: UIViewController {
     }
     
     func TabBarItem() {
-        let yourImage = UIImage(named: "free-icon-lost-and-found-2669415.png")
-        tabBarItem.image = yourImage?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = yourImage
         let appearance = UITabBarAppearance()
             
             // 타이틀의 일반 상태 (선택되지 않은 상태) 색상 설정
@@ -56,13 +53,7 @@ class RegisterInfoViewController: UIViewController {
         UITabBar.appearance().standardAppearance = appearance
     }
     
-    
-    @IBAction func BackBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let MainVC = storyboard.instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainVC, animated: true)
-    }
-    
+   
     @IBAction func completeBtn(_ sender: Any) {
         if titleLabel.text != nil && mainTextLabel.text != nil && lostItemPhoto.image != UIImage(systemName: "photo.artframe") {
             SetData()

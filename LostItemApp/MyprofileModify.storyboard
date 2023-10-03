@@ -44,10 +44,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-ic-DnR">
-                                <rect key="frame" x="10" y="74" width="40" height="24"/>
+                                <rect key="frame" x="13" y="71" width="27" height="28"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="free-icon-backward-318339.png" imageContentMode="scaleToFill"/>
+                                    <backgroundConfiguration key="background" image="free-icon-backward-arrow-81037.png" imageContentMode="scaleToFill"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="BackBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tcY-Rl-FoZ"/>
@@ -59,13 +59,13 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Wh1-gt-ZbI" secondAttribute="bottom" constant="40" id="50F-B3-Fyr"/>
                             <constraint firstItem="VbA-8S-DHI" firstAttribute="centerX" secondItem="Wh1-gt-ZbI" secondAttribute="centerX" id="6mn-jf-R7n"/>
-                            <constraint firstItem="kLD-nx-W4x" firstAttribute="leading" secondItem="zNB-ic-DnR" secondAttribute="trailing" constant="96.666666666666657" id="6rj-BS-dcR"/>
+                            <constraint firstItem="kLD-nx-W4x" firstAttribute="leading" secondItem="zNB-ic-DnR" secondAttribute="trailing" constant="106.66666666666666" id="6rj-BS-dcR"/>
                             <constraint firstItem="VbA-8S-DHI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="150" id="72W-zk-akr"/>
                             <constraint firstItem="Wh1-gt-ZbI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JPK-lV-JoB"/>
                             <constraint firstItem="VbA-8S-DHI" firstAttribute="top" secondItem="kLD-nx-W4x" secondAttribute="bottom" constant="30" id="OwD-7c-ftQ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zNB-ic-DnR" secondAttribute="bottom" constant="720" id="ScL-Zc-1kQ"/>
-                            <constraint firstItem="zNB-ic-DnR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="dLn-ec-fD6"/>
-                            <constraint firstItem="zNB-ic-DnR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="fLP-RB-0jc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zNB-ic-DnR" secondAttribute="bottom" constant="719" id="ScL-Zc-1kQ"/>
+                            <constraint firstItem="zNB-ic-DnR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="dLn-ec-fD6"/>
+                            <constraint firstItem="zNB-ic-DnR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="13" id="fLP-RB-0jc"/>
                             <constraint firstItem="kLD-nx-W4x" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="t4i-UK-vf9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VbA-8S-DHI" secondAttribute="trailing" constant="150" id="wUU-6p-Itk"/>
                             <constraint firstItem="kLD-nx-W4x" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zU9-CH-5gK"/>
@@ -82,7 +82,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="free-icon-backward-318339.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="free-icon-backward-arrow-81037.png" width="247.40939331054688" height="247.40939331054688"/>
         <image name="free-icon-user-7718888.png" width="384" height="384"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

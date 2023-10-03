@@ -35,9 +35,6 @@ class ViewController: UIViewController {
 
   
     func TabBarItem() {
-        let yourImage = UIImage(named: "free-icon-map-423354.png")
-        tabBarItem.image = yourImage?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = yourImage
         let appearance = UITabBarAppearance()
             
             // 타이틀의 일반 상태 (선택되지 않은 상태) 색상 설정
