@@ -96,6 +96,22 @@ class PostViewController: UIViewController {
             }
         }
     }
+    
+    func LostItemImage () {
+        image1.layer.borderWidth = 1.0 // 테두리 두께
+        image1.layer.borderColor = UIColor.lightGray.cgColor // 테두리 색상
+        image1.layer.cornerRadius = 3.0 // 테두리 모서리 반경 (원하는 값으로 조정)
+        image1.clipsToBounds = true
+        image2.layer.borderWidth = 1.0
+        image2.layer.borderColor = UIColor.lightGray.cgColor
+        image2.layer.cornerRadius = 3.0
+        image2.clipsToBounds = true
+        image3.layer.borderWidth = 1.0
+        image3.layer.borderColor = UIColor.lightGray.cgColor
+        image3.layer.cornerRadius = 3.0
+        image3.clipsToBounds = true
+    }
+    
     func UploadData() {
         if let documentID = documentID {
             // Firestore에서 문서를 가져오기 위해 documentID를 사용

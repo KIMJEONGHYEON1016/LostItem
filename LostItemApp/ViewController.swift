@@ -12,7 +12,7 @@ import FirebaseFirestore
 class ViewController: UIViewController {
     
     @IBOutlet var subView: NMFNaverMapView!
-
+    @IBOutlet var refreshBtn: UIButton!
     
     let infoWindow = NMFInfoWindow()
     let marker = NMFMarker()
@@ -29,11 +29,17 @@ class ViewController: UIViewController {
         subView.mapView.positionMode = .direction
         subView.mapView.logoAlign = .rightTop
         TabBarItem()
+        refreshBtn.layer.cornerRadius = 0.5 * refreshBtn.bounds.size.width
 
     }
     
 
-  
+    @IBAction func refreshButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
+    }
+    
     func TabBarItem() {
         let appearance = UITabBarAppearance()
             

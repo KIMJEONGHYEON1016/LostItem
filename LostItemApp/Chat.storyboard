@@ -172,9 +172,9 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmx-QR-Qkn">
-                                <rect key="frame" x="13" y="71" width="27" height="28"/>
+                                <rect key="frame" x="13" y="71" width="20" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="RAU-HP-zIG"/>
+                                    <constraint firstAttribute="height" constant="18" id="RAU-HP-zIG"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -201,14 +201,14 @@
                             <constraint firstItem="N78-EH-8Ki" firstAttribute="leading" secondItem="UOh-3U-DTc" secondAttribute="trailing" id="7w7-Jh-jqA"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="centerY" secondItem="N78-EH-8Ki" secondAttribute="centerY" id="8d7-VS-SKl"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="top" secondItem="DNr-LD-zjq" secondAttribute="bottom" id="9Lh-zR-9Db"/>
-                            <constraint firstItem="DNr-LD-zjq" firstAttribute="top" secondItem="qmx-QR-Qkn" secondAttribute="bottom" constant="15" id="Clb-FP-0xn"/>
+                            <constraint firstItem="DNr-LD-zjq" firstAttribute="top" secondItem="qmx-QR-Qkn" secondAttribute="bottom" constant="25" id="Clb-FP-0xn"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="bottom" secondItem="dXI-M5-9Jv" secondAttribute="bottom" id="JOh-mH-W7c"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="N78-EH-8Ki" secondAttribute="trailing" id="Kir-4g-bJJ"/>
                             <constraint firstItem="DNr-LD-zjq" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="NbJ-L8-SlY"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="bottom" secondItem="N78-EH-8Ki" secondAttribute="bottom" id="NxD-rG-gEu"/>
                             <constraint firstItem="qmx-QR-Qkn" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" constant="13" id="Uno-bu-XOM"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="N78-EH-8Ki" secondAttribute="trailing" id="XxR-qq-vp5"/>
-                            <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="qmx-QR-Qkn" secondAttribute="trailing" constant="353" id="iCz-ff-TWg"/>
+                            <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="qmx-QR-Qkn" secondAttribute="trailing" constant="360" id="iCz-ff-TWg"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="kah-vS-Y7V"/>
                             <constraint firstItem="qmx-QR-Qkn" firstAttribute="top" secondItem="dXI-M5-9Jv" secondAttribute="top" constant="12" id="tzP-HK-cds"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="DNr-LD-zjq" secondAttribute="trailing" id="uZn-zf-76w"/>

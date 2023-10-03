@@ -39,7 +39,23 @@ class RegisterInfoViewController: UIViewController {
         mainTextLabel.layer.borderWidth = 1.0
         // 테두리 색상 설정
         mainTextLabel.layer.borderColor = UIColor.lightGray.cgColor
+        LostItemImage()
         TabBarItem()
+    }
+    
+    func LostItemImage () {
+        lostItemPhoto.layer.borderWidth = 1.0 // 테두리 두께
+        lostItemPhoto.layer.borderColor = UIColor.lightGray.cgColor // 테두리 색상
+        lostItemPhoto.layer.cornerRadius = 3.0 // 테두리 모서리 반경 (원하는 값으로 조정)
+        lostItemPhoto.clipsToBounds = true
+        lostItemPhoto2.layer.borderWidth = 1.0
+        lostItemPhoto2.layer.borderColor = UIColor.lightGray.cgColor
+        lostItemPhoto2.layer.cornerRadius = 3.0
+        lostItemPhoto2.clipsToBounds = true
+        lostItemPhoto3.layer.borderWidth = 1.0
+        lostItemPhoto3.layer.borderColor = UIColor.lightGray.cgColor
+        lostItemPhoto3.layer.cornerRadius = 3.0
+        lostItemPhoto3.clipsToBounds = true
     }
     
     func TabBarItem() {
