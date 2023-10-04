@@ -151,6 +151,7 @@ class RegisterInfoViewController: UIViewController {
         let storyboard = UIStoryboard(name: "MapMarkerRegister", bundle: nil)
         guard let MapMarkerViewControllerVC = storyboard.instantiateViewController(withIdentifier: "MapMarkerViewController") as? MapMarkerViewController else { return }
         MapMarkerViewControllerVC.titleLabel = self.titleLabel.text!
+        MapMarkerViewControllerVC.modalPresentationStyle = .fullScreen
         present(MapMarkerViewControllerVC, animated: true)
     }
     

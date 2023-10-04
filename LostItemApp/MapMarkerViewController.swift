@@ -29,12 +29,17 @@ class MapMarkerViewController: UIViewController {
     @objc func CompleteButtonTapped() {
         self.saveCenterCoordinates()
         self.dismiss(animated: true)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        TabBarControllerVC.selectedIndex = 1
+
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
     }
     
-    @objc func BackButtonTapped() {
+   /* @objc func BackButtonTapped() {
            // Back 버튼을 눌렀을 때 MainVC를 dismiss
            self.dismiss(animated: true, completion: nil)
-       }
+       }*/
     
     func Location() {
      
@@ -43,7 +48,7 @@ class MapMarkerViewController: UIViewController {
             imageView.contentMode = .scaleAspectFit
         view.addSubview(imageView)
         
-        var BackButton: UIButton!
+       /* var BackButton: UIButton!
 
         BackButton = UIButton(type: .system)
         BackButton.setTitle("Back", for: .normal)
@@ -53,12 +58,12 @@ class MapMarkerViewController: UIViewController {
                BackButton.imageView?.contentMode = .scaleAspectFit // 이미지를 버튼 크기에 맞춥니다.
            }
         BackButton.addTarget(self, action: #selector(BackButtonTapped), for: .touchUpInside)
-        view.addSubview(BackButton)
+        view.addSubview(BackButton)*/
         
         CompleteButton = UIButton(type: .system)
         CompleteButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
-        CompleteButton.frame = CGRect(x: 315, y: 10, width: 50, height: 30)
-        CompleteButton.backgroundColor = .systemBlue
+        CompleteButton.frame = CGRect(x: 325, y: 43, width: 50, height: 30)
+        CompleteButton.backgroundColor = .black
         CompleteButton.setTitle("완료", for: .normal)
         CompleteButton.addTarget(self, action: #selector(CompleteButtonTapped), for: .touchUpInside)
         CompleteButton.layer.cornerRadius = 0.2 * CompleteButton.bounds.size.width
