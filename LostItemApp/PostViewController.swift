@@ -223,9 +223,8 @@ class PostViewController: UIViewController {
         
         // "채팅" 컬렉션 내에 문서를 생성
         let userEmail = UserDefaults.standard.string(forKey: "UserEmailKey") ?? ""
-        let chatDocumentID = userEmail + "&" + chatUser!
-        let documentPath = chatUser! + "&" + userEmail// "your_collection_name"은 컬렉션 이름
-
+        let sortedEmails = [userEmail, chatUser!].sorted()
+        let documentPath = sortedEmails[0] + "&" + sortedEmails[1]
         // Firestore에 접근하여 document 존재 여부 확인
         db.collection("채팅").document(documentPath).getDocument { (document, error) in
             if let error = error {
@@ -241,7 +240,7 @@ class PostViewController: UIViewController {
                 }
             } else {
                 // 해당 document가 존재하지 않는 경우
-                db.collection("채팅").document(chatDocumentID).setData([
+                db.collection("채팅").document(documentPath).setData([
                     "user1": userEmail, // 사용자 1의 이메일
                     "user2": self.chatUser!, // 사용자 2의 이메일
                 ]) { error in

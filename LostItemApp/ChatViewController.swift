@@ -10,7 +10,6 @@ import FirebaseFirestore
 
 class ChatViewController: UIViewController {
     
-    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var chattingtable: UITableView?
     
     var user1ValuesCount: Int = 0
@@ -18,16 +17,19 @@ class ChatViewController: UIViewController {
     var user2Values: [String] = [] // user2의 이메일을 저장할 배열
     var nickName: String?
     var profileImage: UIImage?
-    
+    var previewLabel: String?
+    var chatTime: String?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         chattingtable?.dataSource = self
         chattingtable?.delegate = self
-        searchBar?.delegate = self
         loadDataFromFirestore() // Firestore에서 데이터를 가져오는 함수 호출
         TabBarItem()
+        let customColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0) 
+        chattingtable?.layer.borderWidth = 1.0
+        chattingtable?.layer.borderColor = customColor.cgColor
     }
     
     
@@ -160,6 +162,40 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
+        let userEmail = UserDefaults.standard.string(forKey: "UserEmailKey")
+        let sortedEmails = [userEmail!, user].sorted()
+        let chatDocumentID = sortedEmails[0] + "&" + sortedEmails[1]
+        
+        // "채팅" 컬렉션 내의 문서 참조 획득
+        let chatDocumentReference = db.collection("채팅").document(chatDocumentID)
+        
+        // "메시지" 서브컬렉션에 새로운 메시지를 추가
+        chatDocumentReference.collection("메시지")
+            .order(by: "date", descending: true)
+            .limit(to: 1)
+            .getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error fetching documents: \(error)")
+                } else {
+                    // 문서 가져오기 성공
+                    if let document = querySnapshot?.documents.first {
+                        let data = document.data()
+                        if let messageContent = data["body"] as? String,  let messageDate = data["date"] as? Double {
+                            cell.previewContent.text = messageContent
+                            let messageDate = Date(timeIntervalSince1970: messageDate)
+                                                
+                                // Date를 문자열로 변환할 DateFormatter 생성
+                            let dateFormatter = DateFormatter()
+                                    dateFormatter.dateFormat = "YYYY년 MM월 dd일 HH:mm" // 원하는 날짜 및 시간 형식
+                                                
+                                // 변환된 날짜 및 시간 문자열 가져오기
+                            let formattedDate = dateFormatter.string(from: messageDate)
+                                                
+                            cell.timeLabel.text = formattedDate
+                        }
+                    }
+                }
+            }
         return cell
     }
     
@@ -189,9 +225,4 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-// 서치바
-extension ChatViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // 서치바 검색 기능 구현
-    }
-}
+
