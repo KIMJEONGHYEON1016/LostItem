@@ -204,12 +204,14 @@ class PostViewController: UIViewController {
         
         ChatButton = UIButton(type: .system)
         ChatButton.setTitle("채팅", for: .normal)
-        ChatButton.frame = CGRect(x: 155, y: 700, width: 80, height: 30)
-        ChatButton.backgroundColor = .black
+        ChatButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+        ChatButton.setTitleColor(UIColor.white, for: .normal)
+        ChatButton.frame = CGRect(x: 10, y: 660, width: 373, height: 49)
+        ChatButton.backgroundColor = .systemGreen
         ChatButton.addTarget(self, action: #selector(ChatButtonTapped), for: .touchUpInside)
         view.addSubview(ChatButton)
         ChatButton.isHidden = true
-        
+        ChatButton.layer.cornerRadius = 5.0
     }
     
     @objc func ChatButtonTapped() {
