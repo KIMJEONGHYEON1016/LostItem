@@ -15,7 +15,8 @@ class MapMarkerViewController: UIViewController {
     
     let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.5666102, lng: 126.9783881))
     var titleLabel = ""
-    
+    var CompleteButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         Location()
@@ -27,9 +28,7 @@ class MapMarkerViewController: UIViewController {
     
     @objc func CompleteButtonTapped() {
         self.saveCenterCoordinates()
-        let storyboard = UIStoryboard(name: "Register", bundle: nil)
-        guard let RegisterInfoViewControllerVC = storyboard.instantiateViewController(withIdentifier: "RegisterInfoViewController") as? RegisterInfoViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(RegisterInfoViewControllerVC, animated: false)
+        self.dismiss(animated: true)
     }
     
     @objc func BackButtonTapped() {
@@ -56,15 +55,16 @@ class MapMarkerViewController: UIViewController {
         BackButton.addTarget(self, action: #selector(BackButtonTapped), for: .touchUpInside)
         view.addSubview(BackButton)
         
-        var CompleteButton: UIButton!
-
         CompleteButton = UIButton(type: .system)
-        CompleteButton.setTitle("Complete", for: .normal)
-        CompleteButton.frame = CGRect(x: 155, y: 650, width: 80, height: 30)
-        CompleteButton.backgroundColor = .black
+        CompleteButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+        CompleteButton.frame = CGRect(x: 315, y: 10, width: 50, height: 30)
+        CompleteButton.backgroundColor = .systemBlue
+        CompleteButton.setTitle("완료", for: .normal)
         CompleteButton.addTarget(self, action: #selector(CompleteButtonTapped), for: .touchUpInside)
+        CompleteButton.layer.cornerRadius = 0.2 * CompleteButton.bounds.size.width
+        CompleteButton.setTitleColor(UIColor.white, for: .normal)
+
         view.addSubview(CompleteButton)
-        
         
         
     }

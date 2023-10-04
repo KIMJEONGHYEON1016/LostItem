@@ -44,8 +44,12 @@ class ChatViewController: UIViewController {
         UITabBar.appearance().standardAppearance = appearance
     }
     
+    @IBAction func RefreshBtn(_ sender: Any) {
+        self.chattingtable?.reloadData()
+    }
+    
     // Firestore에서 데이터를 가져오는 함수
-    func loadDataFromFirestore() {
+        func loadDataFromFirestore() {
         let currentUserEmail = UserDefaults.standard.string(forKey: "UserEmailKey") ?? ""
         let db = Firestore.firestore()
         db.collection("채팅")
@@ -180,17 +184,39 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                     // 문서 가져오기 성공
                     if let document = querySnapshot?.documents.first {
                         let data = document.data()
-                        if let messageContent = data["body"] as? String,  let messageDate = data["date"] as? Double {
+                        if let messageContent = data["body"] as? String, let messageDateTimestamp = data["date"] as? Double {
+                            
+                            // Timestamp를 Date로 변환
+                            let messageDate = Date(timeIntervalSince1970: messageDateTimestamp)
+                            
                             cell.previewContent.text = messageContent
-                            let messageDate = Date(timeIntervalSince1970: messageDate)
-                                                
-                                // Date를 문자열로 변환할 DateFormatter 생성
+                            
+                            // 현재 날짜와 시간 가져오기
+                            let currentDate = Date()
+                            
+                            // 메시지 날짜와 현재 날짜를 비교
+                            let calendar = Calendar.current
+                            let messageDateComponents = calendar.dateComponents([.year, .month, .day], from: messageDate)
+                            let currentDateComponents = calendar.dateComponents([.year, .month, .day], from: currentDate)
+                            
                             let dateFormatter = DateFormatter()
-                                    dateFormatter.dateFormat = "YYYY년 MM월 dd일 HH:mm" // 원하는 날짜 및 시간 형식
-                                                
-                                // 변환된 날짜 및 시간 문자열 가져오기
+                            
+                            if messageDateComponents.year == currentDateComponents.year {
+                                // 같은 해에 속하는 경우
+                                if messageDateComponents.month == currentDateComponents.month && messageDateComponents.day == currentDateComponents.day {
+                                    // 오늘인 경우
+                                    dateFormatter.dateFormat = "HH:mm"
+                                } else {
+                                    // 이번 년도에 속하지만 오늘이 아닌 경우
+                                    dateFormatter.dateFormat = "MM월 dd일"
+                                }
+                            } else {
+                                // 다른 년도에 속하는 경우
+                                dateFormatter.dateFormat = "YYYY년 MM월 dd일"
+                            }
+                            
                             let formattedDate = dateFormatter.string(from: messageDate)
-                                                
+                            
                             cell.timeLabel.text = formattedDate
                         }
                     }

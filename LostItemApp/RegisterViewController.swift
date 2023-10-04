@@ -18,12 +18,16 @@
         var cellDataCache: [IndexPath: UIImage] = [:]
 
         @IBOutlet var mainTableView: UITableView!
-        
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
             mainTableView?.dataSource = self
             mainTableView?.delegate = self
+            let customColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+            mainTableView?.layer.borderWidth = 1.0
+            mainTableView?.layer.borderColor = customColor.cgColor
+            mainTableView?.layer.cornerRadius = 3.0
         }
         
         
@@ -94,7 +98,7 @@
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterTableViewCell", for: indexPath) as! RegisterTableViewCell
             cell.previewImage.contentMode = .scaleAspectFill
-
+            
             let docRef = db.collection("게시글")
                 .whereField("유저", isEqualTo: UserDefaults.standard.string(forKey: "UserEmailKey")!)
             
@@ -111,6 +115,40 @@
                         // Set the document ID as the cell's text
                         DispatchQueue.main.async {
                             cell.previewLabel.text = document.documentID
+                        }
+                        
+                      if let messageDateTimestamp = document["date"] as? Double {
+                            
+                            // Timestamp를 Date로 변환
+                            let messageDate = Date(timeIntervalSince1970: messageDateTimestamp)
+                                                    
+                            // 현재 날짜와 시간 가져오기
+                            let currentDate = Date()
+                            
+                            // 메시지 날짜와 현재 날짜를 비교
+                            let calendar = Calendar.current
+                            let messageDateComponents = calendar.dateComponents([.year, .month, .day], from: messageDate)
+                            let currentDateComponents = calendar.dateComponents([.year, .month, .day], from: currentDate)
+                            
+                            let dateFormatter = DateFormatter()
+                            
+                            if messageDateComponents.year == currentDateComponents.year {
+                                // 같은 해에 속하는 경우
+                                if messageDateComponents.month == currentDateComponents.month && messageDateComponents.day == currentDateComponents.day {
+                                    // 오늘인 경우
+                                    dateFormatter.dateFormat = "HH:mm"
+                                } else {
+                                    // 이번 년도에 속하지만 오늘이 아닌 경우
+                                    dateFormatter.dateFormat = "MM월 dd일"
+                                }
+                            } else {
+                                // 다른 년도에 속하는 경우
+                                dateFormatter.dateFormat = "YYYY년 MM월 dd일"
+                            }
+                            
+                            let formattedDate = dateFormatter.string(from: messageDate)
+                            
+                            cell.previewDate.text = formattedDate
                         }
                         if let previewImages = document["분실물 사진"] as? [String], let firstImageURLString = previewImages.first, let previewImageImageURL = URL(string: firstImageURLString) {
                             print("Document data: \(previewImageImageURL)")
@@ -129,8 +167,5 @@
             }
                 return cell
         }
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 70 // 적절한 높이를 지정하세요.
-        }
-    }
+}
 

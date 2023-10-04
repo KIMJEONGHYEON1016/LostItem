@@ -39,6 +39,7 @@ class PostViewController: UIViewController {
         // 테두리 색상 설정
         mainText.layer.borderColor = UIColor.lightGray.cgColor
         mainText.isEditable = false
+        LostItemImage()
     }
     
     @IBAction func BackBtn(_ sender: Any) {

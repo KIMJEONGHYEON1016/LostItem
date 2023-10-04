@@ -114,7 +114,7 @@ class RegisterInfoViewController: UIViewController {
             
             if snapshot?.isEmpty == true {
                 // 컬렉션이 비어있으면 컬렉션 생성 후 문서 업데이트 작업 수행
-                let data: [String: Any] = ["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!]
+                let data: [String: Any] = ["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!, "date": Date().timeIntervalSince1970]
                 documentRef.setData(data) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
@@ -127,7 +127,7 @@ class RegisterInfoViewController: UIViewController {
                 documentRef.getDocument { (document, error) in
                     if let document = document, document.exists {
                         // 문서가 존재하면 업데이트 작업 수행
-                        documentRef.updateData(["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!]) { err in
+                        documentRef.updateData(["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!, "date": Date().timeIntervalSince1970]) { err in
                             if let err = err {
                                 print("Error updating document: \(err)")
                             } else {
@@ -136,7 +136,7 @@ class RegisterInfoViewController: UIViewController {
                         }
                     } else {
                         // 문서가 존재하지 않으면 문서 생성 후 업데이트 작업 수행
-                        let data: [String: Any] = ["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!]
+                        let data: [String: Any] = ["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!, "date": Date().timeIntervalSince1970]
                         documentRef.setData(data) { err in
                             if let err = err {
                                 print("Error adding document: \(err)")
@@ -156,7 +156,17 @@ class RegisterInfoViewController: UIViewController {
     
     //이미지 파이어베이스로 업로드
     func uploadimage(img: UIImage, completion: @escaping (Bool) -> Void) {
-        guard let data = img.jpegData(compressionQuality: 0.1) else {
+        guard let referenceImage = UIImage(named: "free-icon-picture-5639854.png"),
+              let referenceImageData = referenceImage.jpegData(compressionQuality: 1.0),
+              let imageData = img.jpegData(compressionQuality: 1.0) else {
+            // 이미지 데이터를 가져오지 못한 경우 또는 기준 이미지를 가져오지 못한 경우 업로드하지 않음
+            completion(false)
+            return
+        }
+        
+        // 이미지 데이터가 같은지 비교
+        if referenceImageData == imageData {
+            // 이미지가 기준 이미지와 같다면 업로드하지 않음
             completion(false)
             return
         }
@@ -165,7 +175,7 @@ class RegisterInfoViewController: UIViewController {
         let metaData = StorageMetadata()
         metaData.contentType = "image/png"
         
-        storage.reference().child(fileName).putData(data, metadata: metaData) { (metaData, error) in
+        storage.reference().child(fileName).putData(imageData, metadata: metaData) { (metaData, error) in
             if let error = error {
                 print(error.localizedDescription)
                 completion(false)
@@ -176,6 +186,7 @@ class RegisterInfoViewController: UIViewController {
             }
         }
     }
+
 
     func downloadAndStoreURL(fileName: String) {
         let fileRef = storage.reference().child(fileName)

@@ -35,9 +35,9 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSy-Ss-C19">
-                                                    <rect key="frame" x="278" y="31" width="100" height="16"/>
+                                                    <rect key="frame" x="355.33333333333331" y="31" width="22.666666666666686" height="16"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="sCE-Pf-wHO"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="sCE-Pf-wHO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                                     <nil key="textColor"/>
@@ -84,6 +84,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2w-Kj-QdM">
+                                <rect key="frame" x="352" y="71" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="free-icon-reload-7134763.png"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="RefreshBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ma6-Hh-TLM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -232,6 +243,7 @@
     <resources>
         <image name="free-icon-backward-arrow-81037.png" width="247.40939331054688" height="247.40939331054688"/>
         <image name="free-icon-chat-bot-9384045.png" width="18.75" height="18.75"/>
+        <image name="free-icon-reload-7134763.png" width="384" height="384"/>
         <image name="free-icon-user-7718888.png" width="384" height="384"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
