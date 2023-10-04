@@ -51,10 +51,9 @@ class MyprofileModifycontroller: UIViewController {
     }
     
     @IBAction func BackBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "MyPage", bundle: nil)
-        guard let MyPageVC = storyboard.instantiateViewController(withIdentifier: "MyPagecontroller") as? MyPagecontroller else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MyPageVC, animated: true)
+        self.dismiss(animated: true)
     }
+    
     // 화면 이동 및 마이페이지 정보 변경
     @IBAction func CompleteBtn(_ sender: Any) {
         

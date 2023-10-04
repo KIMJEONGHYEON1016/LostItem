@@ -39,13 +39,26 @@ class RegisterInfoViewController: UIViewController {
         mainTextLabel.layer.borderWidth = 1.0
         // 테두리 색상 설정
         mainTextLabel.layer.borderColor = UIColor.lightGray.cgColor
+        LostItemImage()
         TabBarItem()
     }
     
+    func LostItemImage () {
+        lostItemPhoto.layer.borderWidth = 1.0 // 테두리 두께
+        lostItemPhoto.layer.borderColor = UIColor.lightGray.cgColor // 테두리 색상
+        lostItemPhoto.layer.cornerRadius = 3.0 // 테두리 모서리 반경 (원하는 값으로 조정)
+        lostItemPhoto.clipsToBounds = true
+        lostItemPhoto2.layer.borderWidth = 1.0
+        lostItemPhoto2.layer.borderColor = UIColor.lightGray.cgColor
+        lostItemPhoto2.layer.cornerRadius = 3.0
+        lostItemPhoto2.clipsToBounds = true
+        lostItemPhoto3.layer.borderWidth = 1.0
+        lostItemPhoto3.layer.borderColor = UIColor.lightGray.cgColor
+        lostItemPhoto3.layer.cornerRadius = 3.0
+        lostItemPhoto3.clipsToBounds = true
+    }
+    
     func TabBarItem() {
-        let yourImage = UIImage(named: "KakaoTalk_Photo_2023-09-27-21-45-31.png")
-        tabBarItem.image = yourImage?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = yourImage
         let appearance = UITabBarAppearance()
             
             // 타이틀의 일반 상태 (선택되지 않은 상태) 색상 설정
@@ -56,13 +69,7 @@ class RegisterInfoViewController: UIViewController {
         UITabBar.appearance().standardAppearance = appearance
     }
     
-    
-    @IBAction func BackBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let MainVC = storyboard.instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainVC, animated: true)
-    }
-    
+   
     @IBAction func completeBtn(_ sender: Any) {
         if titleLabel.text != nil && mainTextLabel.text != nil && lostItemPhoto.image != UIImage(systemName: "photo.artframe") {
             SetData()
@@ -107,7 +114,7 @@ class RegisterInfoViewController: UIViewController {
             
             if snapshot?.isEmpty == true {
                 // 컬렉션이 비어있으면 컬렉션 생성 후 문서 업데이트 작업 수행
-                let data: [String: Any] = ["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!]
+                let data: [String: Any] = ["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!, "date": Date().timeIntervalSince1970]
                 documentRef.setData(data) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
@@ -120,7 +127,7 @@ class RegisterInfoViewController: UIViewController {
                 documentRef.getDocument { (document, error) in
                     if let document = document, document.exists {
                         // 문서가 존재하면 업데이트 작업 수행
-                        documentRef.updateData(["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!]) { err in
+                        documentRef.updateData(["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!, "date": Date().timeIntervalSince1970]) { err in
                             if let err = err {
                                 print("Error updating document: \(err)")
                             } else {
@@ -129,7 +136,7 @@ class RegisterInfoViewController: UIViewController {
                         }
                     } else {
                         // 문서가 존재하지 않으면 문서 생성 후 업데이트 작업 수행
-                        let data: [String: Any] = ["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!]
+                        let data: [String: Any] = ["내용": self.mainTextLabel.text ?? "", "유저": UserDefaults.standard.string(forKey: "UserEmailKey")!, "date": Date().timeIntervalSince1970]
                         documentRef.setData(data) { err in
                             if let err = err {
                                 print("Error adding document: \(err)")
@@ -144,12 +151,23 @@ class RegisterInfoViewController: UIViewController {
         let storyboard = UIStoryboard(name: "MapMarkerRegister", bundle: nil)
         guard let MapMarkerViewControllerVC = storyboard.instantiateViewController(withIdentifier: "MapMarkerViewController") as? MapMarkerViewController else { return }
         MapMarkerViewControllerVC.titleLabel = self.titleLabel.text!
+        MapMarkerViewControllerVC.modalPresentationStyle = .fullScreen
         present(MapMarkerViewControllerVC, animated: true)
     }
     
     //이미지 파이어베이스로 업로드
     func uploadimage(img: UIImage, completion: @escaping (Bool) -> Void) {
-        guard let data = img.jpegData(compressionQuality: 0.1) else {
+        guard let referenceImage = UIImage(named: "free-icon-picture-5639854.png"),
+              let referenceImageData = referenceImage.jpegData(compressionQuality: 1.0),
+              let imageData = img.jpegData(compressionQuality: 1.0) else {
+            // 이미지 데이터를 가져오지 못한 경우 또는 기준 이미지를 가져오지 못한 경우 업로드하지 않음
+            completion(false)
+            return
+        }
+        
+        // 이미지 데이터가 같은지 비교
+        if referenceImageData == imageData {
+            // 이미지가 기준 이미지와 같다면 업로드하지 않음
             completion(false)
             return
         }
@@ -158,7 +176,7 @@ class RegisterInfoViewController: UIViewController {
         let metaData = StorageMetadata()
         metaData.contentType = "image/png"
         
-        storage.reference().child(fileName).putData(data, metadata: metaData) { (metaData, error) in
+        storage.reference().child(fileName).putData(imageData, metadata: metaData) { (metaData, error) in
             if let error = error {
                 print(error.localizedDescription)
                 completion(false)
@@ -169,6 +187,7 @@ class RegisterInfoViewController: UIViewController {
             }
         }
     }
+
 
     func downloadAndStoreURL(fileName: String) {
         let fileRef = storage.reference().child(fileName)

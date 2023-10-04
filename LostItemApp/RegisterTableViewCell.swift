@@ -11,6 +11,7 @@ class RegisterTableViewCell: UITableViewCell {
 
     @IBOutlet var previewLabel: UILabel!
     @IBOutlet var previewImage: UIImageView!
+    @IBOutlet var previewDate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

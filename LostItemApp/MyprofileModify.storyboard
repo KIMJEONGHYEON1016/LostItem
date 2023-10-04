@@ -16,19 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh1-gt-ZbI">
-                                <rect key="frame" x="169.66666666666666" y="743" width="54" height="35"/>
-                                <color key="backgroundColor" red="0.83748632670000001" green="0.35432904050000003" blue="0.32462357130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
-                                <connections>
-                                    <action selector="CompleteBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1nS-WL-LMn"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VbA-8S-DHI">
-                                <rect key="frame" x="150" y="243" width="93" height="34"/>
-                                <color key="backgroundColor" red="0.56478630799999996" green="0.79822281620000002" blue="0.83748632670000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VbA-8S-DHI">
+                                <rect key="frame" x="135" y="293" width="123" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -44,31 +34,62 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-ic-DnR">
-                                <rect key="frame" x="10" y="74" width="40" height="24"/>
+                                <rect key="frame" x="13" y="71" width="20" height="18"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="free-icon-backward-318339.png" imageContentMode="scaleToFill"/>
+                                    <backgroundConfiguration key="background" image="free-icon-backward-arrow-81037.png" imageContentMode="scaleToFill"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="BackBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tcY-Rl-FoZ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="free-icon-photos-4618163.png" translatesAutoresizingMaskIntoConstraints="NO" id="tPf-fb-6xy">
+                                <rect key="frame" x="207" y="167" width="53" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="프로필 수정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fh0-l7-nrN">
+                                <rect key="frame" x="142" y="69" width="109" height="27.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwJ-6G-Xcb">
+                                <rect key="frame" x="173" y="261" width="47" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh1-gt-ZbI">
+                                <rect key="frame" x="324.33333333333331" y="71" width="58.666666666666686" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="완료">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="CompleteBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1nS-WL-LMn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Wh1-gt-ZbI" secondAttribute="bottom" constant="40" id="50F-B3-Fyr"/>
-                            <constraint firstItem="VbA-8S-DHI" firstAttribute="centerX" secondItem="Wh1-gt-ZbI" secondAttribute="centerX" id="6mn-jf-R7n"/>
-                            <constraint firstItem="kLD-nx-W4x" firstAttribute="leading" secondItem="zNB-ic-DnR" secondAttribute="trailing" constant="96.666666666666657" id="6rj-BS-dcR"/>
-                            <constraint firstItem="VbA-8S-DHI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="150" id="72W-zk-akr"/>
-                            <constraint firstItem="Wh1-gt-ZbI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JPK-lV-JoB"/>
-                            <constraint firstItem="VbA-8S-DHI" firstAttribute="top" secondItem="kLD-nx-W4x" secondAttribute="bottom" constant="30" id="OwD-7c-ftQ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zNB-ic-DnR" secondAttribute="bottom" constant="720" id="ScL-Zc-1kQ"/>
-                            <constraint firstItem="zNB-ic-DnR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="dLn-ec-fD6"/>
-                            <constraint firstItem="zNB-ic-DnR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="fLP-RB-0jc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VbA-8S-DHI" secondAttribute="trailing" constant="135" id="44y-or-Ldp"/>
+                            <constraint firstItem="kLD-nx-W4x" firstAttribute="leading" secondItem="zNB-ic-DnR" secondAttribute="trailing" constant="113.66666666666666" id="6rj-BS-dcR"/>
+                            <constraint firstItem="VbA-8S-DHI" firstAttribute="top" secondItem="kLD-nx-W4x" secondAttribute="bottom" constant="80" id="OwD-7c-ftQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zNB-ic-DnR" secondAttribute="bottom" constant="729" id="ScL-Zc-1kQ"/>
+                            <constraint firstItem="Wh1-gt-ZbI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="XRQ-cX-2kA"/>
+                            <constraint firstItem="rwJ-6G-Xcb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="b2Z-jD-NlP"/>
+                            <constraint firstItem="zNB-ic-DnR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="dLn-ec-fD6"/>
+                            <constraint firstItem="zNB-ic-DnR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="13" id="fLP-RB-0jc"/>
+                            <constraint firstItem="VbA-8S-DHI" firstAttribute="top" secondItem="rwJ-6G-Xcb" secondAttribute="bottom" constant="10" id="nWI-HZ-43U"/>
+                            <constraint firstItem="VbA-8S-DHI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="135" id="nWg-nw-dVu"/>
                             <constraint firstItem="kLD-nx-W4x" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="t4i-UK-vf9"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VbA-8S-DHI" secondAttribute="trailing" constant="150" id="wUU-6p-Itk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wh1-gt-ZbI" secondAttribute="trailing" constant="10" id="ve6-uW-7DT"/>
+                            <constraint firstItem="fh0-l7-nrN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="yXu-a1-Ukl"/>
                             <constraint firstItem="kLD-nx-W4x" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zU9-CH-5gK"/>
+                            <constraint firstItem="fh0-l7-nrN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="zqw-Mz-X8y"/>
                         </constraints>
                     </view>
                     <connections>
@@ -82,10 +103,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="free-icon-backward-318339.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="free-icon-backward-arrow-81037.png" width="247.40939331054688" height="247.40939331054688"/>
+        <image name="free-icon-photos-4618163.png" width="384" height="384"/>
         <image name="free-icon-user-7718888.png" width="384" height="384"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

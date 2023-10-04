@@ -33,6 +33,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         
+        let storyboard2 = UIStoryboard(name: "Main", bundle: nil)
+        
         if UserDefaults.standard.string(forKey: "UserEmailKey") != nil {
             // UserEmailKey 값이 존재하는 경우
             isLogged = true
@@ -43,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
    
         
         if isLogged == false {
-            guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginView") as? LoginViewController else { return }
+            guard let loginVC = storyboard2.instantiateViewController(withIdentifier: "LoginView") as? LoginViewController else { return }
             window?.rootViewController = loginVC
         } else {
             guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }

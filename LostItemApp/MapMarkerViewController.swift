@@ -15,7 +15,8 @@ class MapMarkerViewController: UIViewController {
     
     let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.5666102, lng: 126.9783881))
     var titleLabel = ""
-    
+    var CompleteButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         Location()
@@ -27,15 +28,18 @@ class MapMarkerViewController: UIViewController {
     
     @objc func CompleteButtonTapped() {
         self.saveCenterCoordinates()
-        let storyboard = UIStoryboard(name: "Register", bundle: nil)
-        guard let RegisterInfoViewControllerVC = storyboard.instantiateViewController(withIdentifier: "RegisterInfoViewController") as? RegisterInfoViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(RegisterInfoViewControllerVC, animated: false)
+        self.dismiss(animated: true)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        TabBarControllerVC.selectedIndex = 1
+
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
     }
     
-    @objc func BackButtonTapped() {
+   /* @objc func BackButtonTapped() {
            // Back 버튼을 눌렀을 때 MainVC를 dismiss
            self.dismiss(animated: true, completion: nil)
-       }
+       }*/
     
     func Location() {
      
@@ -44,7 +48,7 @@ class MapMarkerViewController: UIViewController {
             imageView.contentMode = .scaleAspectFit
         view.addSubview(imageView)
         
-        var BackButton: UIButton!
+       /* var BackButton: UIButton!
 
         BackButton = UIButton(type: .system)
         BackButton.setTitle("Back", for: .normal)
@@ -54,17 +58,18 @@ class MapMarkerViewController: UIViewController {
                BackButton.imageView?.contentMode = .scaleAspectFit // 이미지를 버튼 크기에 맞춥니다.
            }
         BackButton.addTarget(self, action: #selector(BackButtonTapped), for: .touchUpInside)
-        view.addSubview(BackButton)
+        view.addSubview(BackButton)*/
         
-        var CompleteButton: UIButton!
-
         CompleteButton = UIButton(type: .system)
-        CompleteButton.setTitle("Complete", for: .normal)
-        CompleteButton.frame = CGRect(x: 155, y: 650, width: 80, height: 30)
+        CompleteButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+        CompleteButton.frame = CGRect(x: 325, y: 43, width: 50, height: 30)
         CompleteButton.backgroundColor = .black
+        CompleteButton.setTitle("완료", for: .normal)
         CompleteButton.addTarget(self, action: #selector(CompleteButtonTapped), for: .touchUpInside)
+        CompleteButton.layer.cornerRadius = 0.2 * CompleteButton.bounds.size.width
+        CompleteButton.setTitleColor(UIColor.white, for: .normal)
+
         view.addSubview(CompleteButton)
-        
         
         
     }

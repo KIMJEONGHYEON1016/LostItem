@@ -7,7 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
-
+import KakaoSDKUser
 
 class MyPagecontroller: UIViewController, UITextFieldDelegate {
     
@@ -15,9 +15,10 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
     var ref: DocumentReference?
     
     @IBOutlet var NickName: UILabel!
-    @IBOutlet var Residence: UITextField!
     @IBOutlet var profileimage: UIImageView!
-    @IBOutlet var gratuity: UITextField!
+    @IBOutlet var socialImage: UIImageView!
+    @IBOutlet var userEmail: UILabel!
+    
     var nickName: String?
     var profileImage: UIImage?
     
@@ -32,18 +33,22 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
     }
     
     //뒤로가기 버튼
-    @IBAction func BackBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let MainVC = storyboard.instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainVC, animated: true)
-    }
+  
     @IBAction func MyPostBtn(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Register", bundle: nil)
         let RegisterViewControllerVC = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
         RegisterViewControllerVC.modalPresentationStyle = .fullScreen
         self.present(RegisterViewControllerVC, animated: true, completion: nil)
-
     }
+    
+    @IBAction func LogoutBtn(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "UserEmailKey")
+        UserDefaults.standard.removeObject(forKey: "SocialLogin")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginView") as? LoginViewController else { return }
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(LoginVC, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileimage.layer.cornerRadius = profileimage.frame.size.width / 2
@@ -54,12 +59,24 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
             NickName.text = "닉네임"
         }
         TabBarItem()
+        SocialLoginImage()
+    }
+    
+    
+    func SocialLoginImage() {
+        userEmail.text = UserDefaults.standard.string(forKey: "UserEmailKey")
+        
+        if UserDefaults.standard.string(forKey: "SocialLogin") == "Kakao" {
+            socialImage.image = UIImage(named: "free-icon-kakao-talk-3669973.png")
+        } else if UserDefaults.standard.string(forKey: "UserEmailKey") == "Apple" {
+            socialImage.image = UIImage(named: "free-icon-apple-black-logo-15476.png")
+        } else {
+            socialImage.image = UIImage(named: "free-icon-google-2991148.png")
+        }
+        socialImage.contentMode = .scaleAspectFill
     }
     
     func TabBarItem() {
-        let yourImage = UIImage(named: "free-icon-profile-7310896.png")
-        tabBarItem.image = yourImage?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = yourImage
         let appearance = UITabBarAppearance()
             
             // 타이틀의 일반 상태 (선택되지 않은 상태) 색상 설정

@@ -29,9 +29,7 @@ class ChatRoomViewController: UIViewController {
     }
     
     @IBAction func BackBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-        guard let ChatViewControllerVC = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(ChatViewControllerVC, animated: true)
+        self.dismiss(animated: true)
     }
     
     @IBAction func sendMessage(_ sender: Any) {

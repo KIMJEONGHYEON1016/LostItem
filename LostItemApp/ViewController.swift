@@ -12,7 +12,7 @@ import FirebaseFirestore
 class ViewController: UIViewController {
     
     @IBOutlet var subView: NMFNaverMapView!
-
+    @IBOutlet var refreshBtn: UIButton!
     
     let infoWindow = NMFInfoWindow()
     let marker = NMFMarker()
@@ -29,15 +29,18 @@ class ViewController: UIViewController {
         subView.mapView.positionMode = .direction
         subView.mapView.logoAlign = .rightTop
         TabBarItem()
+        refreshBtn.layer.cornerRadius = 0.5 * refreshBtn.bounds.size.width
 
     }
     
 
-  
+    @IBAction func refreshButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
+    }
+    
     func TabBarItem() {
-        let yourImage = UIImage(named: "free-icon-map-423354.png")
-        tabBarItem.image = yourImage?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = yourImage
         let appearance = UITabBarAppearance()
             
             // 타이틀의 일반 상태 (선택되지 않은 상태) 색상 설정
@@ -109,7 +112,12 @@ class ViewController: UIViewController {
                                         let documentID = document.documentID
                                         PostViewControllerVC.titleLabel.text = documentID
                                         if let chatuser = document["유저"] as? String {
-                                            PostViewControllerVC.chatUser = chatuser
+                                            if chatuser == UserDefaults.standard.string(forKey: "UserEmailKey")! {
+                                                PostViewControllerVC.deleteBtn.isHidden = false
+                                                PostViewControllerVC.ChatButton.isHidden = true
+                                            } else {
+                                                PostViewControllerVC.chatUser = chatuser
+                                            }
                                         }
                                     }
                                 }

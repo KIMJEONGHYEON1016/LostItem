@@ -10,7 +10,6 @@ import FirebaseFirestore
 
 class ChatViewController: UIViewController {
     
-    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var chattingtable: UITableView?
     
     var user1ValuesCount: Int = 0
@@ -18,28 +17,23 @@ class ChatViewController: UIViewController {
     var user2Values: [String] = [] // user2의 이메일을 저장할 배열
     var nickName: String?
     var profileImage: UIImage?
-    
-    @IBAction func BackBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let MainVC = storyboard.instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainVC, animated: true)
-    }
+    var previewLabel: String?
+    var chatTime: String?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         chattingtable?.dataSource = self
         chattingtable?.delegate = self
-        searchBar?.delegate = self
         loadDataFromFirestore() // Firestore에서 데이터를 가져오는 함수 호출
         TabBarItem()
+        let customColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0) 
+        chattingtable?.layer.borderWidth = 1.0
+        chattingtable?.layer.borderColor = customColor.cgColor
     }
     
     
     func TabBarItem() {
-        let yourImage = UIImage(named: "free-icon-chat-bot-9384045.png")
-        tabBarItem.image = yourImage
-        tabBarItem.image = yourImage?.withRenderingMode(.alwaysOriginal)
-        tabBarItem.selectedImage = yourImage
         let appearance = UITabBarAppearance()
             
             // 타이틀의 일반 상태 (선택되지 않은 상태) 색상 설정
@@ -50,8 +44,12 @@ class ChatViewController: UIViewController {
         UITabBar.appearance().standardAppearance = appearance
     }
     
+    @IBAction func RefreshBtn(_ sender: Any) {
+        self.chattingtable?.reloadData()
+    }
+    
     // Firestore에서 데이터를 가져오는 함수
-    func loadDataFromFirestore() {
+        func loadDataFromFirestore() {
         let currentUserEmail = UserDefaults.standard.string(forKey: "UserEmailKey") ?? ""
         let db = Firestore.firestore()
         db.collection("채팅")
@@ -168,6 +166,62 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
+        let userEmail = UserDefaults.standard.string(forKey: "UserEmailKey")
+        let sortedEmails = [userEmail!, user].sorted()
+        let chatDocumentID = sortedEmails[0] + "&" + sortedEmails[1]
+        
+        // "채팅" 컬렉션 내의 문서 참조 획득
+        let chatDocumentReference = db.collection("채팅").document(chatDocumentID)
+        
+        // "메시지" 서브컬렉션에 새로운 메시지를 추가
+        chatDocumentReference.collection("메시지")
+            .order(by: "date", descending: true)
+            .limit(to: 1)
+            .getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error fetching documents: \(error)")
+                } else {
+                    // 문서 가져오기 성공
+                    if let document = querySnapshot?.documents.first {
+                        let data = document.data()
+                        if let messageContent = data["body"] as? String, let messageDateTimestamp = data["date"] as? Double {
+                            
+                            // Timestamp를 Date로 변환
+                            let messageDate = Date(timeIntervalSince1970: messageDateTimestamp)
+                            
+                            cell.previewContent.text = messageContent
+                            
+                            // 현재 날짜와 시간 가져오기
+                            let currentDate = Date()
+                            
+                            // 메시지 날짜와 현재 날짜를 비교
+                            let calendar = Calendar.current
+                            let messageDateComponents = calendar.dateComponents([.year, .month, .day], from: messageDate)
+                            let currentDateComponents = calendar.dateComponents([.year, .month, .day], from: currentDate)
+                            
+                            let dateFormatter = DateFormatter()
+                            
+                            if messageDateComponents.year == currentDateComponents.year {
+                                // 같은 해에 속하는 경우
+                                if messageDateComponents.month == currentDateComponents.month && messageDateComponents.day == currentDateComponents.day {
+                                    // 오늘인 경우
+                                    dateFormatter.dateFormat = "HH:mm"
+                                } else {
+                                    // 이번 년도에 속하지만 오늘이 아닌 경우
+                                    dateFormatter.dateFormat = "MM월 dd일"
+                                }
+                            } else {
+                                // 다른 년도에 속하는 경우
+                                dateFormatter.dateFormat = "YYYY년 MM월 dd일"
+                            }
+                            
+                            let formattedDate = dateFormatter.string(from: messageDate)
+                            
+                            cell.timeLabel.text = formattedDate
+                        }
+                    }
+                }
+            }
         return cell
     }
     
@@ -192,13 +246,9 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         ChatRoomViewControllerVC.chatUser = chatUser
         ChatRoomViewControllerVC.nickName = self.nickName
         ChatRoomViewControllerVC.profileImage = self.profileImage
+        ChatRoomViewControllerVC.modalPresentationStyle = .fullScreen
         present(ChatRoomViewControllerVC, animated: true)
     }
 }
 
-// 서치바
-extension ChatViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // 서치바 검색 기능 구현
-    }
-}
+

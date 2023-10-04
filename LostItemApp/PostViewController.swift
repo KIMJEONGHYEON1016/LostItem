@@ -16,7 +16,7 @@ class PostViewController: UIViewController {
     @IBOutlet var image1: UIImageView!
     @IBOutlet var image2: UIImageView!
     @IBOutlet var image3: UIImageView!
-    @IBOutlet var mainText: UILabel!
+    @IBOutlet var mainText: UITextView!
     @IBOutlet var deleteBtn: UIButton!
     
     var ChatButton: UIButton!
@@ -35,11 +35,15 @@ class PostViewController: UIViewController {
         }
         ChatButtonItem()
         
+        mainText.layer.borderWidth = 1.0
+        // 테두리 색상 설정
+        mainText.layer.borderColor = UIColor.lightGray.cgColor
+        mainText.isEditable = false
+        LostItemImage()
     }
     
     @IBAction func BackBtn(_ sender: Any) {
-        guard let RegisterVC = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(RegisterVC, animated: true)
+        self.dismiss(animated: true)
     }
     
     @IBAction func DeleteBtn(_ sender: Any) {
@@ -70,7 +74,7 @@ class PostViewController: UIViewController {
         // 컬렉션에 대한 참조 생성
         let collectionRef = db.collection("게시글")
         
-        // 조건을 충족하는 문서를 삭제
+        
         collectionRef.whereField("유저", isEqualTo: UserDefaults.standard.string(forKey: "UserEmailKey") ?? "")
                      .whereField("내용", isEqualTo: mainText.text ?? "")
                      .getDocuments { (snapshot, error) in
@@ -93,6 +97,22 @@ class PostViewController: UIViewController {
             }
         }
     }
+    
+    func LostItemImage () {
+        image1.layer.borderWidth = 1.0 // 테두리 두께
+        image1.layer.borderColor = UIColor.lightGray.cgColor // 테두리 색상
+        image1.layer.cornerRadius = 3.0 // 테두리 모서리 반경 (원하는 값으로 조정)
+        image1.clipsToBounds = true
+        image2.layer.borderWidth = 1.0
+        image2.layer.borderColor = UIColor.lightGray.cgColor
+        image2.layer.cornerRadius = 3.0
+        image2.clipsToBounds = true
+        image3.layer.borderWidth = 1.0
+        image3.layer.borderColor = UIColor.lightGray.cgColor
+        image3.layer.cornerRadius = 3.0
+        image3.clipsToBounds = true
+    }
+    
     func UploadData() {
         if let documentID = documentID {
             // Firestore에서 문서를 가져오기 위해 documentID를 사용
@@ -185,12 +205,14 @@ class PostViewController: UIViewController {
         
         ChatButton = UIButton(type: .system)
         ChatButton.setTitle("채팅", for: .normal)
-        ChatButton.frame = CGRect(x: 155, y: 650, width: 80, height: 30)
-        ChatButton.backgroundColor = .black
+        ChatButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+        ChatButton.setTitleColor(UIColor.white, for: .normal)
+        ChatButton.frame = CGRect(x: 10, y: 660, width: 373, height: 49)
+        ChatButton.backgroundColor = .systemGreen
         ChatButton.addTarget(self, action: #selector(ChatButtonTapped), for: .touchUpInside)
         view.addSubview(ChatButton)
         ChatButton.isHidden = true
-        
+        ChatButton.layer.cornerRadius = 5.0
     }
     
     @objc func ChatButtonTapped() {
@@ -202,22 +224,38 @@ class PostViewController: UIViewController {
         
         // "채팅" 컬렉션 내에 문서를 생성
         let userEmail = UserDefaults.standard.string(forKey: "UserEmailKey") ?? ""
-        let chatDocumentID = userEmail + "&" + chatUser!
-        
-        // "채팅" 컬렉션 내에 문서를 생성하고 필요한 데이터를 추가
-        db.collection("채팅").document(chatDocumentID).setData([
-            "user1": userEmail, // 사용자 1의 이메일
-            "user2": chatUser!, // 사용자 2의 이름 또는 식별자
-        ]) { error in
+        let sortedEmails = [userEmail, chatUser!].sorted()
+        let documentPath = sortedEmails[0] + "&" + sortedEmails[1]
+        // Firestore에 접근하여 document 존재 여부 확인
+        db.collection("채팅").document(documentPath).getDocument { (document, error) in
             if let error = error {
-                print("채팅 문서를 생성하는 데 실패했습니다: \(error.localizedDescription)")
-                return
+                print("Error getting document: \(error)")
+            } else if let document = document, document.exists {
+                // 해당 document가 존재하는 경우
+                print("Document exists: \(document.data() ?? [:])")
+                
+                // document에서 "user1" 필드의 값을 가져와서 self.chatUser에 할당
+                if let user1 = document.data()?["user1"] as? String {
+                    self.chatUser = user1
+                    print("self.chatUser에 할당된 값: \(self.chatUser ?? "")")
+                }
+            } else {
+                // 해당 document가 존재하지 않는 경우
+                db.collection("채팅").document(documentPath).setData([
+                    "user1": userEmail, // 사용자 1의 이메일
+                    "user2": self.chatUser!, // 사용자 2의 이메일
+                ]) { error in
+                    if let error = error {
+                        print("채팅 문서를 생성하는 데 실패했습니다: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    print("채팅 문서를 성공적으로 생성했습니다.")
+                }
             }
-            
-            print("채팅 문서를 성공적으로 생성했습니다.")
-            
-            
         }
+        // "채팅" 컬렉션 내에 문서를 생성하고 필요한 데이터를 추가
+       
     
         ChatRoomViewControllerVC.chatUser = chatUser
         present(ChatRoomViewControllerVC, animated: true)
