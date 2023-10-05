@@ -213,6 +213,8 @@ class PostViewController: UIViewController {
         view.addSubview(ChatButton)
         ChatButton.isHidden = true
         ChatButton.layer.cornerRadius = 5.0
+        ChatButton.clipsToBounds = true
+
     }
     
     @objc func ChatButtonTapped() {

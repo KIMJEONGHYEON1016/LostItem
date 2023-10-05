@@ -12,8 +12,9 @@ class ChatRoomTableViewCell: UITableViewCell {
     
     @IBOutlet var leftImageView: UIImageView!
     @IBOutlet var messageLabel: UILabel!
-    @IBOutlet var nickName: UILabel!
     
+    @IBOutlet var myMessage: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

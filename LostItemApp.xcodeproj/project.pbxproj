@@ -78,6 +78,7 @@
 		53D479C02ACC777500D6049F /* free-icon-reload-7134763.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D479BF2ACC777500D6049F /* free-icon-reload-7134763.png */; };
 		53D479C22ACC7F0000D6049F /* free-icon-picture-5639854.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D479C12ACC7F0000D6049F /* free-icon-picture-5639854.png */; };
 		53D479C42ACC837F00D6049F /* free-icon-photo-camera-4653765.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D479C32ACC837F00D6049F /* free-icon-photo-camera-4653765.png */; };
+		53D479C62ACED2BA00D6049F /* 스크린샷 2023-10-05 오후 8.17.07.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D479C52ACED2BA00D6049F /* 스크린샷 2023-10-05 오후 8.17.07.png */; };
 		53F415D22A95B2F8005AB96D /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F415D12A95B2F8005AB96D /* ChatRoomViewController.swift */; };
 		53F415D62A95BC22005AB96D /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F415D52A95BC22005AB96D /* ChatRoomTableViewCell.swift */; };
 		53F415DE2A95EB8A005AB96D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F415DD2A95EB8A005AB96D /* Register.storyboard */; };
@@ -194,6 +195,7 @@
 		53D479BF2ACC777500D6049F /* free-icon-reload-7134763.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-reload-7134763.png"; path = "../../../../../../Downloads/free-icon-reload-7134763.png"; sourceTree = "<group>"; };
 		53D479C12ACC7F0000D6049F /* free-icon-picture-5639854.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-picture-5639854.png"; path = "../../../../../../Downloads/free-icon-picture-5639854.png"; sourceTree = "<group>"; };
 		53D479C32ACC837F00D6049F /* free-icon-photo-camera-4653765.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-photo-camera-4653765.png"; path = "../../../../../../Downloads/free-icon-photo-camera-4653765.png"; sourceTree = "<group>"; };
+		53D479C52ACED2BA00D6049F /* 스크린샷 2023-10-05 오후 8.17.07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "스크린샷 2023-10-05 오후 8.17.07.png"; path = "../../../../../../../../var/folders/v4/tys3kd_j1yl1txqbp25p13wr0000gn/T/TemporaryItems/NSIRD_screencaptureui_fTo253/스크린샷 2023-10-05 오후 8.17.07.png"; sourceTree = "<group>"; };
 		53F415D12A95B2F8005AB96D /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		53F415D52A95BC22005AB96D /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		53F415DD2A95EB8A005AB96D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		534C12972A615CAA0032F957 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				53D479C52ACED2BA00D6049F /* 스크린샷 2023-10-05 오후 8.17.07.png */,
 				53D479BF2ACC777500D6049F /* free-icon-reload-7134763.png */,
 				53D479B52ACC6FC900D6049F /* free-icon-apple-black-logo-15476.png */,
 				53D479C32ACC837F00D6049F /* free-icon-photo-camera-4653765.png */,
@@ -529,6 +532,7 @@
 				53A1AA6E2A61A00C004A1295 /* Main.storyboard in Resources */,
 				53D479BE2ACC74CB00D6049F /* free-icon-photos-4618163.png in Resources */,
 				53A2F5BE2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png in Resources */,
+				53D479C62ACED2BA00D6049F /* 스크린샷 2023-10-05 오후 8.17.07.png in Resources */,
 				534C12982A615CBC0032F957 /* lost item.png in Resources */,
 				534C129A2A615CC20032F957 /* free-icon-message-in-a-bottle-7292542.png in Resources */,
 				53AE400E2ACC451B00DF32DC /* btn_google_signin_dark_normal_ios@2x.png in Resources */,

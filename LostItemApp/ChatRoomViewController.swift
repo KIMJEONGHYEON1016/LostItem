@@ -13,7 +13,7 @@ import UITextView_Placeholder
 class ChatRoomViewController: UIViewController {
     
     @IBOutlet var chattingRoom: UITableView!
-    
+    @IBOutlet var chattingUser: UILabel!
     @IBOutlet var messageTextField: UITextView!
     
     let db = Firestore.firestore()
@@ -30,6 +30,11 @@ class ChatRoomViewController: UIViewController {
     
     @IBAction func BackBtn(_ sender: Any) {
         self.dismiss(animated: true)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        TabBarControllerVC.selectedIndex = 2
+
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
     }
     
     @IBAction func sendMessage(_ sender: Any) {
@@ -67,6 +72,10 @@ class ChatRoomViewController: UIViewController {
         chattingRoom.delegate = self
         LoadMessages()
         messageTextField.placeholder = "채팅"
+        let customColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+        chattingRoom?.layer.borderWidth = 1.0
+        chattingRoom?.layer.borderColor = customColor.cgColor
+        chattingRoom?.layer.cornerRadius = 3.0
     }
     
      func LoadMessages() {
@@ -130,21 +139,27 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
         
         if message.sender == UserDefaults.standard.string(forKey: "UserEmailKey") {
             messageCell.leftImageView.isHidden = true
-            messageCell.nickName.isHidden = true
-            messageCell.messageLabel.textColor = UIColor.black
-            messageCell.messageLabel.textAlignment = .right
+            messageCell.myMessage.textColor = UIColor.black
+            messageCell.myMessage.textAlignment = .right
+            messageCell.myMessage.lineBreakMode = .byWordWrapping
+            messageCell.myMessage.numberOfLines = 0
+            messageCell.myMessage.text = message.body
+            messageCell.myMessage.isHidden = false
+            messageCell.messageLabel.isHidden = true
         } else {
             messageCell.leftImageView.isHidden = false
-            messageCell.nickName?.isHidden = false
             messageCell.messageLabel.textColor = UIColor.brown
             messageCell.messageLabel.textAlignment = .left
+            messageCell.messageLabel.lineBreakMode = .byWordWrapping
+            messageCell.messageLabel.numberOfLines = 0
+            messageCell.messageLabel.text = message.body
+            messageCell.myMessage.isHidden = true
+            messageCell.messageLabel.isHidden = false
         }
 
-        messageCell.messageLabel.lineBreakMode = .byWordWrapping
-        messageCell.messageLabel.numberOfLines = 0
 
-        messageCell.messageLabel.text = message.body
-        messageCell.nickName.text = self.nickName
+        
+        self.chattingUser.text = self.nickName
         messageCell.leftImageView.image = self.profileImage
         if messageCell.leftImageView?.image == nil {
             messageCell.leftImageView?.image = UIImage(named: "free-icon-user-7718888.png")
