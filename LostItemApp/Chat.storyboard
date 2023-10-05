@@ -135,53 +135,72 @@
                                     <action selector="sendMessage:" destination="Oil-ke-NI0" eventType="touchUpInside" id="eVI-Lw-4Lt"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-LD-zjq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-LD-zjq">
                                 <rect key="frame" x="0.0" y="114" width="393" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatRoomTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatRoomTableViewCell" rowHeight="78" id="9id-N1-Bgp" customClass="ChatRoomTableViewCell" customModule="LostItemApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="78"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatRoomTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatRoomTableViewCell" id="9id-N1-Bgp" customClass="ChatRoomTableViewCell" customModule="LostItemApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="59.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9id-N1-Bgp" id="Lfl-na-6Dn">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="78"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="59.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="free-icon-user-7718888.png" translatesAutoresizingMaskIntoConstraints="NO" id="sDX-PC-ZR5">
-                                                    <rect key="frame" x="5" y="13" width="40" height="40"/>
+                                                    <rect key="frame" x="5" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="F0G-uM-zZi"/>
                                                         <constraint firstAttribute="height" constant="40" id="RvE-qa-JYf"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rwg-re-zzy">
+                                                    <rect key="frame" x="50" y="9.6666666666666679" width="74" height="40.333333333333329"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대화내용" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dl-KP-kq9">
-                                                    <rect key="frame" x="55" y="31" width="313" height="16"/>
+                                                    <rect key="frame" x="55" y="19.666666666666671" width="59" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drt-zT-DIz">
-                                                    <rect key="frame" x="5" y="56" width="40" height="11"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dA-pm-ykc">
+                                                    <rect key="frame" x="309" y="9.6666666666666679" width="74" height="40.333333333333329"/>
+                                                    <color key="backgroundColor" red="0.20183545675790204" green="0.49078217793409362" blue="0.96611279249191284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대화내용" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNs-Tc-JdK">
+                                                    <rect key="frame" x="319" y="19.666666666666671" width="59" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="2Dl-KP-kq9" firstAttribute="top" secondItem="Lfl-na-6Dn" secondAttribute="topMargin" constant="20" id="0Dp-FT-2oO"/>
-                                                <constraint firstItem="sDX-PC-ZR5" firstAttribute="centerY" secondItem="Lfl-na-6Dn" secondAttribute="centerY" constant="-6" id="Ecs-2D-w1X"/>
-                                                <constraint firstItem="2Dl-KP-kq9" firstAttribute="leading" secondItem="sDX-PC-ZR5" secondAttribute="trailing" constant="10" id="Hy7-xm-ybv"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="2Dl-KP-kq9" secondAttribute="trailing" constant="5" id="NSL-ou-yjM"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="2Dl-KP-kq9" secondAttribute="bottom" constant="20" id="R2C-yd-MgU"/>
-                                                <constraint firstItem="drt-zT-DIz" firstAttribute="top" secondItem="sDX-PC-ZR5" secondAttribute="bottom" constant="3" id="SFb-7h-11I"/>
-                                                <constraint firstItem="drt-zT-DIz" firstAttribute="centerX" secondItem="Lfl-na-6Dn" secondAttribute="centerX" constant="-171.5" id="U2N-8H-ojv"/>
-                                                <constraint firstItem="sDX-PC-ZR5" firstAttribute="centerY" secondItem="Lfl-na-6Dn" secondAttribute="centerY" constant="-6" id="YCd-03-jLc"/>
+                                                <constraint firstItem="sDX-PC-ZR5" firstAttribute="centerY" secondItem="Lfl-na-6Dn" secondAttribute="centerY" id="3lW-0h-NCl"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rwg-re-zzy" secondAttribute="trailing" constant="20" id="6fs-pR-Hp8"/>
+                                                <constraint firstItem="Rwg-re-zzy" firstAttribute="top" secondItem="2Dl-KP-kq9" secondAttribute="top" constant="-10" id="DYg-jQ-I9U"/>
+                                                <constraint firstItem="cNs-Tc-JdK" firstAttribute="centerY" secondItem="Lfl-na-6Dn" secondAttribute="centerY" id="Dmv-fw-Uwq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2Dl-KP-kq9" secondAttribute="bottom" constant="8.6699999999999999" id="ScX-OK-GVS"/>
+                                                <constraint firstAttribute="trailing" secondItem="cNs-Tc-JdK" secondAttribute="trailing" constant="15" id="T8g-vv-xGc"/>
+                                                <constraint firstItem="8dA-pm-ykc" firstAttribute="bottom" secondItem="cNs-Tc-JdK" secondAttribute="bottom" constant="10" id="Tie-6K-lm4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cNs-Tc-JdK" secondAttribute="bottom" constant="8.6699999999999999" id="VSh-dV-BbQ"/>
+                                                <constraint firstItem="Rwg-re-zzy" firstAttribute="trailing" secondItem="2Dl-KP-kq9" secondAttribute="trailing" constant="10" id="Ykl-q7-tbK"/>
+                                                <constraint firstItem="8dA-pm-ykc" firstAttribute="leading" secondItem="cNs-Tc-JdK" secondAttribute="leading" constant="-10" id="cPC-WE-S84"/>
+                                                <constraint firstItem="8dA-pm-ykc" firstAttribute="trailing" secondItem="cNs-Tc-JdK" secondAttribute="trailing" constant="5" id="dmT-SB-c2X"/>
+                                                <constraint firstItem="8dA-pm-ykc" firstAttribute="top" secondItem="cNs-Tc-JdK" secondAttribute="top" constant="-10" id="jEG-De-mtb"/>
+                                                <constraint firstItem="Rwg-re-zzy" firstAttribute="bottom" secondItem="2Dl-KP-kq9" secondAttribute="bottom" constant="10" id="k7z-9p-QG1"/>
+                                                <constraint firstItem="2Dl-KP-kq9" firstAttribute="centerY" secondItem="Lfl-na-6Dn" secondAttribute="centerY" id="oHw-D8-qlu"/>
+                                                <constraint firstItem="8dA-pm-ykc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lfl-na-6Dn" secondAttribute="leading" constant="30" id="on6-9Q-8bR"/>
+                                                <constraint firstItem="Rwg-re-zzy" firstAttribute="leading" secondItem="2Dl-KP-kq9" secondAttribute="leading" constant="-5" id="sgc-fR-Zjz"/>
                                                 <constraint firstItem="sDX-PC-ZR5" firstAttribute="leading" secondItem="Lfl-na-6Dn" secondAttribute="leading" constant="5" id="wjR-N9-ihY"/>
+                                                <constraint firstItem="2Dl-KP-kq9" firstAttribute="leading" secondItem="sDX-PC-ZR5" secondAttribute="trailing" constant="10" id="z3g-2U-cnO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="MymessageBubble" destination="8dA-pm-ykc" id="Wiv-ji-sZ1"/>
                                             <outlet property="leftImageView" destination="sDX-PC-ZR5" id="bdN-a7-nEW"/>
+                                            <outlet property="messageBubble" destination="Rwg-re-zzy" id="rvo-cC-fjd"/>
                                             <outlet property="messageLabel" destination="2Dl-KP-kq9" id="3wh-US-UmQ"/>
-                                            <outlet property="nickName" destination="drt-zT-DIz" id="KsL-ee-9A9"/>
+                                            <outlet property="myMessage" destination="cNs-Tc-JdK" id="X3u-j0-USa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -209,6 +228,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLO-pY-T5j">
+                                <rect key="frame" x="63" y="68" width="51.333333333333343" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dXI-M5-9Jv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -219,12 +244,15 @@
                             <constraint firstItem="DNr-LD-zjq" firstAttribute="top" secondItem="qmx-QR-Qkn" secondAttribute="bottom" constant="25" id="Clb-FP-0xn"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="bottom" secondItem="dXI-M5-9Jv" secondAttribute="bottom" id="JOh-mH-W7c"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="N78-EH-8Ki" secondAttribute="trailing" id="Kir-4g-bJJ"/>
+                            <constraint firstItem="zLO-pY-T5j" firstAttribute="top" secondItem="dXI-M5-9Jv" secondAttribute="top" constant="9" id="NFz-A7-zTe"/>
                             <constraint firstItem="DNr-LD-zjq" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="NbJ-L8-SlY"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="bottom" secondItem="N78-EH-8Ki" secondAttribute="bottom" id="NxD-rG-gEu"/>
                             <constraint firstItem="qmx-QR-Qkn" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" constant="13" id="Uno-bu-XOM"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="N78-EH-8Ki" secondAttribute="trailing" id="XxR-qq-vp5"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="qmx-QR-Qkn" secondAttribute="trailing" constant="360" id="iCz-ff-TWg"/>
                             <constraint firstItem="UOh-3U-DTc" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="kah-vS-Y7V"/>
+                            <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zLO-pY-T5j" secondAttribute="trailing" constant="100" id="lb3-If-WuD"/>
+                            <constraint firstItem="zLO-pY-T5j" firstAttribute="leading" secondItem="qmx-QR-Qkn" secondAttribute="trailing" constant="30" id="sbd-OU-iqV"/>
                             <constraint firstItem="qmx-QR-Qkn" firstAttribute="top" secondItem="dXI-M5-9Jv" secondAttribute="top" constant="12" id="tzP-HK-cds"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="DNr-LD-zjq" secondAttribute="trailing" id="uZn-zf-76w"/>
                             <constraint firstItem="DNr-LD-zjq" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="vfQ-hT-V2z"/>
@@ -232,6 +260,7 @@
                     </view>
                     <connections>
                         <outlet property="chattingRoom" destination="DNr-LD-zjq" id="NWe-nk-ctv"/>
+                        <outlet property="chattingUser" destination="zLO-pY-T5j" id="o9i-4u-jw2"/>
                         <outlet property="messageTextField" destination="UOh-3U-DTc" id="D4c-vT-Ocd"/>
                     </connections>
                 </viewController>
@@ -250,6 +279,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

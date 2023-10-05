@@ -75,7 +75,6 @@ class MyprofileModifycontroller: UIViewController {
                         // "닉네임" 필드를 가진 문서가 없음, 닉네임 업데이트 및 작업 수행
                         let storyboard = UIStoryboard(name: "MyPage", bundle: nil)
                         guard let myPageVC = storyboard.instantiateViewController(withIdentifier: "MyPagecontroller") as? MyPagecontroller else { return }
-                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(myPageVC, animated: true)
                         myPageVC.NickName?.text = newNickname
                         myPageVC.NickName?.sizeToFit()
                         myPageVC.profileimage?.image = self.profileImage?.image
@@ -83,6 +82,7 @@ class MyprofileModifycontroller: UIViewController {
                         // 이미지 파일 가져오기 및 업로드 로직 추가
                         let image = self.profileImage.image
                         self.uploadimage(img: image!)
+                        self.dismiss(animated: true)
                     }
                 }
             } else {
