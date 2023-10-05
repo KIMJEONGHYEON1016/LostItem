@@ -38,6 +38,9 @@ class ChatRoomViewController: UIViewController {
     }
     
     @IBAction func sendMessage(_ sender: Any) {
+        if messageTextField.text == "" {
+                //메세지가 공백일경우 무반응
+        } else {
         if let messageBody = messageTextField.text, let messageSender = UserDefaults.standard.string(forKey: "UserEmailKey"), let chatUser = chatUser {
             
             // 사용자 이메일과 채팅 사용자 이메일을 정렬후 합침
@@ -57,9 +60,10 @@ class ChatRoomViewController: UIViewController {
                     print("메시지를 서브컬렉션에 추가하는 데 실패했습니다: \(e.localizedDescription)")
                 } else {
                     print("메시지를 서브컬렉션에 성공적으로 추가했습니다.")
-
+                    
                     DispatchQueue.main.async {
                         self.messageTextField.text = ""
+                        }
                     }
                 }
             }
@@ -136,27 +140,36 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
         
         let messageCell = tableView.dequeueReusableCell(withIdentifier: "ChatRoomTableViewCell", for: indexPath) as! ChatRoomTableViewCell
         
-        
+        messageCell.messageBubble.addSubview(messageCell.messageLabel)
+        messageCell.MymessageBubble.addSubview(messageCell.myMessage)
+
         if message.sender == UserDefaults.standard.string(forKey: "UserEmailKey") {
+            messageCell.myMessage.text = message.body
             messageCell.leftImageView.isHidden = true
-            messageCell.myMessage.textColor = UIColor.black
             messageCell.myMessage.textAlignment = .right
             messageCell.myMessage.lineBreakMode = .byWordWrapping
             messageCell.myMessage.numberOfLines = 0
-            messageCell.myMessage.text = message.body
             messageCell.myMessage.isHidden = false
             messageCell.messageLabel.isHidden = true
+            messageCell.messageBubble.isHidden = true
+            messageCell.MymessageBubble.isHidden = false
+            messageCell.MymessageBubble.layer.cornerRadius = 5.0
+
         } else {
+            messageCell.messageLabel.text = message.body
             messageCell.leftImageView.isHidden = false
-            messageCell.messageLabel.textColor = UIColor.brown
+            messageCell.messageLabel.textColor = UIColor.black
             messageCell.messageLabel.textAlignment = .left
             messageCell.messageLabel.lineBreakMode = .byWordWrapping
             messageCell.messageLabel.numberOfLines = 0
-            messageCell.messageLabel.text = message.body
             messageCell.myMessage.isHidden = true
             messageCell.messageLabel.isHidden = false
-        }
+            messageCell.messageBubble.isHidden = false
+            messageCell.messageBubble.layer.cornerRadius = 5.0
+            messageCell.messageBubble.isHidden = false
+            messageCell.MymessageBubble.isHidden = true
 
+        }
 
         
         self.chattingUser.text = self.nickName
