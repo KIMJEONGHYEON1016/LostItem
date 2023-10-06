@@ -49,7 +49,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="스크린샷 2023-10-03 오후 10.04.24.png"/>
+                                    <backgroundConfiguration key="background" image="스크린샷 2023-10-07 오전 12.58.34.png" imageContentMode="scaleToFill"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="GoogleBtnAction:" destination="zEk-1O-vul" eventType="touchUpInside" id="JlQ-Ed-RRv"/>
@@ -138,7 +138,7 @@
         <image name="free-icon-map-423354.png" width="20" height="20"/>
         <image name="free-icon-reload-7134763.png" width="384" height="384"/>
         <image name="kakao_login_medium_wide.png" width="300" height="45"/>
-        <image name="스크린샷 2023-10-03 오후 10.04.24.png" width="555" height="73"/>
+        <image name="스크린샷 2023-10-07 오전 12.58.34.png" width="554" height="71"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

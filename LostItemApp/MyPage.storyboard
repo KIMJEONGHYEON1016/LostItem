@@ -149,7 +149,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="NickName" destination="7fe-lL-Acl" id="yJC-z8-T4N"/>
-                        <outlet property="profileimage" destination="ZlR-Jg-0Xx" id="gKn-RN-xhd"/>
+                        <outlet property="profileimage" destination="ZlR-Jg-0Xx" id="UZk-iK-fnt"/>
                         <outlet property="socialImage" destination="9cs-iZ-jbd" id="0SA-Zu-7R2"/>
                         <outlet property="userEmail" destination="FZS-ss-Ify" id="GyF-4k-qBE"/>
                     </connections>

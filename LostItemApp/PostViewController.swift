@@ -34,7 +34,6 @@ class PostViewController: UIViewController {
             self.UploadData()
         }
         ChatButtonItem()
-        
         mainText.layer.borderWidth = 1.0
         // 테두리 색상 설정
         mainText.layer.borderColor = UIColor.lightGray.cgColor

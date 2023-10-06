@@ -83,6 +83,11 @@ class MyprofileModifycontroller: UIViewController {
                         let image = self.profileImage.image
                         self.uploadimage(img: image!)
                         self.dismiss(animated: true)
+                        let storyboard1 = UIStoryboard(name: "TabBar", bundle: nil)
+                        guard let TabBarControllerVC = storyboard1.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+                        TabBarControllerVC.selectedIndex = 3
+
+                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
                     }
                 }
             } else {

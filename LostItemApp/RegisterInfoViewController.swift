@@ -71,7 +71,7 @@ class RegisterInfoViewController: UIViewController {
     
    
     @IBAction func completeBtn(_ sender: Any) {
-        if titleLabel.text != nil && mainTextLabel.text != nil && lostItemPhoto.image != UIImage(systemName: "photo.artframe") {
+        if titleLabel.text != nil && mainTextLabel.text != nil && lostItemPhoto.image != UIImage(named: "free-icon-photo-camera-4653765.png") {
             SetData()
             let storyboard = UIStoryboard(name: "Register", bundle: nil)
             guard let RegisterViewControllerVC = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
@@ -158,8 +158,8 @@ class RegisterInfoViewController: UIViewController {
     //이미지 파이어베이스로 업로드
     func uploadimage(img: UIImage, completion: @escaping (Bool) -> Void) {
         guard let referenceImage = UIImage(named: "free-icon-picture-5639854.png"),
-              let referenceImageData = referenceImage.jpegData(compressionQuality: 1.0),
-              let imageData = img.jpegData(compressionQuality: 1.0) else {
+              let referenceImageData = referenceImage.jpegData(compressionQuality: 0.1),
+              let imageData = img.jpegData(compressionQuality: 0.1) else {
             // 이미지 데이터를 가져오지 못한 경우 또는 기준 이미지를 가져오지 못한 경우 업로드하지 않음
             completion(false)
             return

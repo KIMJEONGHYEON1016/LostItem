@@ -28,6 +28,7 @@
             mainTableView?.layer.borderWidth = 1.0
             mainTableView?.layer.borderColor = customColor.cgColor
             mainTableView?.layer.cornerRadius = 3.0
+            mainTableView?.reloadData()
         }
         
         

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		531A8B0C2A77FC1A009ABE30 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531A8B0B2A77FC1A009ABE30 /* OpenGLES.framework */; };
-		53220BBB2ABEF1360011A099 /* free-icon-backward-318339.png in Resources */ = {isa = PBXBuildFile; fileRef = 53220BBA2ABEF1350011A099 /* free-icon-backward-318339.png */; };
 		5324A50C2AA0B8BB008B7A6E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5324A50B2AA0B8BB008B7A6E /* PostViewController.swift */; };
 		5340DF852A72887F004E81A6 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF842A72887F004E81A6 /* KakaoSDK */; };
 		5340DF872A72887F004E81A6 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF862A72887F004E81A6 /* KakaoSDKAuth */; };
@@ -20,8 +19,6 @@
 		534C12952A615C930032F957 /* kakao_login_medium_wide.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C12912A615AF80032F957 /* kakao_login_medium_wide.png */; };
 		534C12982A615CBC0032F957 /* lost item.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C128F2A615AF70032F957 /* lost item.png */; };
 		534C12992A615CC00032F957 /* free-icon-lost-items-3372390-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C12922A615AF80032F957 /* free-icon-lost-items-3372390-3.png */; };
-		534C129A2A615CC20032F957 /* free-icon-message-in-a-bottle-7292542.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C12932A615AF80032F957 /* free-icon-message-in-a-bottle-7292542.png */; };
-		534C129B2A615CC50032F957 /* free-icon-document-list-11240429.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C128E2A615AF70032F957 /* free-icon-document-list-11240429.png */; };
 		534C129C2A615CC70032F957 /* free-icon-user-7718888.png in Resources */ = {isa = PBXBuildFile; fileRef = 534C12902A615AF80032F957 /* free-icon-user-7718888.png */; };
 		53605FBA2AC4408B007F09B2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53605FB92AC4408B007F09B2 /* TabBarController.swift */; };
 		53605FBC2AC44219007F09B2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53605FBB2AC44219007F09B2 /* TabBar.storyboard */; };
@@ -48,10 +45,7 @@
 		53A2F5BA2AB9C779009B97AD /* free-icon-message-520648.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5B92AB9C779009B97AD /* free-icon-message-520648.png */; };
 		53A2F5BC2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5BB2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png */; };
 		53A2F5BE2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5BD2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png */; };
-		53A2F5C02ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5BF2ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png */; };
-		53A2F5C22ABC6706009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5C12ABC6705009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png */; };
-		53A2F5C42ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5C32ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png */; };
-		53A2F5C82ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A2F5C72ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png */; };
+		53A5BBA62AD0667B0037C745 /* 스크린샷 2023-10-07 오전 12.58.34.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A5BBA52AD0667B0037C745 /* 스크린샷 2023-10-07 오전 12.58.34.png */; };
 		53AB63F92AAD80EC00795B8C /* MapMarkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB63F82AAD80EC00795B8C /* MapMarkerViewController.swift */; };
 		53AB63FB2AAD810A00795B8C /* MapMarkerRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53AB63FA2AAD810A00795B8C /* MapMarkerRegister.storyboard */; };
 		53AC716A2A6AC119005CF4A2 /* MyPagecontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AC71692A6AC119005CF4A2 /* MyPagecontroller.swift */; };
@@ -118,17 +112,14 @@
 		2C318E5A7221020B580E8B95 /* Pods-LostItemApp-LostItemAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LostItemApp-LostItemAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-LostItemApp-LostItemAppUITests/Pods-LostItemApp-LostItemAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		309727993C2F454850980CCD /* Pods_LostItemApp_LostItemAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LostItemApp_LostItemAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		531A8B0B2A77FC1A009ABE30 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		53220BBA2ABEF1350011A099 /* free-icon-backward-318339.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-backward-318339.png"; path = "../../../../../../Downloads/free-icon-backward-318339.png"; sourceTree = "<group>"; };
 		5324A50B2AA0B8BB008B7A6E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		5349C7032A7918E300C790CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5349C7232A7A750B00C790CE /* btn_google_signin_dark_focus_web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_google_signin_dark_focus_web@2x.png"; path = "../../../../../../Downloads/google_signin_buttons/web/2x/btn_google_signin_dark_focus_web@2x.png"; sourceTree = "<group>"; };
 		5349C72A2A7D209E00C790CE /* free-icon-back-arrow-594830.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-back-arrow-594830.png"; path = "../../../../../../Downloads/free-icon-back-arrow-594830.png"; sourceTree = "<group>"; };
-		534C128E2A615AF70032F957 /* free-icon-document-list-11240429.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-icon-document-list-11240429.png"; sourceTree = "<group>"; };
 		534C128F2A615AF70032F957 /* lost item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lost item.png"; sourceTree = "<group>"; };
 		534C12902A615AF80032F957 /* free-icon-user-7718888.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-icon-user-7718888.png"; sourceTree = "<group>"; };
 		534C12912A615AF80032F957 /* kakao_login_medium_wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_login_medium_wide.png; sourceTree = "<group>"; };
 		534C12922A615AF80032F957 /* free-icon-lost-items-3372390-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-icon-lost-items-3372390-3.png"; sourceTree = "<group>"; };
-		534C12932A615AF80032F957 /* free-icon-message-in-a-bottle-7292542.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-icon-message-in-a-bottle-7292542.png"; sourceTree = "<group>"; };
 		534C129D2A6168350032F957 /* LostItemApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LostItemApp.entitlements; sourceTree = "<group>"; };
 		53605FB92AC4408B007F09B2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		53605FBB2AC44219007F09B2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -158,10 +149,7 @@
 		53A2F5B92AB9C779009B97AD /* free-icon-message-520648.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-message-520648.png"; path = "../../../../../../Downloads/free-icon-message-520648.png"; sourceTree = "<group>"; };
 		53A2F5BB2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-lost-and-found-2669415.png"; path = "../../../../../../Downloads/free-icon-lost-and-found-2669415.png"; sourceTree = "<group>"; };
 		53A2F5BD2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-lost-items-1436258.png"; path = "../../../../../../Downloads/free-icon-lost-items-1436258.png"; sourceTree = "<group>"; };
-		53A2F5BF2ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-21-20-46-01.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-21-20-46-01.png"; sourceTree = "<group>"; };
-		53A2F5C12ABC6705009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-21-20-56-36.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-21-20-56-36.png"; sourceTree = "<group>"; };
-		53A2F5C32ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-21-20-56-40.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-21-20-56-40.png"; sourceTree = "<group>"; };
-		53A2F5C72ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "KakaoTalk_Photo_2023-09-21-23-24-51.png"; path = "../../../../../../Downloads/KakaoTalk_Photo_2023-09-21-23-24-51.png"; sourceTree = "<group>"; };
+		53A5BBA52AD0667B0037C745 /* 스크린샷 2023-10-07 오전 12.58.34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "스크린샷 2023-10-07 오전 12.58.34.png"; path = "../../../../../../Desktop/스크린샷 2023-10-07 오전 12.58.34.png"; sourceTree = "<group>"; };
 		53A6BA8F2A61AF3500DBC192 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
 		53AB63F82AAD80EC00795B8C /* MapMarkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerViewController.swift; sourceTree = "<group>"; };
 		53AB63FA2AAD810A00795B8C /* MapMarkerRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapMarkerRegister.storyboard; sourceTree = "<group>"; };
@@ -256,6 +244,7 @@
 		534C12972A615CAA0032F957 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				53A5BBA52AD0667B0037C745 /* 스크린샷 2023-10-07 오전 12.58.34.png */,
 				53D479BF2ACC777500D6049F /* free-icon-reload-7134763.png */,
 				53D479B52ACC6FC900D6049F /* free-icon-apple-black-logo-15476.png */,
 				53D479C32ACC837F00D6049F /* free-icon-photo-camera-4653765.png */,
@@ -276,18 +265,11 @@
 				53605FBF2AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png */,
 				53605FBD2AC44EC7007F09B2 /* free-icon-map-423354.png */,
 				5349C7232A7A750B00C790CE /* btn_google_signin_dark_focus_web@2x.png */,
-				53220BBA2ABEF1350011A099 /* free-icon-backward-318339.png */,
-				53A2F5C72ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png */,
-				53A2F5C32ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png */,
-				53A2F5C12ABC6705009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png */,
-				53A2F5BF2ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png */,
 				5349C72A2A7D209E00C790CE /* free-icon-back-arrow-594830.png */,
 				53A2F5B92AB9C779009B97AD /* free-icon-message-520648.png */,
 				53D479C12ACC7F0000D6049F /* free-icon-picture-5639854.png */,
 				53A2F5BD2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png */,
 				53A2F5BB2AB9C7A4009B97AD /* free-icon-lost-and-found-2669415.png */,
-				534C12932A615AF80032F957 /* free-icon-message-in-a-bottle-7292542.png */,
-				534C128E2A615AF70032F957 /* free-icon-document-list-11240429.png */,
 				534C12902A615AF80032F957 /* free-icon-user-7718888.png */,
 			);
 			path = Images;
@@ -489,13 +471,10 @@
 				53A1AA702A61A021004A1295 /* LaunchScreen.storyboard in Resources */,
 				53D479B42ACC6B1100D6049F /* free-icon-sign-out-7471239.png in Resources */,
 				53605FC02AC45A0E007F09B2 /* free-icon-chat-bot-9384045.png in Resources */,
-				53220BBB2ABEF1360011A099 /* free-icon-backward-318339.png in Resources */,
 				534C129C2A615CC70032F957 /* free-icon-user-7718888.png in Resources */,
 				53605FBE2AC44EC7007F09B2 /* free-icon-map-423354.png in Resources */,
-				53A2F5C42ABC670B009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-40.png in Resources */,
 				53AE400A2AC8347800DF32DC /* free-icon-lost-and-found-2669415.png in Resources */,
 				53D479C02ACC777500D6049F /* free-icon-reload-7134763.png in Resources */,
-				534C129B2A615CC50032F957 /* free-icon-document-list-11240429.png in Resources */,
 				53F415DE2A95EB8A005AB96D /* Register.storyboard in Resources */,
 				53AE401F2ACC66A400DF32DC /* free-icon-bullet-list-8477012.png in Resources */,
 				5349C7042A7918E300C790CE /* GoogleService-Info.plist in Resources */,
@@ -508,21 +487,18 @@
 				534C12992A615CC00032F957 /* free-icon-lost-items-3372390-3.png in Resources */,
 				53AE400C2ACC3C8A00DF32DC /* free-icon-backward-arrow-81037.png in Resources */,
 				53A2F5B62AB9C76D009B97AD /* free-icon-profile-7310896.png in Resources */,
-				53A2F5C02ABC6488009B97AD /* KakaoTalk_Photo_2023-09-21-20-46-01.png in Resources */,
 				53CF4EDF2A8253E700BCE475 /* MyprofileModify.storyboard in Resources */,
-				53A2F5C22ABC6706009B97AD /* KakaoTalk_Photo_2023-09-21-20-56-36.png in Resources */,
 				53C587652A6AC18A0024E203 /* MyPage.storyboard in Resources */,
 				53AB63FB2AAD810A00795B8C /* MapMarkerRegister.storyboard in Resources */,
 				5349C72B2A7D209E00C790CE /* free-icon-back-arrow-594830.png in Resources */,
 				53AE401D2ACC659F00DF32DC /* free-icon-list-1629421.png in Resources */,
+				53A5BBA62AD0667B0037C745 /* 스크린샷 2023-10-07 오전 12.58.34.png in Resources */,
 				53D479BA2ACC6FD100D6049F /* free-icon-kakao-talk-3669973.png in Resources */,
-				53A2F5C82ABC89C4009B97AD /* KakaoTalk_Photo_2023-09-21-23-24-51.png in Resources */,
 				53D479B62ACC6FC900D6049F /* free-icon-apple-black-logo-15476.png in Resources */,
 				53A1AA6E2A61A00C004A1295 /* Main.storyboard in Resources */,
 				53D479BE2ACC74CB00D6049F /* free-icon-photos-4618163.png in Resources */,
 				53A2F5BE2AB9C7A9009B97AD /* free-icon-lost-items-1436258.png in Resources */,
 				534C12982A615CBC0032F957 /* lost item.png in Resources */,
-				534C129A2A615CC20032F957 /* free-icon-message-in-a-bottle-7292542.png in Resources */,
 				53AE400E2ACC451B00DF32DC /* btn_google_signin_dark_normal_ios@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
