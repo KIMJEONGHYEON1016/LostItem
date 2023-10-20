@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="free-icon-user-7718888.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZlR-Jg-0Xx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZlR-Jg-0Xx">
                                 <rect key="frame" x="16" y="139" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="E1o-dV-DGG"/>
@@ -80,7 +80,7 @@
                                     <action selector="LogoutBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1ei-dj-Ba3"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="free-icon-list-1629421.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vjd-u9-zNf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-list.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vjd-u9-zNf">
                                 <rect key="frame" x="16" y="348" width="35" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="fDJ-0u-QNn"/>
@@ -93,7 +93,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="free-icon-sign-out-7471239.png" translatesAutoresizingMaskIntoConstraints="NO" id="6T4-rR-qIB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out.png" translatesAutoresizingMaskIntoConstraints="NO" id="6T4-rR-qIB">
                                 <rect key="frame" x="16" y="428" width="35" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="GeW-BW-UbD"/>
@@ -145,7 +145,7 @@
                             <constraint firstItem="0rT-rK-N6z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="48" id="wgq-Ef-n7S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MY" image="free-icon-profile-7310896.png" id="xts-fN-7kc"/>
+                    <tabBarItem key="tabBarItem" title="MY" image="profile-mini.png" id="xts-fN-7kc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="NickName" destination="7fe-lL-Acl" id="yJC-z8-T4N"/>
@@ -160,10 +160,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="free-icon-list-1629421.png" width="512" height="512"/>
-        <image name="free-icon-profile-7310896.png" width="18.75" height="18.75"/>
-        <image name="free-icon-sign-out-7471239.png" width="384" height="384"/>
-        <image name="free-icon-user-7718888.png" width="384" height="384"/>
+        <image name="icon-list.png" width="512" height="512"/>
+        <image name="profile-mini.png" width="18.75" height="18.75"/>
+        <image name="sign-out.png" width="384" height="384"/>
+        <image name="user.png" width="384" height="384"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -33,7 +33,7 @@ class ViewController: UIViewController {
 
     }
     
-    //새로고참 버튼
+    //새로고침 버튼
     @IBAction func refreshButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
@@ -50,8 +50,6 @@ class ViewController: UIViewController {
             // 타이틀의 선택된 상태 색상 설정
             appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBlue] // 원하는 색상으로 변경
         UITabBar.appearance().standardAppearance = appearance
-        
-        
     }
     
     // Firestore에서 "게시글" 컬렉션의 문서를 가져와서 좌표 데이터 필드를 네이버지도의 마커로 표시
@@ -82,7 +80,7 @@ class ViewController: UIViewController {
                     marker.mapView = self.subView.mapView
                     
                     //마커 이미지 및 크기 지정
-                    marker.iconImage = NMFOverlayImage(name: "free-icon-lost-items-3372390-3.png")
+                    marker.iconImage = NMFOverlayImage(name: "lost item.png")
                     marker.width = 30
                     marker.height = 30
                     

@@ -36,7 +36,7 @@ class MyprofileModifycontroller: UIViewController {
         profileImage.image = profileimage
         
         if profileImage.image == nil {
-            profileImage.image = UIImage(named: "free-icon-user-7718888.png")
+            profileImage.image = UIImage(named: "user.png")
         }
         profileImage.contentMode = .scaleAspectFill
         if NickName.text == nil{
