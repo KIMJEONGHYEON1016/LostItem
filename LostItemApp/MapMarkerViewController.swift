@@ -26,6 +26,8 @@ class MapMarkerViewController: UIViewController {
         subView.showZoomControls = true
     }
     
+    
+    //완료 버튼
     @objc func CompleteButtonTapped() {
         self.saveCenterCoordinates()
         self.dismiss(animated: true)
@@ -36,6 +38,7 @@ class MapMarkerViewController: UIViewController {
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
     }
     
+    //back버튼
    /* @objc func BackButtonTapped() {
            // Back 버튼을 눌렀을 때 MainVC를 dismiss
            self.dismiss(animated: true, completion: nil)
@@ -48,6 +51,8 @@ class MapMarkerViewController: UIViewController {
             imageView.contentMode = .scaleAspectFit
         view.addSubview(imageView)
         
+        
+        //back버튼
        /* var BackButton: UIButton!
 
         BackButton = UIButton(type: .system)
@@ -74,6 +79,8 @@ class MapMarkerViewController: UIViewController {
         
     }
     
+    
+    //좌표를 저장하는 함수
     func saveCenterCoordinates() {
         if let subView = subView { // subView 변수가 올바른지 확인
             let centerX = subView.frame.width / 2

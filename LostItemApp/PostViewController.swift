@@ -67,6 +67,8 @@ class PostViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
     }
     
+    
+    //삭제 함수
     func DeleteDocument() {
         let db = Firestore.firestore()
         
@@ -98,18 +100,15 @@ class PostViewController: UIViewController {
     }
     
     func LostItemImage () {
-        image1.layer.borderWidth = 1.0 // 테두리 두께
-        image1.layer.borderColor = UIColor.lightGray.cgColor // 테두리 색상
-        image1.layer.cornerRadius = 3.0 // 테두리 모서리 반경 (원하는 값으로 조정)
-        image1.clipsToBounds = true
-        image2.layer.borderWidth = 1.0
-        image2.layer.borderColor = UIColor.lightGray.cgColor
-        image2.layer.cornerRadius = 3.0
-        image2.clipsToBounds = true
-        image3.layer.borderWidth = 1.0
-        image3.layer.borderColor = UIColor.lightGray.cgColor
-        image3.layer.cornerRadius = 3.0
-        image3.clipsToBounds = true
+        let photoViews = [image1, image2, image3]
+
+        for photoView in photoViews {
+            photoView?.layer.borderWidth = 1.0
+            photoView?.layer.borderColor = UIColor.lightGray.cgColor
+            photoView?.layer.cornerRadius = 3.0
+            photoView?.clipsToBounds = true
+        }
+        
     }
     
     func UploadData() {

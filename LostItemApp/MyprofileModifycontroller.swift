@@ -44,7 +44,7 @@ class MyprofileModifycontroller: UIViewController {
         }
     }
     
-    // 다른 곳 클릭하면 확정 짓기?
+    // 다른 곳 클릭하면 확정 짓기
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -232,6 +232,8 @@ class MyprofileModifycontroller: UIViewController {
                 }
             }
         }
+    
+
     func showAuthorizationdeinedAlert() {
                 let alert = UIAlertController(title: "포토라이브러리 접근 권한을 활성화 해주세요", message: nil, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "닫기", style: .cancel,handler: nil))

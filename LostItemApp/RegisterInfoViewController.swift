@@ -44,18 +44,14 @@ class RegisterInfoViewController: UIViewController {
     }
     
     func LostItemImage () {
-        lostItemPhoto.layer.borderWidth = 1.0 // 테두리 두께
-        lostItemPhoto.layer.borderColor = UIColor.lightGray.cgColor // 테두리 색상
-        lostItemPhoto.layer.cornerRadius = 3.0 // 테두리 모서리 반경 (원하는 값으로 조정)
-        lostItemPhoto.clipsToBounds = true
-        lostItemPhoto2.layer.borderWidth = 1.0
-        lostItemPhoto2.layer.borderColor = UIColor.lightGray.cgColor
-        lostItemPhoto2.layer.cornerRadius = 3.0
-        lostItemPhoto2.clipsToBounds = true
-        lostItemPhoto3.layer.borderWidth = 1.0
-        lostItemPhoto3.layer.borderColor = UIColor.lightGray.cgColor
-        lostItemPhoto3.layer.cornerRadius = 3.0
-        lostItemPhoto3.clipsToBounds = true
+        let photoViews = [lostItemPhoto, lostItemPhoto2, lostItemPhoto3]
+
+        for photoView in photoViews {
+            photoView?.layer.borderWidth = 1.0
+            photoView?.layer.borderColor = UIColor.lightGray.cgColor
+            photoView?.layer.cornerRadius = 3.0
+            photoView?.clipsToBounds = true
+        }
     }
     
     func TabBarItem() {
@@ -70,28 +66,37 @@ class RegisterInfoViewController: UIViewController {
     }
     
    
-    @IBAction func completeBtn(_ sender: Any) {
-        if titleLabel.text != nil && mainTextLabel.text != nil && lostItemPhoto.image != UIImage(named: "free-icon-photo-camera-4653765.png") {
-            SetData()
-            let storyboard = UIStoryboard(name: "Register", bundle: nil)
-            guard let RegisterViewControllerVC = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
-            RegisterViewControllerVC.mainTableView?.reloadData()
-            //이미지파일 가지고 오기
-            imagesToUpload = [lostItemPhoto.image, lostItemPhoto2.image, lostItemPhoto3.image]
-            uploadImagesSequentially(index: 0)
-        } else {
-            // 알림 창 표시
-               let alertController = UIAlertController(title: "게시글 작성 오류", message: "내용을 확인해주세요.", preferredStyle: .alert)
-               
-               // 확인 버튼 추가
-               let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-               alertController.addAction(okAction)
-               
-               // 알림 창 표시
-               present(alertController, animated: true, completion: nil)
+        @IBAction func completeBtn(_ sender: Any) {
+            let cameraImage = UIImage(named: "free-icon-photo-camera-4653765.png")
+
+            if titleLabel.text != "" && mainTextLabel.text != "" && !imagesAreEqual(lostItemPhoto.image, cameraImage) {          //내용, 제목, 이미지 중 하나라도 비어있다면 게시글 작성 실패
+                SetData()
+                let storyboard = UIStoryboard(name: "Register", bundle: nil)
+                guard let RegisterViewControllerVC = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
+                RegisterViewControllerVC.mainTableView?.reloadData()
+                //이미지파일 가지고 오기
+                imagesToUpload = [lostItemPhoto.image, lostItemPhoto2.image, lostItemPhoto3.image]
+                uploadImagesSequentially(index: 0)
+            } else {
+                // 알림 창 표시
+                   let alertController = UIAlertController(title: "게시글 작성 오류", message: "내용을 확인해주세요.", preferredStyle: .alert)
+                   
+                   // 확인 버튼 추가
+                   let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+                   alertController.addAction(okAction)
+                   
+                   // 알림 창 표시
+                   present(alertController, animated: true, completion: nil)
+            }
         }
-    }
     
+        //이미지를 비교하는 함수
+        func imagesAreEqual(_ image1: UIImage?, _ image2: UIImage?) -> Bool {
+            if let data1 = image1?.pngData(), let data2 = image2?.pngData() {
+                return data1 == data2
+            }
+            return false
+        }
     
     //정보를 db에 넘겨줌
     func SetData() {
@@ -155,6 +160,9 @@ class RegisterInfoViewController: UIViewController {
         present(MapMarkerViewControllerVC, animated: true)
     }
     
+    
+    
+    
     //이미지 파이어베이스로 업로드
     func uploadimage(img: UIImage, completion: @escaping (Bool) -> Void) {
         guard let referenceImage = UIImage(named: "free-icon-picture-5639854.png"),
@@ -189,6 +197,8 @@ class RegisterInfoViewController: UIViewController {
     }
 
 
+    
+    //storage로 저장
     func downloadAndStoreURL(fileName: String) {
         let fileRef = storage.reference().child(fileName)
         fileRef.downloadURL { url, error in
@@ -208,12 +218,15 @@ class RegisterInfoViewController: UIViewController {
         }
     }
 
+    //firestorage에 랜덤의 이름으로 저장
     func generateUniqueFileName() -> String {
         let timestamp = Int(Date().timeIntervalSince1970)
         let randomString = UUID().uuidString
         return "\(timestamp)_\(randomString).png"
     }
 
+    
+    
     func uploadImagesSequentially(index: Int) {
         guard index < imagesToUpload.count else {
             // 모든 이미지를 업로드한 경우

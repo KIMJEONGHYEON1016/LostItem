@@ -33,13 +33,14 @@ class ViewController: UIViewController {
 
     }
     
-
+    //새로고참 버튼
     @IBAction func refreshButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
     }
     
+    //탭바 아이템 글씨 색상
     func TabBarItem() {
         let appearance = UITabBarAppearance()
             

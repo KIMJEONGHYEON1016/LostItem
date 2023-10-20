@@ -41,10 +41,15 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
         self.present(RegisterViewControllerVC, animated: true, completion: nil)
     }
     
+    
+    //로그아웃 기능
     @IBAction func LogoutBtn(_ sender: Any) {
+        //유저 디폴트에서 정보 삭제
         UserDefaults.standard.removeObject(forKey: "UserEmailKey")
         UserDefaults.standard.removeObject(forKey: "SocialLogin")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //로그인 화면으로 이동
         guard let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginView") as? LoginViewController else { return }
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(LoginVC, animated: true)
     }
@@ -63,6 +68,7 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
     }
     
     
+    //소셜 로그인 마크
     func SocialLoginImage() {
         userEmail.text = UserDefaults.standard.string(forKey: "UserEmailKey")
         
@@ -76,6 +82,7 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
         socialImage.contentMode = .scaleAspectFill
     }
     
+    
     func TabBarItem() {
         let appearance = UITabBarAppearance()
             
@@ -87,6 +94,8 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
         UITabBar.appearance().standardAppearance = appearance
     }
     
+    
+    //유저 정보 불러오기
     func UserDataLoad(){
         let docRef = db.collection("Users").document(UserDefaults.standard.string(forKey: "UserEmailKey")!)
         docRef.getDocument { (document, error) in
