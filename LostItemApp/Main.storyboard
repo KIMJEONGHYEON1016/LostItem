@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,7 +62,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UmM-ra-mhA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UmM-ra-mhA" firstAttribute="trailing" secondItem="dFp-qw-Guc" secondAttribute="trailing" constant="32" id="4Vn-iK-eYo"/>
                             <constraint firstItem="dFp-qw-Guc" firstAttribute="leading" secondItem="UmM-ra-mhA" secondAttribute="leading" constant="29" id="KQV-jU-wRy"/>
@@ -140,8 +139,5 @@
         <image name="map" width="25" height="25"/>
         <image name="map-mini.png" width="20" height="20"/>
         <image name="reload.png" width="384" height="384"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
