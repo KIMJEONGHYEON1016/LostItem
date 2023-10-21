@@ -108,7 +108,7 @@
                             <constraint firstItem="QO3-0K-2Ly" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36.670000000000002" id="zC9-BQ-7j4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="게시글" image="mini-lost-and-found.png" id="UE1-iB-Aqk"/>
+                    <tabBarItem key="tabBarItem" title="게시글" image="mini-lost-and-found.png" selectedImage="post" id="UE1-iB-Aqk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lostItemPhoto" destination="q7c-8a-ydK" id="yiT-BG-9kf"/>
@@ -356,6 +356,7 @@
         <image name="mini-lost-and-found.png" width="18.75" height="18.75"/>
         <image name="photo-camera.png" width="37.5" height="37.5"/>
         <image name="picture.png" width="37.5" height="37.5"/>
+        <image name="post" width="25" height="25"/>
         <image name="reload.png" width="384" height="384"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

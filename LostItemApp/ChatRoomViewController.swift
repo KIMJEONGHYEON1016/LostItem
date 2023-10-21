@@ -15,6 +15,7 @@ class ChatRoomViewController: UIViewController {
     @IBOutlet var chattingRoom: UITableView!
     @IBOutlet var chattingUser: UILabel!
     @IBOutlet var messageTextField: UITextView!
+    @IBOutlet var sendMessage: UIButton!
     
     let db = Firestore.firestore()
     
@@ -35,6 +36,49 @@ class ChatRoomViewController: UIViewController {
         TabBarControllerVC.selectedIndex = 2
 
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
+    }
+    
+    @IBAction func DeleteBtn(_ sender: Any) {
+            //알림창 생성
+            let alertController = UIAlertController(title: "채팅방 나가기", message: "정말로 채팅방을 나가겠습니까?", preferredStyle: .alert)
+            
+            //"네" 버튼 추가
+            let yesAction = UIAlertAction(title: "네", style: .destructive) { (action) in
+                // "네" 버튼을 눌렀을 때의 로직을 여기에 추가
+                self.DeleteDocument()
+                self.dismiss(animated: true)
+            }
+            
+            //"아니오" 버튼 추가
+            let noAction = UIAlertAction(title: "아니오", style: .cancel, handler: nil)
+            
+            //알림창에 버튼 추가
+            alertController.addAction(yesAction)
+            alertController.addAction(noAction)
+            
+            //알림창 표시
+            present(alertController, animated: true, completion: nil)
+    }
+    
+    //삭제 함수
+    func DeleteDocument() {
+        let db = Firestore.firestore()
+        if let messageSender = UserDefaults.standard.string(forKey: "UserEmailKey"),
+           let chatUser = chatUser {
+            let sortedEmails = [messageSender, chatUser].sorted()
+            
+            let chatDocumentID = sortedEmails[0] + "&" + sortedEmails[1]
+            let docRef = db.collection("채팅").document(chatDocumentID)
+            
+            // 문서 삭제
+            docRef.delete { (error) in
+                if let error = error {
+                    print("문서 삭제 중 오류 발생: \(error)")
+                } else {
+                    print("문서 삭제 성공")
+                }
+            }
+        }
     }
     
     @IBAction func sendMessage(_ sender: Any) {
@@ -67,6 +111,7 @@ class ChatRoomViewController: UIViewController {
                     }
                 }
             }
+            sendMessage.setImage(UIImage(named: "chat-btn2"), for: .normal)
         }
     }
     
@@ -76,10 +121,23 @@ class ChatRoomViewController: UIViewController {
         chattingRoom.delegate = self
         LoadMessages()
         messageTextField.placeholder = "채팅"
+        messageTextField.layer.cornerRadius = 3.0
         let customColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
         chattingRoom?.layer.borderWidth = 1.0
         chattingRoom?.layer.borderColor = customColor.cgColor
         chattingRoom?.layer.cornerRadius = 3.0
+        NotificationCenter.default.addObserver(self, selector: #selector(textViewTextChanged), name: UITextView.textDidChangeNotification, object: messageTextField)
+        
+    }
+    
+    
+    @objc func textViewTextChanged() {
+        if let text = messageTextField.text, !text.isEmpty {
+            // 텍스트 뷰가 비어 있지 않으면 버튼의 이미지를 설정
+            sendMessage.setImage(UIImage(named: "chat-btn"), for: .normal)
+        } else {
+            sendMessage.setImage(UIImage(named: "chat-btn2"), for: .normal)
+        }
     }
     
      func LoadMessages() {

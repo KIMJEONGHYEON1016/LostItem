@@ -44,14 +44,32 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
     
     //로그아웃 기능
     @IBAction func LogoutBtn(_ sender: Any) {
-        //유저 디폴트에서 정보 삭제
-        UserDefaults.standard.removeObject(forKey: "UserEmailKey")
-        UserDefaults.standard.removeObject(forKey: "SocialLogin")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        //로그인 화면으로 이동
-        guard let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginView") as? LoginViewController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(LoginVC, animated: true)
+        let alertController = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
+        
+        //"네" 버튼 추가
+        let yesAction = UIAlertAction(title: "네", style: .destructive) { (action) in
+            // "네" 버튼을 눌렀을 때의 로직을 여기에 추가
+            //유저 디폴트에서 정보 삭제
+            UserDefaults.standard.removeObject(forKey: "UserEmailKey")
+            UserDefaults.standard.removeObject(forKey: "SocialLogin")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            //로그인 화면으로 이동
+            guard let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginView") as? LoginViewController else { return }
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(LoginVC, animated: true)
+            self.dismiss(animated: true)
+        }
+        
+        //"아니오" 버튼 추가
+        let noAction = UIAlertAction(title: "아니오", style: .cancel, handler: nil)
+        
+        //알림창에 버튼 추가
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        
+        //알림창 표시
+        present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -90,7 +108,7 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
             appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray] // 원하는 색상으로 변경
             
             // 타이틀의 선택된 상태 색상 설정
-            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBlue] // 원하는 색상으로 변경
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black] // 원하는 색상으로 변경
         UITabBar.appearance().standardAppearance = appearance
     }
     

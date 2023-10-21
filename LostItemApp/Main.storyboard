@@ -121,7 +121,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="imN-Sr-sF6" secondAttribute="trailing" id="xEb-ci-ecB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="지도" image="map-mini.png" id="dnc-9l-GmR"/>
+                    <tabBarItem key="tabBarItem" title="지도" image="map-mini.png" selectedImage="map" id="dnc-9l-GmR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="refreshBtn" destination="lOg-kc-qJ5" id="AIP-vp-lqL"/>
@@ -137,6 +137,7 @@
         <image name="google-sign.png" width="554" height="71"/>
         <image name="kakao_login_medium_wide.png" width="300" height="45"/>
         <image name="lost-items.png" width="384" height="384"/>
+        <image name="map" width="25" height="25"/>
         <image name="map-mini.png" width="20" height="20"/>
         <image name="reload.png" width="384" height="384"/>
         <systemColor name="systemBackgroundColor">

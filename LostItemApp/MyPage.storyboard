@@ -145,7 +145,7 @@
                             <constraint firstItem="0rT-rK-N6z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="48" id="wgq-Ef-n7S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MY" image="profile-mini.png" id="xts-fN-7kc"/>
+                    <tabBarItem key="tabBarItem" title="MY" image="profile-mini.png" selectedImage="mypage" id="xts-fN-7kc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="NickName" destination="7fe-lL-Acl" id="yJC-z8-T4N"/>
@@ -161,6 +161,7 @@
     </scenes>
     <resources>
         <image name="icon-list.png" width="512" height="512"/>
+        <image name="mypage" width="25" height="25"/>
         <image name="profile-mini.png" width="18.75" height="18.75"/>
         <image name="sign-out.png" width="384" height="384"/>
         <image name="user.png" width="384" height="384"/>

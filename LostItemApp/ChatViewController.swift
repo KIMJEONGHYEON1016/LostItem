@@ -40,7 +40,7 @@ class ChatViewController: UIViewController {
             appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray] // 원하는 색상으로 변경
             
             // 타이틀의 선택된 상태 색상 설정
-            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBlue] // 원하는 색상으로 변경
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black] // 원하는 색상으로 변경
         UITabBar.appearance().standardAppearance = appearance
     }
     
