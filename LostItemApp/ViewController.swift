@@ -81,7 +81,7 @@ class ViewController: UIViewController {
                     marker.mapView = self.subView.mapView
                     
                     //마커 이미지 및 크기 지정
-                    marker.iconImage = NMFOverlayImage(name: "lost item.png")
+                    marker.iconImage = NMFOverlayImage(name: "lost item")
                     marker.width = 30
                     marker.height = 30
                     

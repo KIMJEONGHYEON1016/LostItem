@@ -91,11 +91,11 @@ class MyPagecontroller: UIViewController, UITextFieldDelegate {
         userEmail.text = UserDefaults.standard.string(forKey: "UserEmailKey")
         
         if UserDefaults.standard.string(forKey: "SocialLogin") == "Kakao" {
-            socialImage.image = UIImage(named: "icon-kakao-talk.png")
+            socialImage.image = UIImage(named: "icon-kakao-talk")
         } else if UserDefaults.standard.string(forKey: "UserEmailKey") == "Apple" {
-            socialImage.image = UIImage(named: "Apple_logo.png")
+            socialImage.image = UIImage(named: "Apple_logo")
         } else {
-            socialImage.image = UIImage(named: "google.png")
+            socialImage.image = UIImage(named: "google")
         }
         socialImage.contentMode = .scaleAspectFill
     }

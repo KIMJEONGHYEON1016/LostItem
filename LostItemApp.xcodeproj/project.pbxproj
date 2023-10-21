@@ -22,12 +22,6 @@
 		5373129E2A5D8DBE005DF023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5373129D2A5D8DBE005DF023 /* Assets.xcassets */; };
 		537312C72A5D8E78005DF023 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312C62A5D8E78005DF023 /* LoginViewController.swift */; };
 		537312D72A5DB1B6005DF023 /* KakaoAuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312D62A5DB1B6005DF023 /* KakaoAuthVM.swift */; };
-		53A119CB2AE39DD700CD1124 /* chat-btn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A119C92AE39DD600CD1124 /* chat-btn2.png */; };
-		53A119CC2AE39DD700CD1124 /* chat-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A119CA2AE39DD700CD1124 /* chat-btn.png */; };
-		53A119CE2AE3A3C300CD1124 /* map-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A119CD2AE3A3C300CD1124 /* map-mini.png */; };
-		53A119D02AE3A4D600CD1124 /* chat-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A119CF2AE3A4D600CD1124 /* chat-mini.png */; };
-		53A119D22AE3A58F00CD1124 /* chat-out.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A119D12AE3A58E00CD1124 /* chat-out.png */; };
-		53A119D42AE3A69B00CD1124 /* free-icon-sign-out-6461396.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A119D32AE3A69B00CD1124 /* free-icon-sign-out-6461396.png */; };
 		53A1AA6E2A61A00C004A1295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A1AA6D2A61A00C004A1295 /* Main.storyboard */; };
 		53A1AA702A61A021004A1295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A1AA6F2A61A021004A1295 /* LaunchScreen.storyboard */; };
 		53A1AB142A61AB76004A1295 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1AB132A61AB76004A1295 /* SystemConfiguration.framework */; };
@@ -49,27 +43,6 @@
 		53CF4ECF2A82366C00BCE475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF4ECE2A82366C00BCE475 /* ViewController.swift */; };
 		53CF4EDC2A8250B800BCE475 /* MyprofileModifycontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF4EDA2A8250B800BCE475 /* MyprofileModifycontroller.swift */; };
 		53CF4EDF2A8253E700BCE475 /* MyprofileModify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CF4EDE2A8253E700BCE475 /* MyprofileModify.storyboard */; };
-		53D4B80D2AE29ACA00832596 /* Apple_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B7F72AE29AC700832596 /* Apple_logo.png */; };
-		53D4B80E2AE29ACA00832596 /* bullet-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B7F82AE29AC700832596 /* bullet-list.png */; };
-		53D4B80F2AE29ACA00832596 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B7F92AE29AC700832596 /* user.png */; };
-		53D4B8102AE29ACA00832596 /* icon-kakao-talk.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B7FA2AE29AC700832596 /* icon-kakao-talk.png */; };
-		53D4B8112AE29ACA00832596 /* photo-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B7FB2AE29AC700832596 /* photo-camera.png */; };
-		53D4B8132AE29ACA00832596 /* sign-out.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B7FD2AE29AC800832596 /* sign-out.png */; };
-		53D4B8142AE29ACA00832596 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B7FE2AE29AC800832596 /* google.png */; };
-		53D4B8152AE29ACA00832596 /* lost item.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B7FF2AE29AC800832596 /* lost item.png */; };
-		53D4B8162AE29ACA00832596 /* icon-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8002AE29AC800832596 /* icon-list.png */; };
-		53D4B8172AE29ACA00832596 /* lost-items.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8012AE29AC800832596 /* lost-items.png */; };
-		53D4B8182AE29ACA00832596 /* icon-photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8022AE29AC800832596 /* icon-photos.png */; };
-		53D4B8192AE29ACA00832596 /* lost item 복사본.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8032AE29AC800832596 /* lost item 복사본.png */; };
-		53D4B81A2AE29ACA00832596 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8042AE29AC900832596 /* message.png */; };
-		53D4B81B2AE29ACA00832596 /* mini-lost-and-found.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8052AE29AC900832596 /* mini-lost-and-found.png */; };
-		53D4B81C2AE29ACA00832596 /* document-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8062AE29AC900832596 /* document-list.png */; };
-		53D4B81E2AE29ACA00832596 /* kakao_login_medium_wide.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8082AE29AC900832596 /* kakao_login_medium_wide.png */; };
-		53D4B81F2AE29ACA00832596 /* profile-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8092AE29AC900832596 /* profile-mini.png */; };
-		53D4B8202AE29ACA00832596 /* backward-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B80A2AE29AC900832596 /* backward-arrow.png */; };
-		53D4B8212AE29ACA00832596 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B80B2AE29AC900832596 /* reload.png */; };
-		53D4B8222AE29ACA00832596 /* picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B80C2AE29ACA00832596 /* picture.png */; };
-		53D4B8282AE29ED700832596 /* google-sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D4B8272AE29ED700832596 /* google-sign.png */; };
 		53F415D22A95B2F8005AB96D /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F415D12A95B2F8005AB96D /* ChatRoomViewController.swift */; };
 		53F415D62A95BC22005AB96D /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F415D52A95BC22005AB96D /* ChatRoomTableViewCell.swift */; };
 		53F415DE2A95EB8A005AB96D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F415DD2A95EB8A005AB96D /* Register.storyboard */; };
@@ -126,12 +99,6 @@
 		537312C62A5D8E78005DF023 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		537312D52A5DAE38005DF023 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		537312D62A5DB1B6005DF023 /* KakaoAuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthVM.swift; sourceTree = "<group>"; };
-		53A119C92AE39DD600CD1124 /* chat-btn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chat-btn2.png"; path = "../../../resource/chat-btn2.png"; sourceTree = "<group>"; };
-		53A119CA2AE39DD700CD1124 /* chat-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chat-btn.png"; path = "../../../resource/chat-btn.png"; sourceTree = "<group>"; };
-		53A119CD2AE3A3C300CD1124 /* map-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-mini.png"; path = "../../../resource/map-mini.png"; sourceTree = "<group>"; };
-		53A119CF2AE3A4D600CD1124 /* chat-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chat-mini.png"; path = "../../../resource/chat-mini.png"; sourceTree = "<group>"; };
-		53A119D12AE3A58E00CD1124 /* chat-out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chat-out.png"; path = "../../../resource/chat-out.png"; sourceTree = "<group>"; };
-		53A119D32AE3A69B00CD1124 /* free-icon-sign-out-6461396.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "free-icon-sign-out-6461396.png"; path = "../../../resource/free-icon-sign-out-6461396.png"; sourceTree = "<group>"; };
 		53A1AA6D2A61A00C004A1295 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		53A1AA6F2A61A021004A1295 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53A1AB132A61AB76004A1295 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -156,27 +123,6 @@
 		53CF4ECE2A82366C00BCE475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53CF4EDA2A8250B800BCE475 /* MyprofileModifycontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileModifycontroller.swift; sourceTree = "<group>"; };
 		53CF4EDE2A8253E700BCE475 /* MyprofileModify.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyprofileModify.storyboard; sourceTree = "<group>"; };
-		53D4B7F72AE29AC700832596 /* Apple_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Apple_logo.png; path = ../../../resource/Apple_logo.png; sourceTree = "<group>"; };
-		53D4B7F82AE29AC700832596 /* bullet-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bullet-list.png"; path = "../../../resource/bullet-list.png"; sourceTree = "<group>"; };
-		53D4B7F92AE29AC700832596 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = ../../../resource/user.png; sourceTree = "<group>"; };
-		53D4B7FA2AE29AC700832596 /* icon-kakao-talk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-kakao-talk.png"; path = "../../../resource/icon-kakao-talk.png"; sourceTree = "<group>"; };
-		53D4B7FB2AE29AC700832596 /* photo-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "photo-camera.png"; path = "../../../resource/photo-camera.png"; sourceTree = "<group>"; };
-		53D4B7FD2AE29AC800832596 /* sign-out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sign-out.png"; path = "../../../resource/sign-out.png"; sourceTree = "<group>"; };
-		53D4B7FE2AE29AC800832596 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = google.png; path = ../../../resource/google.png; sourceTree = "<group>"; };
-		53D4B7FF2AE29AC800832596 /* lost item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lost item.png"; path = "../../../resource/lost item.png"; sourceTree = "<group>"; };
-		53D4B8002AE29AC800832596 /* icon-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-list.png"; path = "../../../resource/icon-list.png"; sourceTree = "<group>"; };
-		53D4B8012AE29AC800832596 /* lost-items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lost-items.png"; path = "../../../resource/lost-items.png"; sourceTree = "<group>"; };
-		53D4B8022AE29AC800832596 /* icon-photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-photos.png"; path = "../../../resource/icon-photos.png"; sourceTree = "<group>"; };
-		53D4B8032AE29AC800832596 /* lost item 복사본.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lost item 복사본.png"; path = "../../../resource/lost item 복사본.png"; sourceTree = "<group>"; };
-		53D4B8042AE29AC900832596 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = message.png; path = ../../../resource/message.png; sourceTree = "<group>"; };
-		53D4B8052AE29AC900832596 /* mini-lost-and-found.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mini-lost-and-found.png"; path = "../../../resource/mini-lost-and-found.png"; sourceTree = "<group>"; };
-		53D4B8062AE29AC900832596 /* document-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "document-list.png"; path = "../../../resource/document-list.png"; sourceTree = "<group>"; };
-		53D4B8082AE29AC900832596 /* kakao_login_medium_wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kakao_login_medium_wide.png; path = ../../../resource/kakao_login_medium_wide.png; sourceTree = "<group>"; };
-		53D4B8092AE29AC900832596 /* profile-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile-mini.png"; path = "../../../resource/profile-mini.png"; sourceTree = "<group>"; };
-		53D4B80A2AE29AC900832596 /* backward-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backward-arrow.png"; path = "../../../resource/backward-arrow.png"; sourceTree = "<group>"; };
-		53D4B80B2AE29AC900832596 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reload.png; path = ../../../resource/reload.png; sourceTree = "<group>"; };
-		53D4B80C2AE29ACA00832596 /* picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = picture.png; path = ../../../resource/picture.png; sourceTree = "<group>"; };
-		53D4B8272AE29ED700832596 /* google-sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "google-sign.png"; path = "../../../resource/google-sign.png"; sourceTree = "<group>"; };
 		53F415D12A95B2F8005AB96D /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		53F415D52A95BC22005AB96D /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		53F415DD2A95EB8A005AB96D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -286,7 +232,6 @@
 				537312A22A5D8DBE005DF023 /* Info.plist */,
 				5373129A2A5D8DBB005DF023 /* LostItemApp.xcdatamodeld */,
 				537312D52A5DAE38005DF023 /* Config.xcconfig */,
-				53D4B7C02AE2995E00832596 /* Images */,
 			);
 			path = LostItemApp;
 			sourceTree = "<group>";
@@ -306,40 +251,6 @@
 				61125168A952755FE6F65189 /* Pods_LostItemAppTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		53D4B7C02AE2995E00832596 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				53D4B8272AE29ED700832596 /* google-sign.png */,
-				53A119D32AE3A69B00CD1124 /* free-icon-sign-out-6461396.png */,
-				53D4B7F72AE29AC700832596 /* Apple_logo.png */,
-				53A119CD2AE3A3C300CD1124 /* map-mini.png */,
-				53A119D12AE3A58E00CD1124 /* chat-out.png */,
-				53D4B80A2AE29AC900832596 /* backward-arrow.png */,
-				53D4B7F82AE29AC700832596 /* bullet-list.png */,
-				53A119CF2AE3A4D600CD1124 /* chat-mini.png */,
-				53D4B8052AE29AC900832596 /* mini-lost-and-found.png */,
-				53D4B8062AE29AC900832596 /* document-list.png */,
-				53D4B7FE2AE29AC800832596 /* google.png */,
-				53D4B7FA2AE29AC700832596 /* icon-kakao-talk.png */,
-				53D4B8002AE29AC800832596 /* icon-list.png */,
-				53D4B8022AE29AC800832596 /* icon-photos.png */,
-				53D4B8082AE29AC900832596 /* kakao_login_medium_wide.png */,
-				53D4B8032AE29AC800832596 /* lost item 복사본.png */,
-				53D4B7FF2AE29AC800832596 /* lost item.png */,
-				53D4B8012AE29AC800832596 /* lost-items.png */,
-				53D4B8042AE29AC900832596 /* message.png */,
-				53A119CA2AE39DD700CD1124 /* chat-btn.png */,
-				53A119C92AE39DD600CD1124 /* chat-btn2.png */,
-				53D4B7FB2AE29AC700832596 /* photo-camera.png */,
-				53D4B80C2AE29ACA00832596 /* picture.png */,
-				53D4B8092AE29AC900832596 /* profile-mini.png */,
-				53D4B80B2AE29AC900832596 /* reload.png */,
-				53D4B7FD2AE29AC800832596 /* sign-out.png */,
-				53D4B7F92AE29AC700832596 /* user.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,41 +374,14 @@
 			files = (
 				53B09FFB2A8E032300DEA70E /* Chat.storyboard in Resources */,
 				53A1AA702A61A021004A1295 /* LaunchScreen.storyboard in Resources */,
-				53D4B8152AE29ACA00832596 /* lost item.png in Resources */,
 				53F415DE2A95EB8A005AB96D /* Register.storyboard in Resources */,
 				5349C7042A7918E300C790CE /* GoogleService-Info.plist in Resources */,
-				53D4B81B2AE29ACA00832596 /* mini-lost-and-found.png in Resources */,
-				53D4B8112AE29ACA00832596 /* photo-camera.png in Resources */,
 				53605FBC2AC44219007F09B2 /* TabBar.storyboard in Resources */,
-				53D4B81E2AE29ACA00832596 /* kakao_login_medium_wide.png in Resources */,
-				53D4B8182AE29ACA00832596 /* icon-photos.png in Resources */,
 				5373129E2A5D8DBE005DF023 /* Assets.xcassets in Resources */,
-				53D4B8202AE29ACA00832596 /* backward-arrow.png in Resources */,
-				53A119D22AE3A58F00CD1124 /* chat-out.png in Resources */,
-				53D4B8282AE29ED700832596 /* google-sign.png in Resources */,
-				53D4B8132AE29ACA00832596 /* sign-out.png in Resources */,
-				53D4B81A2AE29ACA00832596 /* message.png in Resources */,
-				53A119D42AE3A69B00CD1124 /* free-icon-sign-out-6461396.png in Resources */,
-				53D4B80D2AE29ACA00832596 /* Apple_logo.png in Resources */,
-				53D4B8142AE29ACA00832596 /* google.png in Resources */,
 				53CF4EDF2A8253E700BCE475 /* MyprofileModify.storyboard in Resources */,
-				53D4B8172AE29ACA00832596 /* lost-items.png in Resources */,
-				53D4B81F2AE29ACA00832596 /* profile-mini.png in Resources */,
-				53A119CB2AE39DD700CD1124 /* chat-btn2.png in Resources */,
 				53C587652A6AC18A0024E203 /* MyPage.storyboard in Resources */,
-				53D4B81C2AE29ACA00832596 /* document-list.png in Resources */,
-				53D4B8162AE29ACA00832596 /* icon-list.png in Resources */,
 				53AB63FB2AAD810A00795B8C /* MapMarkerRegister.storyboard in Resources */,
 				53A1AA6E2A61A00C004A1295 /* Main.storyboard in Resources */,
-				53D4B8222AE29ACA00832596 /* picture.png in Resources */,
-				53D4B80F2AE29ACA00832596 /* user.png in Resources */,
-				53D4B8102AE29ACA00832596 /* icon-kakao-talk.png in Resources */,
-				53A119CE2AE3A3C300CD1124 /* map-mini.png in Resources */,
-				53D4B8212AE29ACA00832596 /* reload.png in Resources */,
-				53A119D02AE3A4D600CD1124 /* chat-mini.png in Resources */,
-				53D4B8192AE29ACA00832596 /* lost item 복사본.png in Resources */,
-				53A119CC2AE39DD700CD1124 /* chat-btn.png in Resources */,
-				53D4B80E2AE29ACA00832596 /* bullet-list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

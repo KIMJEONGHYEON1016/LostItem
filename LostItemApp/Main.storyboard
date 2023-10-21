@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="41" id="y33-a8-6Tn"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lost-items.png" translatesAutoresizingMaskIntoConstraints="NO" id="UCl-Eh-2kc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lost-items" translatesAutoresizingMaskIntoConstraints="NO" id="UCl-Eh-2kc">
                                 <rect key="frame" x="76.666666666666686" y="188" width="240" height="218"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="218" id="J8P-zj-DGh"/>
@@ -34,7 +34,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFp-qw-Guc">
                                 <rect key="frame" x="29" y="562.66666666666663" width="332" height="59"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="kakao_login_medium_wide.png"/>
+                                <buttonConfiguration key="configuration" style="plain" image="kakao_login_medium_wide"/>
                                 <connections>
                                     <action selector="KakaoLoginBtn:" destination="zEk-1O-vul" eventType="touchUpInside" id="LMV-13-zBm"/>
                                 </connections>
@@ -48,7 +48,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="google-sign.png" imageContentMode="scaleToFill"/>
+                                    <backgroundConfiguration key="background" image="google-sign" imageContentMode="scaleToFill"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="GoogleBtnAction:" destination="zEk-1O-vul" eventType="touchUpInside" id="JlQ-Ed-RRv"/>
@@ -120,7 +120,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="imN-Sr-sF6" secondAttribute="trailing" id="xEb-ci-ecB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="지도" image="map-mini.png" selectedImage="map" id="dnc-9l-GmR"/>
+                    <tabBarItem key="tabBarItem" title="지도" image="chat-mini" selectedImage="chat-mini 1" id="dnc-9l-GmR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="refreshBtn" destination="lOg-kc-qJ5" id="AIP-vp-lqL"/>
@@ -133,11 +133,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="google-sign.png" width="554" height="71"/>
-        <image name="kakao_login_medium_wide.png" width="300" height="45"/>
-        <image name="lost-items.png" width="384" height="384"/>
-        <image name="map" width="25" height="25"/>
-        <image name="map-mini.png" width="20" height="20"/>
+        <image name="chat-mini" width="25" height="25"/>
+        <image name="chat-mini 1" width="25" height="25"/>
+        <image name="google-sign" width="1108" height="142"/>
+        <image name="kakao_login_medium_wide" width="300" height="45"/>
+        <image name="lost-items" width="512" height="512"/>
         <image name="reload.png" width="384" height="384"/>
     </resources>
 </document>

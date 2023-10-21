@@ -28,21 +28,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QO3-0K-2Ly">
                                 <rect key="frame" x="36.666666666666657" y="183" width="320" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera.png" translatesAutoresizingMaskIntoConstraints="NO" id="q7c-8a-ydK">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="q7c-8a-ydK">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="agp-X1-QaQ"/>
                                             <constraint firstAttribute="height" constant="100" id="fts-aq-iNr"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kfg-nf-bRj">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="Kfg-nf-bRj">
                                         <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="HXU-TQ-D0V"/>
                                             <constraint firstAttribute="width" constant="100" id="Ihk-An-twa"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="wkR-fa-NN8">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="wkR-fa-NN8">
                                         <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="mFN-qE-wTo"/>
@@ -108,7 +108,7 @@
                             <constraint firstItem="QO3-0K-2Ly" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36.670000000000002" id="zC9-BQ-7j4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="게시글" image="mini-lost-and-found.png" selectedImage="post" id="UE1-iB-Aqk"/>
+                    <tabBarItem key="tabBarItem" title="게시글" image="mini-lost-and-found" selectedImage="mini-lost-and-found 1" id="UE1-iB-Aqk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lostItemPhoto" destination="q7c-8a-ydK" id="yiT-BG-9kf"/>
@@ -141,7 +141,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="tGs-z0-KHN">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="tGs-z0-KHN">
                                                     <rect key="frame" x="20" y="26" width="100" height="78"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -211,7 +211,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="reload.png"/>
+                                    <backgroundConfiguration key="background" image="reload"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="RefreshBtn:" destination="oZy-bi-XH5" eventType="touchUpInside" id="jCc-xD-1Ut"/>
@@ -253,7 +253,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-Am-2jQ">
                                 <rect key="frame" x="36.666666666666657" y="159" width="320" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="euL-kF-ndn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="euL-kF-ndn">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -261,7 +261,7 @@
                                             <constraint firstAttribute="height" constant="100" id="bLJ-16-KpA"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="5AL-Jn-Nzp">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="5AL-Jn-Nzp">
                                         <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -269,7 +269,7 @@
                                             <constraint firstAttribute="width" constant="100" id="PED-ZK-4nK"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="SwO-zS-paT">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="SwO-zS-paT">
                                         <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -353,11 +353,11 @@
     </scenes>
     <resources>
         <image name="backward-arrow.png" width="247.40939331054688" height="247.40939331054688"/>
-        <image name="mini-lost-and-found.png" width="18.75" height="18.75"/>
-        <image name="photo-camera.png" width="37.5" height="37.5"/>
-        <image name="picture.png" width="37.5" height="37.5"/>
-        <image name="post" width="25" height="25"/>
-        <image name="reload.png" width="384" height="384"/>
+        <image name="mini-lost-and-found" width="25" height="25"/>
+        <image name="mini-lost-and-found 1" width="25" height="25"/>
+        <image name="photo-camera" width="50" height="50"/>
+        <image name="picture" width="50" height="50"/>
+        <image name="reload" width="512" height="512"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

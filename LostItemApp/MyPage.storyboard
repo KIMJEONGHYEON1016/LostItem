@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZlR-Jg-0Xx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ZlR-Jg-0Xx">
                                 <rect key="frame" x="16" y="139" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="E1o-dV-DGG"/>
@@ -145,7 +145,7 @@
                             <constraint firstItem="0rT-rK-N6z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="48" id="wgq-Ef-n7S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MY" image="profile-mini.png" selectedImage="mypage" id="xts-fN-7kc"/>
+                    <tabBarItem key="tabBarItem" title="MY" image="profile-mini" selectedImage="profile-mini 1" id="xts-fN-7kc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="NickName" destination="7fe-lL-Acl" id="yJC-z8-T4N"/>
@@ -161,10 +161,10 @@
     </scenes>
     <resources>
         <image name="icon-list.png" width="512" height="512"/>
-        <image name="mypage" width="25" height="25"/>
-        <image name="profile-mini.png" width="18.75" height="18.75"/>
+        <image name="profile-mini" width="25" height="25"/>
+        <image name="profile-mini 1" width="25" height="25"/>
         <image name="sign-out.png" width="384" height="384"/>
-        <image name="user.png" width="384" height="384"/>
+        <image name="user" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

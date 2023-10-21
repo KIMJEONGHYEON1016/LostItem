@@ -121,7 +121,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         
         // 기본 이미지 설정
         if cell.profileImage?.image == nil {
-            cell.profileImage?.image = UIImage(named: "user.png")
+            cell.profileImage?.image = UIImage(named: "user")
         }
         cell.profileImage?.layer.cornerRadius = cell.profileImage.frame.size.width / 2
         cell.profileImage?.clipsToBounds = true

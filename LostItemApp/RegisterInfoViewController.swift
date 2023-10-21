@@ -67,7 +67,7 @@ class RegisterInfoViewController: UIViewController {
     
    
         @IBAction func completeBtn(_ sender: Any) {
-            let cameraImage = UIImage(named: "photo-camera.png")
+            let cameraImage = UIImage(named: "photo-camera")
 
             if titleLabel.text != "" && mainTextLabel.text != "" && !imagesAreEqual(lostItemPhoto.image, cameraImage) {          //내용, 제목, 이미지 중 하나라도 비어있다면 게시글 작성 실패
                 SetData()
@@ -165,7 +165,7 @@ class RegisterInfoViewController: UIViewController {
     
     //이미지 파이어베이스로 업로드
     func uploadimage(img: UIImage, completion: @escaping (Bool) -> Void) {
-        guard let referenceImage = UIImage(named: "picture.png"),
+        guard let referenceImage = UIImage(named: "picture"),
               let referenceImageData = referenceImage.jpegData(compressionQuality: 0.1),
               let imageData = img.jpegData(compressionQuality: 0.1) else {
             // 이미지 데이터를 가져오지 못한 경우 또는 기준 이미지를 가져오지 못한 경우 업로드하지 않음

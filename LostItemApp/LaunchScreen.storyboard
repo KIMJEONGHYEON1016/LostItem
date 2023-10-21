@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lost item.png" translatesAutoresizingMaskIntoConstraints="NO" id="HHA-Hd-1rD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lost item" translatesAutoresizingMaskIntoConstraints="NO" id="HHA-Hd-1rD">
                                 <rect key="frame" x="76" y="259" width="240" height="212"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="212" id="3Tr-TA-3JZ"/>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lost item.png" width="384" height="384"/>
+        <image name="lost item" width="512" height="512"/>
     </resources>
 </document>

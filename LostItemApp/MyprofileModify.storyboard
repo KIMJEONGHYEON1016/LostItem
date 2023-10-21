@@ -25,7 +25,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="Placeholder" value="닉네임"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="kLD-nx-W4x">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="kLD-nx-W4x">
                                 <rect key="frame" x="146.66666666666666" y="109" width="100" height="104"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="3FQ-bz-MJg"/>
@@ -43,7 +43,7 @@
                                     <action selector="BackBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tcY-Rl-FoZ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-photos.png" translatesAutoresizingMaskIntoConstraints="NO" id="tPf-fb-6xy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-photos" translatesAutoresizingMaskIntoConstraints="NO" id="tPf-fb-6xy">
                                 <rect key="frame" x="207" y="167" width="53" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -104,8 +104,8 @@
     </scenes>
     <resources>
         <image name="backward-arrow.png" width="247.40939331054688" height="247.40939331054688"/>
-        <image name="icon-photos.png" width="384" height="384"/>
-        <image name="user.png" width="384" height="384"/>
+        <image name="icon-photos" width="512" height="512"/>
+        <image name="user" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

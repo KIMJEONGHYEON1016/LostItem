@@ -233,7 +233,7 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
         self.chattingUser.text = self.nickName
         messageCell.leftImageView.image = self.profileImage
         if messageCell.leftImageView?.image == nil {
-            messageCell.leftImageView?.image = UIImage(named: "user.png")
+            messageCell.leftImageView?.image = UIImage(named: "user")
         }
         messageCell.leftImageView?.layer.cornerRadius = messageCell.leftImageView.frame.size.width / 2
         messageCell.leftImageView?.clipsToBounds = true
