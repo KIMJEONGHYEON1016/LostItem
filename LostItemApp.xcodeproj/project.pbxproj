@@ -13,7 +13,6 @@
 		5340DF872A72887F004E81A6 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF862A72887F004E81A6 /* KakaoSDKAuth */; };
 		5340DF892A72887F004E81A6 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF882A72887F004E81A6 /* KakaoSDKCommon */; };
 		5340DF8B2A72887F004E81A6 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 5340DF8A2A72887F004E81A6 /* KakaoSDKUser */; };
-		5349C7042A7918E300C790CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5349C7032A7918E300C790CE /* GoogleService-Info.plist */; };
 		53605FBA2AC4408B007F09B2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53605FB92AC4408B007F09B2 /* TabBarController.swift */; };
 		53605FBC2AC44219007F09B2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53605FBB2AC44219007F09B2 /* TabBar.storyboard */; };
 		537312922A5D8DBB005DF023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312912A5D8DBB005DF023 /* AppDelegate.swift */; };
@@ -22,6 +21,7 @@
 		5373129E2A5D8DBE005DF023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5373129D2A5D8DBE005DF023 /* Assets.xcassets */; };
 		537312C72A5D8E78005DF023 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312C62A5D8E78005DF023 /* LoginViewController.swift */; };
 		537312D72A5DB1B6005DF023 /* KakaoAuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537312D62A5DB1B6005DF023 /* KakaoAuthVM.swift */; };
+		537E54642AE584D900BD8F2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537E54632AE584D900BD8F2A /* GoogleService-Info.plist */; };
 		53A1AA6E2A61A00C004A1295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A1AA6D2A61A00C004A1295 /* Main.storyboard */; };
 		53A1AA702A61A021004A1295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A1AA6F2A61A021004A1295 /* LaunchScreen.storyboard */; };
 		53A1AB142A61AB76004A1295 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A1AB132A61AB76004A1295 /* SystemConfiguration.framework */; };
@@ -86,7 +86,6 @@
 		309727993C2F454850980CCD /* Pods_LostItemApp_LostItemAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LostItemApp_LostItemAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		531A8B0B2A77FC1A009ABE30 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5324A50B2AA0B8BB008B7A6E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		5349C7032A7918E300C790CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		534C129D2A6168350032F957 /* LostItemApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LostItemApp.entitlements; sourceTree = "<group>"; };
 		53605FB92AC4408B007F09B2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		53605FBB2AC44219007F09B2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		537312C62A5D8E78005DF023 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		537312D52A5DAE38005DF023 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		537312D62A5DB1B6005DF023 /* KakaoAuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthVM.swift; sourceTree = "<group>"; };
+		537E54632AE584D900BD8F2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53A1AA6D2A61A00C004A1295 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		53A1AA6F2A61A021004A1295 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53A1AB132A61AB76004A1295 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				534C129D2A6168350032F957 /* LostItemApp.entitlements */,
-				5349C7032A7918E300C790CE /* GoogleService-Info.plist */,
+				537E54632AE584D900BD8F2A /* GoogleService-Info.plist */,
 				537312912A5D8DBB005DF023 /* AppDelegate.swift */,
 				537312932A5D8DBB005DF023 /* SceneDelegate.swift */,
 				53605FB92AC4408B007F09B2 /* TabBarController.swift */,
@@ -375,11 +375,11 @@
 				53B09FFB2A8E032300DEA70E /* Chat.storyboard in Resources */,
 				53A1AA702A61A021004A1295 /* LaunchScreen.storyboard in Resources */,
 				53F415DE2A95EB8A005AB96D /* Register.storyboard in Resources */,
-				5349C7042A7918E300C790CE /* GoogleService-Info.plist in Resources */,
 				53605FBC2AC44219007F09B2 /* TabBar.storyboard in Resources */,
 				5373129E2A5D8DBE005DF023 /* Assets.xcassets in Resources */,
 				53CF4EDF2A8253E700BCE475 /* MyprofileModify.storyboard in Resources */,
 				53C587652A6AC18A0024E203 /* MyPage.storyboard in Resources */,
+				537E54642AE584D900BD8F2A /* GoogleService-Info.plist in Resources */,
 				53AB63FB2AAD810A00795B8C /* MapMarkerRegister.storyboard in Resources */,
 				53A1AA6E2A61A00C004A1295 /* Main.storyboard in Resources */,
 			);
