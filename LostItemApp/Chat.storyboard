@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -128,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N78-EH-8Ki">
-                                <rect key="frame" x="344" y="784" width="45" height="34"/>
+                                <rect key="frame" x="344" y="778" width="45" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="pR2-mV-O1N"/>
                                 </constraints>
@@ -139,7 +140,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-LD-zjq">
-                                <rect key="frame" x="0.0" y="114" width="393" height="670"/>
+                                <rect key="frame" x="0.0" y="114" width="393" height="664"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatRoomTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatRoomTableViewCell" id="9id-N1-Bgp" customClass="ChatRoomTableViewCell" customModule="LostItemApp" customModuleProvider="target">
@@ -222,10 +223,11 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UOh-3U-DTc">
-                                <rect key="frame" x="0.0" y="784" width="338" height="34"/>
+                                <rect key="frame" x="5" y="778" width="333" height="40"/>
                                 <color key="backgroundColor" red="0.94853960341619337" green="0.95291847590022694" blue="0.96605509335232764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="bks-OR-pCU"/>
+                                    <constraint firstAttribute="height" constant="40" id="bks-OR-pCU"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -266,7 +268,7 @@
                             <constraint firstItem="eYK-7m-RZJ" firstAttribute="top" secondItem="dXI-M5-9Jv" secondAttribute="top" id="b0h-kr-AH8"/>
                             <constraint firstItem="N78-EH-8Ki" firstAttribute="leading" secondItem="UOh-3U-DTc" secondAttribute="trailing" constant="6" id="bIu-bL-r95"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="qmx-QR-Qkn" secondAttribute="trailing" constant="360" id="iCz-ff-TWg"/>
-                            <constraint firstItem="UOh-3U-DTc" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" id="kah-vS-Y7V"/>
+                            <constraint firstItem="UOh-3U-DTc" firstAttribute="leading" secondItem="dXI-M5-9Jv" secondAttribute="leading" constant="5" id="kah-vS-Y7V"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zLO-pY-T5j" secondAttribute="trailing" constant="100" id="lb3-If-WuD"/>
                             <constraint firstItem="zLO-pY-T5j" firstAttribute="leading" secondItem="qmx-QR-Qkn" secondAttribute="trailing" constant="30" id="sbd-OU-iqV"/>
                             <constraint firstItem="dXI-M5-9Jv" firstAttribute="trailing" secondItem="eYK-7m-RZJ" secondAttribute="trailing" id="t8k-z9-H4t"/>
@@ -296,13 +298,13 @@
         <image name="reload.png" width="384" height="384"/>
         <image name="user" width="512" height="512"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

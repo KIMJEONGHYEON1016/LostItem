@@ -44,6 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let kakaoHandled = AuthController.handleOpenUrl(url: url)
                     return kakaoHandled
                 }
+                if GIDSignIn.sharedInstance.handle(url) {
+                    return true
+                }
                 
                 // 다른 URL 유형을 처리할 필요가 있다면 여기에 추가
                 

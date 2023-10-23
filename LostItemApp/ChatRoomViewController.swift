@@ -23,6 +23,7 @@ class ChatRoomViewController: UIViewController {
     var chatUser: String?
     var nickName: String?
     var profileImage: UIImage?
+    var keyHeight: CGFloat?
     
     struct Message {
         let sender: String
@@ -82,6 +83,8 @@ class ChatRoomViewController: UIViewController {
     }
     
     @IBAction func sendMessage(_ sender: Any) {
+        messageTextField.resignFirstResponder()
+
         if messageTextField.text == "" {
                 //메세지가 공백일경우 무반응
         } else {
@@ -127,7 +130,25 @@ class ChatRoomViewController: UIViewController {
         chattingRoom?.layer.borderColor = customColor.cgColor
         chattingRoom?.layer.cornerRadius = 3.0
         NotificationCenter.default.addObserver(self, selector: #selector(textViewTextChanged), name: UITextView.textDidChangeNotification, object: messageTextField)
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+                
+    }
+
+    @objc func keyboardWillShow(_ sender: Notification) {
+           let userInfo:NSDictionary = sender.userInfo! as NSDictionary
+           let keyboardFrame:NSValue = userInfo.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue
+           let keyboardRectangle = keyboardFrame.cgRectValue
+           let keyboardHeight = keyboardRectangle.height
+           keyHeight = keyboardHeight
+
+           self.view.frame.size.height -= keyboardHeight
+       }
+    
+    @objc func keyboardWillHide(_ sender: Notification) {
         
+        self.view.frame.size.height += keyHeight!
     }
     
     
@@ -197,7 +218,7 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
         let message = messages[indexPath.row]
         
         let messageCell = tableView.dequeueReusableCell(withIdentifier: "ChatRoomTableViewCell", for: indexPath) as! ChatRoomTableViewCell
-        
+        messageCell.selectionStyle = .none
         messageCell.messageBubble.addSubview(messageCell.messageLabel)
         messageCell.MymessageBubble.addSubview(messageCell.myMessage)
 

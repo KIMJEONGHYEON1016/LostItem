@@ -42,7 +42,24 @@ class MyprofileModifycontroller: UIViewController {
         if NickName.text == nil{
             NickName.text = "닉네임"
         }
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "확인", style: .plain, target: self, action: #selector(doneButtonTapped))
+
+        // "확인" 버튼의 텍스트 색상을 검은색으로 변경
+        doneButton.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+
+        // "확인" 버튼을 오른쪽에 배치
+        toolbar.items = [flexibleSpace, doneButton]
+
+        // titleLabel과 mainTextLabel의 inputAccessoryView로 툴바를 설정합니다.
+        NickName.inputAccessoryView = toolbar
     }
+
+    @objc func doneButtonTapped() {
+        NickName.resignFirstResponder() // 키보드를 내립니다.
+    }
+
     
     // 다른 곳 클릭하면 확정 짓기
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

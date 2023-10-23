@@ -41,8 +41,27 @@ class RegisterInfoViewController: UIViewController {
         mainTextLabel.layer.borderColor = UIColor.lightGray.cgColor
         LostItemImage()
         TabBarItem()
+        // 툴바를 만들고 "확인" 버튼을 오른쪽 상단에 추가합니다.
+                let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
+                let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+                let doneButton = UIBarButtonItem(title: "확인", style: .plain, target: self, action: #selector(doneButtonTapped))
+
+                // "확인" 버튼의 텍스트 색상을 검은색으로 변경
+                doneButton.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+
+                // "확인" 버튼을 오른쪽에 배치
+                toolbar.items = [flexibleSpace, doneButton]
+
+                // titleLabel과 mainTextLabel의 inputAccessoryView로 툴바를 설정합니다.
+                titleLabel.inputAccessoryView = toolbar
+                mainTextLabel.inputAccessoryView = toolbar
     }
     
+    @objc func doneButtonTapped() {
+        mainTextLabel.resignFirstResponder() // 키보드를 내립니다.
+        titleLabel.resignFirstResponder()
+    }
+
     func LostItemImage () {
         let photoViews = [lostItemPhoto, lostItemPhoto2, lostItemPhoto3]
 
@@ -69,7 +88,8 @@ class RegisterInfoViewController: UIViewController {
         @IBAction func completeBtn(_ sender: Any) {
             let cameraImage = UIImage(named: "photo-camera")
 
-            if titleLabel.text != "" && mainTextLabel.text != "" && !imagesAreEqual(lostItemPhoto.image, cameraImage) {          //내용, 제목, 이미지 중 하나라도 비어있다면 게시글 작성 실패
+            if titleLabel.text != "" && mainTextLabel.text != "" && !imagesAreEqual(lostItemPhoto.image, cameraImage) {       
+                //내용, 제목, 이미지 중 하나라도 비어있다면 게시글 작성 실패
                 SetData()
                 let storyboard = UIStoryboard(name: "Register", bundle: nil)
                 guard let RegisterViewControllerVC = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }

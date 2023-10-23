@@ -702,6 +702,7 @@
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LostItemApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "분실물 찾기";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -745,6 +746,7 @@
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LostItemApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "분실물 찾기";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

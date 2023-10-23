@@ -23,45 +23,36 @@ class LoginViewController: UIViewController, ASAuthorizationControllerPresentati
     @IBOutlet var GoogleLoginBtn: GIDSignInButton!
     
     //구글로그인 기능
-    @IBAction func GoogleBtnAction(_ sender: GIDSignInButton) {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        let config = GIDConfiguration(clientID: clientID)
-        
-        GIDSignIn.sharedInstance.signIn(with: config, presenting: self as UIViewController) { user, error in
-            
+    @IBAction func GoogleBtnAction(sender: Any) {
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
             guard error == nil else { return }
-            
-            guard let authentication = user?.authentication,
-                  let idToken = authentication.idToken
-            else {
-                return
-            }
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
-                                                           accessToken: authentication.accessToken)
-            Auth.auth().signIn(with: credential) { authResult, error in
-            if let error = error {
-                // 로그인 오류 처리
-                print("Google 로그인 실패: \(error.localizedDescription)")
-                return
-            }
-                
-                // 로그인 성공 시 처리
-                if let user = authResult?.user {
-                    // 로그인한 사용자 정보 사용 가능
-                    UserDefaults.standard.set("Google", forKey: "SocialLogin")
-                    UserDefaults.standard.set(Auth.auth().currentUser?.email, forKey: "UserEmailKey")
-                    print("Google 로그인 성공: \(user.uid)")
+            guard let signInResult = signInResult else { return }
+
+                let user = signInResult.user
+
+                let emailAddress = user.profile?.email
+            Auth.auth().signIn(withEmail: emailAddress ?? "", password: "randompassword") { (authResult, error) in
+                        if let error = error {
+                            print("Error creating user: \(error.localizedDescription)")
+                            return
+                        }
+                        
+                        if let user = authResult?.user {
+                            print("User created with email: \(emailAddress ?? "")")
+                        
+                    }
                 }
-                
-            }
+            
+            UserDefaults.standard.set("Google", forKey: "SocialLogin")
+            UserDefaults.standard.set(emailAddress, forKey: "UserEmailKey")
             let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
             guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
-        }
+          }
     }
     
     
-    
+  
     let authorizationAppleIDButton = ASAuthorizationAppleIDButton()
     
     override func viewDidLoad() {

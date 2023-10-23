@@ -8,8 +8,9 @@
 import Foundation
 import NMapsMap
 import FirebaseFirestore
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var subView: NMFNaverMapView!
     @IBOutlet var refreshBtn: UIButton!
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
     let infoWindow = NMFInfoWindow()
     let marker = NMFMarker()
     let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.5666102, lng: 126.9783881))
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +32,37 @@ class ViewController: UIViewController {
         subView.mapView.logoAlign = .rightTop
         TabBarItem()
         refreshBtn.layer.cornerRadius = 0.5 * refreshBtn.bounds.size.width
-
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        DispatchQueue.global(qos: .background).async {
+            if CLLocationManager.locationServicesEnabled() {
+                switch self.locationManager.authorizationStatus {
+                case .authorizedWhenInUse, .authorizedAlways:
+                    print("위치 권한이 허용됨")
+                    self.locationManager.startUpdatingLocation()
+                case .denied, .restricted:
+                    self.locationManager.requestWhenInUseAuthorization()
+                    print("위치 권한이 거부됨 또는 제한됨")
+                case .notDetermined:
+                    self.locationManager.requestWhenInUseAuthorization()
+                @unknown default:
+                    break
+                }
+            } else {
+                print("위치 서비스 Off 상태")
+            }
+        }
     }
+    
+ 
     
     //새로고침 버튼
     @IBAction func refreshButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
+        self.locationManager.requestWhenInUseAuthorization()
     }
     
     //탭바 아이템 글씨 색상

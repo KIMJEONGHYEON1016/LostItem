@@ -5,11 +5,13 @@ target 'LostItemApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Firebase/Auth'
-    pod 'GoogleSignIn'
-    pod 'Firebase/Database'
-    pod 'Firebase/Core'
-    pod 'FirebaseFirestore'
-    pod 'Firebase/Storage'
+    pod 'GoogleSignIn', '7.0.0'
+    pod 'Firebase/Database', '10.15.0'
+    pod 'Firebase/Core', '10.15.0'
+    pod 'Firebase/Database', '10.15.0'
+    pod 'FirebaseFirestore', '10.15.0'
+    pod 'Firebase/Storage', '10.15.0'
+    pod 'GTMSessionFetcher/Core', '3.1.1'
     pod 'NMapsMap'
     pod 'UITextView+Placeholder'
     pod 'Kingfisher'
