@@ -46,7 +46,13 @@ class ChatRoomViewController: UIViewController {
             //"네" 버튼 추가
             let yesAction = UIAlertAction(title: "네", style: .destructive) { (action) in
                 // "네" 버튼을 눌렀을 때의 로직을 여기에 추가
-                self.DeleteDocument()
+                self.deleteSubcollection()
+                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+
+                guard let TabBarControllerVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+                TabBarControllerVC.selectedIndex = 2
+
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(TabBarControllerVC, animated: false)
                 self.dismiss(animated: true)
             }
             
@@ -62,23 +68,34 @@ class ChatRoomViewController: UIViewController {
     }
     
     //삭제 함수
-    func DeleteDocument() {
+    func deleteSubcollection() {
         let db = Firestore.firestore()
         if let messageSender = UserDefaults.standard.string(forKey: "UserEmailKey"),
            let chatUser = chatUser {
             let sortedEmails = [messageSender, chatUser].sorted()
-            
             let chatDocumentID = sortedEmails[0] + "&" + sortedEmails[1]
-            let docRef = db.collection("채팅").document(chatDocumentID)
             
-            // 문서 삭제
-            docRef.delete { (error) in
+            // 대상 서브컬렉션의 참조 가져오기
+            let subcollectionRef = db.collection("채팅").document(chatDocumentID).collection("메시지")
+            
+            // 모든 문서를 삭제
+            subcollectionRef.getDocuments { (querySnapshot, error) in
                 if let error = error {
-                    print("문서 삭제 중 오류 발생: \(error)")
+                    print("서브컬렉션 문서 조회 중 오류 발생: \(error)")
                 } else {
-                    print("문서 삭제 성공")
+                    for document in querySnapshot!.documents {
+                        // 각 문서 삭제
+                        document.reference.delete { (error) in
+                            if let error = error {
+                                print("문서 삭제 중 오류 발생: \(error)")
+                            } else {
+                                print("문서 삭제 성공")
+                            }
+                        }
+                    }
                 }
             }
+            db.collection("채팅").document(chatDocumentID).delete()
         }
     }
     
@@ -148,7 +165,7 @@ class ChatRoomViewController: UIViewController {
     
     @objc func keyboardWillHide(_ sender: Notification) {
         
-        self.view.frame.size.height += keyHeight!
+        self.view.frame.size.height += keyHeight ?? 0
     }
     
     
