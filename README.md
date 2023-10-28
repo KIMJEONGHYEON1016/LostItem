@@ -1,1 +1,5 @@
-분실물 찾기 앱입니다.
+- **`Project` :** LostItem
+<img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=Swift&logoColor=white">
+
+## 설명
+
