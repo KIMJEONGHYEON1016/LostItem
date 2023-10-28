@@ -1,5 +1,5 @@
 - **`Project` :** LostItem <br>
-- **`Stack` :** <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=Swift&logoColor=white">
+- **`Stack` :**  <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=Swift&logoColor=white">
 
 ## 전체적인 소개
 
@@ -16,3 +16,6 @@ LostItem 프로젝트를 시작하게 된 계기는 이미 대중화돼서 사�
 
 ### 앱 아이콘
 ![appicon](https://github.com/KIMJEONGHYEON1016/LostItem/assets/127102729/97f6aac1-eb8c-4ed0-824f-67690c5e2eac)
+
+### 메인화면
+![KakaoTalk_20231028_220250464_06](https://github.com/KIMJEONGHYEON1016/LostItem/assets/127102729/c06c90cf-5fab-4990-913e-2f72cb0eeb13)
